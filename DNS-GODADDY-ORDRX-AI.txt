@@ -1,0 +1,168 @@
+═══════════════════════════════════════════════════════════════════════════
+  CONFIGURAÇÃO DNS - GODADDY PARA ORDRX.AI
+═══════════════════════════════════════════════════════════════════════════
+
+🌐 DOMÍNIO: ordrx.ai
+🎯 DESTINO: GitHub Pages
+📅 DATA: Outubro 2025
+
+═══════════════════════════════════════════════════════════════════════════
+
+📋 COPIE E COLE NA GODADDY:
+
+---
+
+✅ REGISTRO 1 - A
+   Tipo:  A
+   Nome:  @
+   Valor: 185.199.108.153
+   TTL:   600 segundos (ou 10 minutos)
+
+---
+
+✅ REGISTRO 2 - A
+   Tipo:  A
+   Nome:  @
+   Valor: 185.199.109.153
+   TTL:   600 segundos (ou 10 minutos)
+
+---
+
+✅ REGISTRO 3 - A
+   Tipo:  A
+   Nome:  @
+   Valor: 185.199.110.153
+   TTL:   600 segundos (ou 10 minutos)
+
+---
+
+✅ REGISTRO 4 - A
+   Tipo:  A
+   Nome:  @
+   Valor: 185.199.111.153
+   TTL:   600 segundos (ou 10 minutos)
+
+---
+
+✅ REGISTRO 5 - CNAME (WWW)
+   Tipo:  CNAME
+   Nome:  www
+   Valor: pabloungaro.github.io
+   TTL:   1 hora (ou 3600 segundos)
+
+   ⚠️ ATENÇÃO: Substitua "pabloungaro" pelo seu username do GitHub!
+
+═══════════════════════════════════════════════════════════════════════════
+
+🔧 PASSO A PASSO NA GODADDY:
+
+1. Acesse: https://dcc.godaddy.com
+2. Clique em "Meus Produtos"
+3. Encontre "ordrx.ai"
+4. Clique em "DNS" ao lado do domínio
+5. Delete registros A existentes (se houver)
+6. Clique em "Adicionar" para cada registro acima
+7. Preencha os campos exatamente como mostrado
+8. Salve cada registro
+9. Aguarde 10-30 minutos para propagação
+
+═══════════════════════════════════════════════════════════════════════════
+
+✅ VERIFICAÇÃO:
+
+Após configurar, teste no terminal:
+
+   dig ordrx.ai +short
+
+Deve retornar os 4 IPs:
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+
+Teste WWW:
+   dig www.ordrx.ai +short
+
+Deve retornar:
+   pabloungaro.github.io (ou seu username)
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+
+═══════════════════════════════════════════════════════════════════════════
+
+🔗 VERIFICAÇÃO ONLINE:
+
+Teste a propagação global em:
+   https://www.whatsmydns.net/#A/ordrx.ai
+
+Aguarde até ver ✅ verde na maioria dos servidores.
+
+═══════════════════════════════════════════════════════════════════════════
+
+⏱️ TEMPO DE PROPAGAÇÃO:
+
+• GoDaddy: 10-30 minutos (geralmente)
+• DNS Global: Até 48 horas (raramente)
+• Média real: 15-20 minutos ✅
+
+═══════════════════════════════════════════════════════════════════════════
+
+📝 NOTAS IMPORTANTES:
+
+1. Não delete o registro @ antigo antes de adicionar os novos
+2. Se já existe CNAME no @, delete-o (conflita com registros A)
+3. Mantenha registros MX (e-mail) se existirem
+4. Não mexa em registros TXT (verificações)
+5. TTL baixo (600s) ajuda em correções rápidas
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎉 RESULTADO FINAL:
+
+Após propagação completa:
+
+   https://ordrx.ai        → ✅ Carrega seu site
+   https://www.ordrx.ai    → ✅ Redireciona para ordrx.ai
+   http://ordrx.ai         → ✅ Redireciona para HTTPS
+   http://www.ordrx.ai     → ✅ Redireciona para HTTPS
+
+═══════════════════════════════════════════════════════════════════════════
+
+🆘 PROBLEMAS COMUNS:
+
+❌ Erro: "CNAME já existe no @"
+   Solução: Delete o CNAME do @, use apenas registros A
+
+❌ Erro: "IP inválido"
+   Solução: Copie os IPs novamente, sem espaços
+
+❌ DNS não propaga após 1 hora
+   Solução: Verifique se salvou todos os registros corretamente
+
+❌ WWW não funciona
+   Solução: Verifique o valor do CNAME (deve ser seu-usuario.github.io)
+
+═══════════════════════════════════════════════════════════════════════════
+
+📚 FONTE OFICIAL:
+https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
+
+═══════════════════════════════════════════════════════════════════════════
+
+✅ CHECKLIST:
+
+[ ] 4 registros A adicionados com os IPs corretos
+[ ] 1 registro CNAME (www) adicionado com github.io
+[ ] Todos os registros salvos
+[ ] Aguardado 10-30 minutos
+[ ] Testado com dig ordrx.ai +short
+[ ] Verificado em whatsmydns.net
+[ ] GitHub Pages configurado com ordrx.ai
+[ ] HTTPS ativado no GitHub
+
+═══════════════════════════════════════════════════════════════════════════
+
+Desenvolvido por ORDRX Team | Outubro 2025
+

@@ -58,8 +58,21 @@ Coleta:
 3. Configurar GitHub Pages:
    - Settings → Pages
    - Source: `main` branch
-   - Folder: `/landing-page`
-4. Acessar: `https://ordrx-ai.github.io/ordrx/`
+   - Folder: `/ (root)`
+4. Acessar: `https://seu-usuario.github.io/landing-page/`
+
+### Domínio Customizado (GoDaddy)
+
+Para usar seu próprio domínio (`ordrx.ai`):
+
+1. **Leia o guia completo:** [CONFIGURACAO-DOMINIO.md](./CONFIGURACAO-DOMINIO.md)
+2. Configure DNS na GoDaddy (registros A/CNAME)
+3. ✅ Arquivo `CNAME` já configurado com `ordrx.ai`
+4. Adicione o domínio em Settings → Pages no GitHub
+5. Aguarde propagação DNS (10-30 min)
+6. Ative HTTPS
+
+**Domínio configurado:** `ordrx.ai` ✅
 
 ## 📝 Customização
 
@@ -127,7 +140,7 @@ Logo SVG inline com gradiente neon (cyan → pink).
 ## 📞 Contato
 
 - **E-mail:** ungaro.pablo@gmail.com
-- **Site:** https://ordrx.com.br (em breve)
+- **Site:** https://ordrx.ai
 
 ---
 
