@@ -554,10 +554,393 @@ section {
 }
 
 /* ========================================
+   Pricing Section
+   ======================================== */
+.pricing {
+    background: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 240, 255, 0.05) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.pricing .container {
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pricing-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.pricing-feature svg {
+    color: var(--neon-green);
+    flex-shrink: 0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Para telas grandes (24 polegadas - 1920px+), mostrar 5 colunas */
+@media (min-width: 1920px) {
+    .pricing-grid {
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 1800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Para telas médias-grandes (13 polegadas - 1280px-1919px), 3 colunas + scroll */
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Para tablets (768px-1279px), 2 colunas */
+@media (min-width: 768px) and (max-width: 1279px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para mobile (iPhone 13, 13 Pro Max - até 767px), 1 coluna */
+@media (max-width: 767px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pricing-card {
+    position: relative;
+    padding: 2rem;
+    background: var(--bg-tertiary);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--neon-cyan);
+    box-shadow: 
+        0 20px 60px rgba(0, 240, 255, 0.3),
+        0 0 80px rgba(0, 240, 255, 0.1);
+}
+
+.pricing-card.featured {
+    border-color: var(--neon-pink);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 0, 229, 0.08) 0%,
+        var(--bg-tertiary) 100%
+    );
+    box-shadow: 
+        0 10px 40px rgba(255, 0, 229, 0.2),
+        0 0 60px rgba(255, 0, 229, 0.1);
+}
+
+.pricing-card.featured:hover {
+    border-color: var(--neon-pink);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 
+        0 25px 70px rgba(255, 0, 229, 0.4),
+        0 0 100px rgba(255, 0, 229, 0.2);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.4rem 1.2rem;
+    background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(255, 0, 229, 0.4);
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pricing-header h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pricing-description {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.pricing-price {
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.price-currency {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.price-value {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.price-period {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.pricing-condition {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 240, 255, 0.05);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+}
+
+.pricing-features {
+    list-style: none;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-features li {
+    padding: 0.75rem 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.pricing-features li strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.btn-pricing {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: var(--text-primary);
+}
+
+.btn-pricing:hover {
+    border-color: var(--neon-cyan);
+    background: rgba(0, 240, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.2);
+}
+
+.btn-pricing.btn-gradient {
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
+    border-color: transparent;
+}
+
+.btn-pricing.btn-gradient:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 240, 255, 0.4);
+}
+
+.pricing-note {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(0, 240, 255, 0.03);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.pricing-note p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.pricing-note p:last-child {
+    margin-bottom: 0;
+}
+
+.pricing-note strong {
+    color: var(--neon-cyan);
+    font-weight: 700;
+}
+
+/* Responsividade específica para iPhone 13 (390px) */
+@media (max-width: 428px) {
+    .pricing-info {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .pricing-card {
+        padding: 1.5rem;
+    }
+    
+    .pricing-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .price-value {
+        font-size: 3rem;
+    }
+    
+    .pricing-features li {
+        font-size: 0.85rem;
+        padding: 0.6rem 0;
+    }
+    
+    .pricing-note {
+        padding: 1.5rem;
+    }
+    
+    .pricing-note p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajustes para iPhone 13 Pro Max (428px) */
+@media (min-width: 429px) and (max-width: 767px) {
+    .pricing-card {
+        padding: 1.75rem;
+    }
+}
+
+/* Ajustes para telas de 13 polegadas (1280px-1440px típico) */
+@media (min-width: 1280px) and (max-width: 1600px) {
+    .container {
+        max-width: 1280px;
+        padding: 0 3rem;
+    }
+    
+    .pricing-grid {
+        gap: 1.5rem;
+    }
+    
+    .pricing-card {
+        padding: 1.75rem;
+    }
+    
+    .price-value {
+        font-size: 3.5rem;
+    }
+}
+
+/* Ajustes para telas grandes de 24 polegadas (1920px+) */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1800px;
+        padding: 0 4rem;
+    }
+    
+    .pricing-grid {
+        gap: 2rem;
+    }
+    
+    .section-title {
+        font-size: 3.5rem;
+    }
+    
+    .pricing-card {
+        padding: 2.5rem;
+    }
+    
+    .pricing-header h3 {
+        font-size: 2rem;
+    }
+    
+    .price-value {
+        font-size: 4.5rem;
+    }
+}
+
+/* ========================================
    Segments Section
    ======================================== */
 .segments {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
 }
 
 .segments-grid {
@@ -1091,32 +1474,28 @@ section {
 }
 
 /* ========================================
-   Responsive Design
+   Responsive Design - Multi-Device Optimization
    ======================================== */
-@media (max-width: 992px) {
-    .hero .container {
-        grid-template-columns: 1fr;
-    }
-    
-    .hero-image {
-        display: none;
-    }
-    
-    .about-content,
-    .contact-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-links {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (max-width: 768px) {
+/* iPhone 13 Pro Max e similar (390px - 428px) */
+@media (max-width: 428px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+    
+    .nav-content {
+        height: 70px;
+    }
+    
+    .logo {
+        font-size: 1.25rem;
+    }
+    
+    .logo svg {
+        width: 32px;
+        height: 32px;
+    }
+    
     .nav-menu {
         display: none;
     }
@@ -1125,16 +1504,30 @@ section {
         display: flex;
     }
     
-    .hero-title {
-        font-size: 2.5rem;
+    .hero {
+        padding: 6rem 0 3rem;
+        min-height: auto;
     }
     
-    .section-title {
+    .hero-title {
         font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
     }
     
     .hero-cta {
         flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-large {
+        width: 100%;
+        justify-content: center;
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
     }
     
     .hero-stats {
@@ -1142,8 +1535,58 @@ section {
         gap: 1.5rem;
     }
     
+    .stat-value {
+        font-size: 2.5rem;
+    }
+    
+    .hero-image {
+        display: none;
+    }
+    
+    .section-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.875rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .feature-card,
+    .benefit-card,
+    .segment-card {
+        padding: 1.5rem;
+    }
+    
+    .feature-card h3,
+    .benefit-card h3 {
+        font-size: 1.25rem;
+    }
+    
+    .features-grid,
+    .benefits-grid,
+    .segments-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    
+    .contact-content,
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
     .form-row {
         grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     .footer-links {
@@ -1155,11 +1598,244 @@ section {
         gap: 1rem;
         text-align: center;
     }
+}
+
+/* iPhone 13 Pro Max específico (428px+) e tablets pequenos (429px - 767px) */
+@media (min-width: 429px) and (max-width: 767px) {
+    .hero-title {
+        font-size: 2.25rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-cta {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .btn-large {
+        flex: 1;
+        min-width: 200px;
+    }
+}
+
+/* Tablets (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        padding: 0 2rem;
+    }
+    
+    .hero .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-image {
+        display: none;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .segments-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Laptops e telas de 13 polegadas (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .container {
+        max-width: 1100px;
+        padding: 0 2.5rem;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.75rem;
+    }
+    
+    .hero .container {
+        grid-template-columns: 1.2fr 1fr;
+        gap: 3rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .segments-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Monitores de 13 polegadas full (1440px - 1679px) */
+@media (min-width: 1440px) and (max-width: 1679px) {
+    .container {
+        max-width: 1320px;
+        padding: 0 3rem;
+    }
+    
+    .hero .container {
+        grid-template-columns: 1.3fr 1fr;
+        gap: 4rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Telas grandes (1680px - 1919px) */
+@media (min-width: 1680px) and (max-width: 1919px) {
+    .container {
+        max-width: 1500px;
+        padding: 0 3.5rem;
+    }
+    
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    
+    .section-title {
+        font-size: 3.25rem;
+    }
+}
+
+/* Telas de 24 polegadas e maiores (1920px+) */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1800px;
+        padding: 0 4rem;
+    }
+    
+    .hero {
+        padding: 10rem 0 6rem;
+    }
+    
+    .hero-title {
+        font-size: 5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 3.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .hero .container {
+        grid-template-columns: 1.4fr 1fr;
+        gap: 5rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+    
+    .segments-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    
+    .feature-card,
+    .benefit-card {
+        padding: 2.5rem;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.75rem;
+    }
+    
+    .btn-large {
+        padding: 1.25rem 2.5rem;
+        font-size: 1.25rem;
+    }
+}
+
+/* Telas ultra-wide (2560px+) */
+@media (min-width: 2560px) {
+    .container {
+        max-width: 2200px;
+        padding: 0 5rem;
+    }
+    
+    .hero-title {
+        font-size: 6rem;
+    }
+    
+    .section-title {
+        font-size: 4rem;
+    }
     
     .features-grid,
-    .benefits-grid,
-    .segments-grid {
-        grid-template-columns: 1fr;
+    .benefits-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Ajustes para touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .btn-primary:hover,
+    .btn-large:hover,
+    .feature-card:hover,
+    .segment-card:hover,
+    .pricing-card:hover {
+        transform: none;
+    }
+    
+    .btn-primary:active,
+    .btn-large:active {
+        transform: scale(0.98);
     }
 }
 
