@@ -1,4 +1,45 @@
 // ========================================
+// Scroll Animations - Intersection Observer
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+    // Configurar Intersection Observer para animações de scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Opcional: parar de observar depois da animação
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Observar todos elementos com classes de animação
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
+    animatedElements.forEach(el => observer.observe(el));
+    
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        
+        lastScroll = currentScroll;
+    });
+});
+
+// ========================================
 // FAQ Accordion
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {

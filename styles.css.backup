@@ -590,19 +590,19 @@ section {
     position: relative;
     padding: 2rem;
     background: var(--bg-tertiary);
-    border: 1px solid var(--gray-200);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-lg);
     transition: all 0.3s ease;
 }
 
 .feature-card:hover {
     transform: translateY(-8px);
-    border-color: var(--primary-color);
+    border-color: var(--neon-cyan);
     box-shadow: 0 20px 40px rgba(0, 240, 255, 0.2);
 }
 
 .feature-card.featured {
-    border-color: var(--accent-color);
+    border-color: var(--neon-pink);
     background: linear-gradient(135deg, rgba(255, 0, 229, 0.1), transparent);
 }
 
@@ -611,7 +611,7 @@ section {
     top: 1rem;
     right: 1rem;
     padding: 0.25rem 0.75rem;
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
     border-radius: 50px;
     font-size: 0.75rem;
     font-weight: 600;
@@ -656,7 +656,7 @@ section {
 .benefit-card {
     padding: 2rem;
     background: var(--bg-tertiary);
-    border: 1px solid var(--gray-200);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-lg);
     position: relative;
     overflow: hidden;
@@ -669,7 +669,7 @@ section {
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink));
 }
 
 .benefit-number {
@@ -697,7 +697,7 @@ section {
     padding: 1rem;
     background: rgba(0, 240, 255, 0.05);
     border-radius: var(--radius-sm);
-    border-left: 3px solid var(--primary-color);
+    border-left: 3px solid var(--neon-cyan);
 }
 
 .benefit-highlight span:first-child {
@@ -749,7 +749,7 @@ section {
     padding: 1.5rem;
     background: rgba(255, 255, 255, 0.03);
     border-radius: var(--radius-lg);
-    border: 1px solid var(--gray-100);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .pricing-feature {
@@ -762,7 +762,7 @@ section {
 }
 
 .pricing-feature svg {
-    color: var(--secondary-color);
+    color: var(--neon-green);
     flex-shrink: 0;
 }
 
@@ -808,7 +808,7 @@ section {
     position: relative;
     padding: 2rem;
     background: var(--bg-tertiary);
-    border: 2px solid var(--gray-200);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-lg);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
@@ -817,14 +817,14 @@ section {
 
 .pricing-card:hover {
     transform: translateY(-8px) scale(1.02);
-    border-color: var(--primary-color);
+    border-color: var(--neon-cyan);
     box-shadow: 
         0 20px 60px rgba(0, 240, 255, 0.3),
         0 0 80px rgba(0, 240, 255, 0.1);
 }
 
 .pricing-card.featured {
-    border-color: var(--accent-color);
+    border-color: var(--neon-pink);
     background: linear-gradient(
         135deg,
         rgba(255, 0, 229, 0.08) 0%,
@@ -836,7 +836,7 @@ section {
 }
 
 .pricing-card.featured:hover {
-    border-color: var(--accent-color);
+    border-color: var(--neon-pink);
     transform: translateY(-10px) scale(1.03);
     box-shadow: 
         0 25px 70px rgba(255, 0, 229, 0.4),
@@ -849,7 +849,7 @@ section {
     left: 50%;
     transform: translateX(-50%);
     padding: 0.4rem 1.2rem;
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
     border-radius: 50px;
     font-size: 0.75rem;
     font-weight: 700;
@@ -863,14 +863,14 @@ section {
     text-align: center;
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--gray-200);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .pricing-header h3 {
     font-size: 1.75rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -901,7 +901,7 @@ section {
     font-size: 4rem;
     font-weight: 900;
     line-height: 1;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -935,7 +935,7 @@ section {
     color: var(--text-secondary);
     font-size: 0.9rem;
     line-height: 1.5;
-    border-bottom: 1px solid var(--gray-100);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .pricing-features li:last-child {
@@ -956,20 +956,20 @@ section {
     font-weight: 700;
     border-radius: var(--radius-md);
     transition: all 0.3s ease;
-    border: 2px solid var(--gray-300);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     background: transparent;
     color: var(--text-primary);
 }
 
 .btn-pricing:hover {
-    border-color: var(--primary-color);
+    border-color: var(--neon-cyan);
     background: rgba(0, 240, 255, 0.1);
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(0, 240, 255, 0.2);
 }
 
 .btn-pricing.btn-gradient {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
     border-color: transparent;
 }
 
@@ -999,7 +999,7 @@ section {
 }
 
 .pricing-note strong {
-    color: var(--primary-color);
+    color: var(--neon-cyan);
     font-weight: 700;
 }
 
@@ -1108,7 +1108,7 @@ section {
 .segment-card {
     padding: 2rem;
     background: var(--bg-tertiary);
-    border: 1px solid var(--gray-200);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-lg);
     text-align: center;
     transition: all 0.3s ease;
@@ -1116,7 +1116,7 @@ section {
 
 .segment-card:hover {
     transform: translateY(-4px);
-    border-color: var(--primary-color);
+    border-color: var(--neon-cyan);
     box-shadow: 0 10px 30px rgba(0, 240, 255, 0.2);
 }
 
@@ -1147,7 +1147,7 @@ section {
 .faq-item {
     margin-bottom: 1rem;
     background: var(--bg-tertiary);
-    border: 1px solid var(--gray-200);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-md);
     overflow: hidden;
 }
@@ -1169,7 +1169,7 @@ section {
 }
 
 .faq-question:hover {
-    color: var(--primary-color);
+    color: var(--neon-cyan);
 }
 
 .faq-question svg {
@@ -1209,7 +1209,7 @@ section {
 }
 
 .faq-answer strong {
-    color: var(--primary-color);
+    color: var(--neon-cyan);
 }
 
 /* ========================================
@@ -1246,7 +1246,7 @@ section {
 .about-stat-value {
     font-size: 2.5rem;
     font-weight: 900;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1348,7 +1348,7 @@ section {
 .stat-value-anim {
     font-size: 2rem;
     font-weight: 900;
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1395,13 +1395,13 @@ section {
 }
 
 .contact-feature svg {
-    color: var(--secondary-color);
+    color: var(--neon-green);
 }
 
 .contact-form {
     padding: 2rem;
     background: var(--bg-tertiary);
-    border: 1px solid var(--gray-200);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-lg);
 }
 
@@ -1430,7 +1430,7 @@ section {
 .form-group textarea {
     padding: 0.75rem 1rem;
     background: var(--bg-secondary);
-    border: 1px solid var(--gray-200);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-sm);
     color: var(--text-primary);
     font-family: inherit;
@@ -1442,7 +1442,7 @@ section {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: var(--neon-cyan);
     box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.1);
 }
 
@@ -1458,7 +1458,7 @@ section {
     justify-content: center;
     gap: 0.5rem;
     padding: 1rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
     border: none;
     border-radius: var(--radius-md);
     color: var(--text-primary);
@@ -1481,7 +1481,7 @@ section {
 }
 
 .form-disclaimer a {
-    color: var(--primary-color);
+    color: var(--neon-cyan);
 }
 
 /* ========================================
@@ -1489,7 +1489,7 @@ section {
    ======================================== */
 .footer {
     background: var(--bg-secondary);
-    border-top: 1px solid var(--gray-200);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 4rem 0 2rem;
 }
 
@@ -1530,7 +1530,7 @@ section {
 }
 
 .footer-column a:hover {
-    color: var(--primary-color);
+    color: var(--neon-cyan);
 }
 
 .footer-bottom {
@@ -1538,7 +1538,7 @@ section {
     justify-content: space-between;
     align-items: center;
     padding-top: 2rem;
-    border-top: 1px solid var(--gray-200);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-bottom p {
@@ -1557,14 +1557,14 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--gray-100);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
     color: var(--text-secondary);
     transition: all 0.3s ease;
 }
 
 .footer-social a:hover {
-    background: var(--primary-color);
+    background: var(--neon-cyan);
     color: var(--bg-primary);
     transform: translateY(-2px);
 }
@@ -1615,7 +1615,7 @@ section {
 
 .btn-close-modal {
     padding: 0.75rem 2rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
     border: none;
     border-radius: var(--radius-sm);
     color: var(--text-primary);
