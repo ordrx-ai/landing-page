@@ -122,7 +122,7 @@ Origem: Landing Page ORDRX
     try {
         // Send email using mailto (fallback method for static site)
         // For production, you should use EmailJS or similar service
-        const mailtoLink = `mailto:ungaro.pablo@gmail.com?subject=${encodeURIComponent('Nova Solicitação ORDRX - ' + formData.name)}&body=${encodeURIComponent(emailBody)}`;
+        const mailtoLink = `mailto:ungaro.pablo@gmail.com?subject=${encodeURIComponent('🚀 Nova Candidatura Beta Founders - ' + formData.name)}&body=${encodeURIComponent(emailBody)}`;
         
         // Alternative: Use FormSubmit.co (no backend needed)
         const response = await fetch('https://formsubmit.co/ajax/ungaro.pablo@gmail.com', {
@@ -139,7 +139,7 @@ Origem: Landing Page ORDRX
                 tables: formData.tables,
                 city: formData.city,
                 message: formData.message,
-                _subject: `Nova Solicitação ORDRX - ${formData.name} (${formData.email})`,
+                _subject: `🚀 Nova Candidatura Beta Founders - ${formData.name} (${formData.email})`,
                 _template: 'box',
                 _replyto: formData.email
             })
@@ -158,7 +158,7 @@ Origem: Landing Page ORDRX
         console.error('Error:', error);
         
         // Fallback: Open mailto link
-        window.location.href = `mailto:ungaro.pablo@gmail.com?subject=${encodeURIComponent('Nova Solicitação ORDRX - ' + formData.name)}&body=${encodeURIComponent(emailBody)}`;
+        window.location.href = `mailto:ungaro.pablo@gmail.com?subject=${encodeURIComponent('🚀 Nova Candidatura Beta Founders - ' + formData.name)}&body=${encodeURIComponent(emailBody)}`;
         
         // Show success modal anyway
         setTimeout(() => {
