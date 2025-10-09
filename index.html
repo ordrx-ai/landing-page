@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="ORDRX - Automação de Pedidos para Restaurantes. Reduza custos em até 50%, aumente vendas em até 40% com cardápio digital e QR Code."
+      content="Automação de pedidos para bares e restaurantes com cardápio digital (QR Code), impressão automática e dashboard em tempo real. Reduza custos e aumente vendas com a ORDRX."
     />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://ordrx.ai/" />
+    <link rel="alternate" hreflang="pt-BR" href="https://ordrx.ai/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ORDRX" />
+    <meta property="og:title" content="ORDRX - Automação Inteligente para Restaurantes" />
+    <meta property="og:description" content="Automação de pedidos para bares e restaurantes com cardápio digital (QR Code), impressão automática e dashboard em tempo real." />
+    <meta property="og:url" content="https://ordrx.ai/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ORDRX - Automação Inteligente para Restaurantes" />
+    <meta name="twitter:description" content="Automação de pedidos para bares e restaurantes com cardápio digital (QR Code), impressão automática e dashboard em tempo real." />
     <title>ORDRX - Automação Inteligente para Restaurantes</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,6 +27,56 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ORDRX",
+        "url": "https://ordrx.ai/",
+        "logo": "https://ordrx.ai/images/logo.png",
+        "sameAs": [
+          "https://www.linkedin.com/company/ordrx",
+          "https://www.instagram.com/ordrx.ai"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://ordrx.ai/",
+        "name": "ORDRX",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://ordrx.ai/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ORDRX",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"}
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question","name": "Preciso comprar tablets ou impressoras?","acceptedAnswer": {"@type": "Answer","text": "Não. Todo equipamento necessário (tablets, impressoras térmicas, QR Codes) é fornecido pela ORDRX com treinamento incluso."}},
+          {"@type": "Question","name": "Como funciona o dashboard de vendas e controle de estoque?","acceptedAnswer": {"@type": "Answer","text": "Dashboard em tempo real com vendas, produtos mais vendidos, horários de pico e controle automático de estoque."}},
+          {"@type": "Question","name": "Qual a velocidade do sistema?","acceptedAnswer": {"@type": "Answer","text": "Do pedido à cozinha em menos de 3 segundos, com impressão automática e notificações em tempo real."}},
+          {"@type": "Question","name": "Ainda vou precisar de garçons?","acceptedAnswer": {"@type": "Answer","text": "Sim, mas em função consultiva e de experiência do cliente; o sistema elimina anotação manual e reduz custos."}},
+          {"@type": "Question","name": "Como funciona a validação de comanda?","acceptedAnswer": {"@type": "Answer","text": "Cadastro rápido, associação via QR Code e liberação para pedidos pelo celular, garantindo controle e segurança."}},
+          {"@type": "Question","name": "O sistema funciona sem internet?","acceptedAnswer": {"@type": "Answer","text": "Possui modo offline que armazena pedidos localmente e sincroniza automaticamente quando a internet volta."}}
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- Navigation -->
@@ -44,7 +106,7 @@
             </svg>
             <span>ORDRX</span>
           </div>
-          <ul class="nav-menu">
+          <ul class="nav-menu" id="primaryNav">
             <li><a href="#features">Funcionalidades</a></li>
             <li><a href="#benefits">Benefícios</a></li>
             <li><a href="#about">Quem Somos</a></li>
@@ -54,7 +116,7 @@
               <a href="#contact" class="btn-primary">Candidate-se ao Beta</a>
             </li>
           </ul>
-          <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-label="Abrir menu" aria-controls="primaryNav" aria-expanded="false" title="Menu">
             <span></span>
             <span></span>
             <span></span>
@@ -1186,10 +1248,10 @@
           </div>
         </div>
 
-        <div class="footer-bottom">
+          <div class="footer-bottom">
           <p>&copy; 2025 ORDRX. Todos os direitos reservados.</p>
           <div class="footer-social">
-            <a href="#instagram" aria-label="Instagram">
+            <a href="https://www.instagram.com/pablo.ungaro/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <svg
                 width="20"
                 height="20"
@@ -1204,7 +1266,7 @@
                 />
               </svg>
             </a>
-            <a href="#linkedin" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/pablo-ungaro/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
               <svg
                 width="20"
                 height="20"
@@ -1216,7 +1278,7 @@
                 />
               </svg>
             </a>
-            <a href="#facebook" aria-label="Facebook">
+            <a href="https://web.facebook.com/ungaro.pablo" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
               <svg
                 width="20"
                 height="20"

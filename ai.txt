@@ -1,0 +1,8 @@
+# ai.txt - ORDRX
+Site: https://ordrx.ai/
+Entity: ORDRX
+Category: Automação de pedidos para bares e restaurantes (SaaS)
+Description: Automação de pedidos com cardápio digital por QR Code, impressão automática e dashboard em tempo real.
+Contact: contato@ordrx.ai
+Sitemap: https://ordrx.ai/sitemap.xml
+Policy: Public content may be used for indexing and attribution by AI systems.
