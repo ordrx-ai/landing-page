@@ -263,3 +263,4 @@ rgba(255, 255, 255, 0.2) → var(--gray-300)
 **Status:** 60% Completo | ⏳ Em Andamento
 
 
+
