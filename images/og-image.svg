@@ -1,0 +1,53 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E293B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00F0FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF00E5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="150" cy="150" r="100" fill="#00F0FF" opacity="0.1"/>
+  <circle cx="150" cy="150" r="80" fill="none" stroke="#00F0FF" stroke-width="2" opacity="0.3"/>
+  
+  <circle cx="1050" cy="480" r="100" fill="#FF00E5" opacity="0.1"/>
+  <circle cx="1050" cy="480" r="80" fill="none" stroke="#FF00E5" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Logo circle -->
+  <circle cx="600" cy="150" r="40" fill="url(#textGrad)"/>
+  <circle cx="600" cy="150" r="30" fill="none" stroke="white" stroke-width="2"/>
+  <circle cx="600" cy="150" r="10" fill="white"/>
+  
+  <!-- Main text -->
+  <text x="600" y="260" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="bold" fill="url(#textGrad)" text-anchor="middle">ORDRX</text>
+  
+  <text x="600" y="340" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="#FFFFFF" text-anchor="middle">Automação Inteligente</text>
+  <text x="600" y="390" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="#FFFFFF" text-anchor="middle">para Restaurantes</text>
+  
+  <!-- Features -->
+  <text x="600" y="480" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#00C9A7" text-anchor="middle">Cardápio Digital • QR Code • Dashboard em Tempo Real</text>
+  
+  <!-- Stats -->
+  <g transform="translate(200, 530)">
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" fill="#00F0FF" text-anchor="middle">50%</text>
+    <text x="0" y="30" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#94A3B8" text-anchor="middle">Redução custos</text>
+  </g>
+  
+  <g transform="translate(600, 530)">
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" fill="#00C9A7" text-anchor="middle">40%</text>
+    <text x="0" y="30" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#94A3B8" text-anchor="middle">Aumento vendas</text>
+  </g>
+  
+  <g transform="translate(1000, 530)">
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" fill="#FF00E5" text-anchor="middle">0</text>
+    <text x="0" y="30" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#94A3B8" text-anchor="middle">Erros de pedidos</text>
+  </g>
+</svg>
+
