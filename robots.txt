@@ -8,7 +8,13 @@ User-agent: Google-Extended
 Allow: /
 User-agent: anthropic-ai
 Allow: /
+User-agent: ClaudeBot
+Allow: /
 User-agent: FacebookBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Bytespider
 Allow: /
 
 Sitemap: https://ordrx.ai/sitemap.xml

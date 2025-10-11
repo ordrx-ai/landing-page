@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Blog ORDRX: Dicas, estratégias e tendências sobre cardápio digital, automação de pedidos e gestão de restaurantes. Aprenda como melhorar seu negócio."
+    />
+    <meta
+      name="keywords"
+      content="blog restaurante, dicas cardápio digital, automação pedidos, gestão restaurante, tecnologia gastronômica, QR Code restaurante"
+    />
+    <meta name="author" content="ORDRX" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://ordrx.ai/blog.html" />
+    <title>Blog ORDRX - Dicas e Estratégias para Restaurantes</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Blog ORDRX",
+        "description": "Conteúdo sobre automação de restaurantes, cardápio digital e gestão gastronômica",
+        "url": "https://ordrx.ai/blog.html",
+        "publisher": {
+          "@type": "Organization",
+          "name": "ORDRX",
+          "logo": "https://ordrx.ai/images/logo-a.svg"
+        }
+      }
+    </script>
+
+    <style>
+      .blog-hero {
+        padding: 8rem 0 4rem;
+        background: var(--bg-secondary);
+        text-align: center;
+      }
+
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2rem;
+        padding: 4rem 0;
+      }
+
+      .blog-card {
+        background: var(--bg-tertiary);
+        border: 1px solid var(--gray-200);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .blog-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 102, 255, 0.15);
+        border-color: var(--primary-color);
+      }
+
+      .blog-thumbnail {
+        width: 100%;
+        height: 220px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 3rem;
+      }
+
+      .blog-content {
+        padding: 1.5rem;
+      }
+
+      .blog-meta {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+      }
+
+      .blog-category {
+        padding: 0.25rem 0.75rem;
+        background: rgba(0, 102, 255, 0.1);
+        border-radius: 20px;
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+
+      .blog-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.3;
+      }
+
+      .blog-excerpt {
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+
+      .blog-read-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--primary-color);
+        font-weight: 600;
+        transition: gap 0.3s ease;
+      }
+
+      .blog-read-more:hover {
+        gap: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .blog-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-content">
+          <a href="index.html" class="logo">
+            <img
+              src="images/logo-a.svg"
+              alt="Logo ORDRX"
+              width="40"
+              height="40"
+            />
+            <span>ORDRX</span>
+          </a>
+          <ul class="nav-menu">
+            <li><a href="index.html#features">Funcionalidades</a></li>
+            <li><a href="index.html#benefits">Benefícios</a></li>
+            <li><a href="index.html#about">Quem Somos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li>
+              <a href="index.html#contact" class="btn-primary btn-gradient"
+                >Candidate-se ao Beta</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+      <div class="container">
+        <span class="section-badge">Blog</span>
+        <h1 class="section-title">
+          Dicas e Estratégias para
+          <span class="gradient-text">Restaurantes</span>
+        </h1>
+        <p class="section-subtitle">
+          Conteúdo exclusivo sobre automação, cardápio digital e gestão
+          gastronômica
+        </p>
+      </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-section">
+      <div class="container">
+        <div class="blog-grid">
+          <!-- Article 1 -->
+          <article class="blog-card">
+            <div class="blog-thumbnail">📱</div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category">Tecnologia</span>
+                <span>10 min de leitura</span>
+              </div>
+              <h3>
+                10 Vantagens do Cardápio Digital com QR Code para Restaurantes
+              </h3>
+              <p class="blog-excerpt">
+                Descubra como o cardápio digital pode transformar a experiência
+                dos seus clientes e aumentar suas vendas em até 40%. Conheça os
+                principais benefícios dessa tecnologia.
+              </p>
+              <a
+                href="blog/cardapio-digital-qr-code-vantagens.html"
+                class="blog-read-more"
+              >
+                Ler mais →
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="blog-card">
+            <div class="blog-thumbnail">💰</div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category">Gestão</span>
+                <span>8 min de leitura</span>
+              </div>
+              <h3>
+                Como Reduzir Custos em Restaurantes com Automação de Pedidos
+              </h3>
+              <p class="blog-excerpt">
+                Aprenda estratégias comprovadas para reduzir até 50% dos seus
+                custos operacionais através da automação inteligente de pedidos
+                e otimização de processos.
+              </p>
+              <a
+                href="blog/reduzir-custos-automacao-pedidos.html"
+                class="blog-read-more"
+              >
+                Ler mais →
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="blog-card">
+            <div class="blog-thumbnail">📊</div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category">Analytics</span>
+                <span>12 min de leitura</span>
+              </div>
+              <h3>
+                Dashboard de Vendas: Por Que Todo Restaurante Precisa de Um
+              </h3>
+              <p class="blog-excerpt">
+                Entenda como um dashboard em tempo real pode revolucionar a
+                gestão do seu restaurante, oferecendo insights valiosos para
+                tomada de decisões estratégicas.
+              </p>
+              <a
+                href="blog/dashboard-vendas-restaurante.html"
+                class="blog-read-more"
+              >
+                Ler mais →
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="blog-card">
+            <div class="blog-thumbnail">⚡</div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category">Comparativo</span>
+                <span>7 min de leitura</span>
+              </div>
+              <h3>
+                Cardápio Digital vs Cardápio Físico: Qual é Mais Lucrativo?
+              </h3>
+              <p class="blog-excerpt">
+                Análise detalhada comparando custos, benefícios e retorno sobre
+                investimento entre cardápio digital e tradicional. Descubra qual
+                opção maximiza seus lucros.
+              </p>
+              <a
+                href="blog/cardapio-digital-vs-fisico.html"
+                class="blog-read-more"
+              >
+                Ler mais →
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="blog-card">
+            <div class="blog-thumbnail">📈</div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category">Vendas</span>
+                <span>9 min de leitura</span>
+              </div>
+              <h3>Como Aumentar o Ticket Médio do Restaurante em 40%</h3>
+              <p class="blog-excerpt">
+                Estratégias práticas e comprovadas para aumentar
+                significativamente o valor médio por cliente através de
+                upselling, cross-selling e sugestões inteligentes.
+              </p>
+              <a
+                href="blog/aumentar-ticket-medio-restaurante.html"
+                class="blog-read-more"
+              >
+                Ler mais →
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="contact"
+      style="background: var(--bg-secondary); padding: 4rem 0"
+    >
+      <div class="container" style="text-align: center">
+        <h2 class="section-title">
+          Pronto para transformar seu
+          <span class="gradient-text">restaurante</span>?
+        </h2>
+        <p style="margin: 1rem 0 2rem; color: var(--text-secondary)">
+          Candidate-se ao Programa Beta Founders e ganhe 12 meses grátis
+        </p>
+        <a href="index.html#contact" class="btn-large btn-gradient">
+          Candidate-se Agora
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path
+              d="M7.5 15L12.5 10L7.5 5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">
+              <img
+                src="images/logo-a.svg"
+                alt="Logo ORDRX"
+                width="32"
+                height="32"
+              />
+              <span>ORDRX</span>
+            </div>
+            <p>
+              Revolucionando o atendimento em restaurantes com automação
+              inteligente.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Menu</h4>
+              <ul>
+                <li><a href="index.html#features">Funcionalidades</a></li>
+                <li><a href="index.html#benefits">Benefícios</a></li>
+                <li><a href="index.html#about">Quem Somos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#contact">Candidate-se ao Beta</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 ORDRX. Todos os direitos reservados.</p>
+          <div class="footer-social">
+            <a
+              href="https://wa.me/5521993813062"
+              aria-label="WhatsApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M10.002 0C4.487 0 0 4.486 0 10c0 1.746.446 3.417 1.294 4.872L.05 19.95l5.233-1.237A9.955 9.955 0 0010.002 20c5.515 0 10.002-4.486 10.002-10S15.517 0 10.002 0zm5.922 14.172c-.247.692-1.224 1.27-2.002 1.44-.534.116-1.229.21-3.57-.765-3.002-1.251-4.941-4.302-5.09-4.5-.149-.198-1.207-1.605-1.207-3.063 0-1.458.764-2.176 1.035-2.473.271-.297.592-.371.79-.371.198 0 .396.001.568.01.183.009.428-.07.67.511.247.594.84 2.051.914 2.2.074.149.124.322.025.52-.099.198-.148.322-.297.496-.148.173-.312.387-.445.519-.149.148-.303.308-.13.605.173.297.768 1.267 1.647 2.053 1.132.999 2.086 1.31 2.383 1.458.297.148.47.124.643-.074.173-.198.74-.865.938-1.162.198-.297.396-.247.668-.148.272.099 1.729.815 2.026.964.297.148.494.222.568.347.074.124.074.717-.173 1.409z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
