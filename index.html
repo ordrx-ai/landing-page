@@ -1,1521 +1,1253 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="ORDRX: Sistema completo de cardápio digital com QR Code e automação de pedidos para restaurantes e bares. Dashboard em tempo real, impressão automática. Teste grátis 12 meses."
-    />
-    <meta
-      name="keywords"
-      content="cardápio digital, automação de pedidos, sistema para restaurante, QR Code cardápio, gestão restaurante, software restaurante, pedidos automáticos, cardápio QR Code, sistema de pedidos, automação bar, menu digital"
-    />
-    <meta name="author" content="ORDRX" />
-    <meta name="language" content="pt-BR" />
-    <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://ordrx.ai/" />
-    <link rel="alternate" hreflang="pt-BR" href="https://ordrx.ai/" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="ORDRX" />
-    <meta
-      property="og:title"
-      content="ORDRX - Automação Inteligente para Restaurantes"
-    />
-    <meta
-      property="og:description"
-      content="ORDRX: Sistema completo de cardápio digital com QR Code e automação de pedidos para restaurantes e bares. Dashboard em tempo real, impressão automática. Teste grátis 12 meses."
-    />
-    <meta property="og:url" content="https://ordrx.ai/" />
-    <meta property="og:image" content="https://ordrx.ai/images/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="ORDRX - Automação Inteligente para Restaurantes - Cardápio Digital com QR Code"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="ORDRX - Automação Inteligente para Restaurantes"
-    />
-    <meta
-      name="twitter:description"
-      content="ORDRX: Sistema completo de cardápio digital com QR Code e automação de pedidos para restaurantes e bares. Dashboard em tempo real, impressão automática. Teste grátis 12 meses."
-    />
-    <meta name="twitter:image" content="https://ordrx.ai/images/og-image.jpg" />
-    <meta
-      name="twitter:image:alt"
-      content="ORDRX - Automação Inteligente para Restaurantes - Cardápio Digital com QR Code"
-    />
-    <title>ORDRX - Automação Inteligente para Restaurantes</title>
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
-    <link rel="alternate icon" href="images/favicon.svg" />
-    <link rel="preload" as="image" href="images/logo-a.svg" />
-    <link rel="preload" as="style" href="styles.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "ORDRX",
-        "url": "https://ordrx.ai/",
-        "logo": "https://ordrx.ai/images/og-image.jpg",
-        "image": "https://ordrx.ai/images/og-image.jpg",
-        "description": "Automação de pedidos para bares e restaurantes com cardápio digital (QR Code), impressão automática e dashboard em tempo real.",
-        "sameAs": [
-          "https://www.linkedin.com/company/ordrx",
-          "https://www.instagram.com/ordrx.ai"
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "url": "https://ordrx.ai/",
-        "name": "ORDRX",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://ordrx.ai/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "ORDRX",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Preciso comprar tablets ou impressoras?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Não. Todo equipamento necessário (tablets, impressoras térmicas, QR Codes) é fornecido pela ORDRX com treinamento incluso."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Como funciona o dashboard de vendas e controle de estoque?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Dashboard em tempo real com vendas, produtos mais vendidos, horários de pico e controle automático de estoque."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Qual a velocidade do sistema?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Do pedido à cozinha em menos de 3 segundos, com impressão automática e notificações em tempo real."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Ainda vou precisar de garçons?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sim, mas em função consultiva e de experiência do cliente; o sistema elimina anotação manual e reduz custos."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Como funciona a validação de comanda?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Cadastro rápido, associação via QR Code e liberação para pedidos pelo celular, garantindo controle e segurança."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "O sistema funciona sem internet?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Possui modo offline que armazena pedidos localmente e sincroniza automaticamente quando a internet volta."
-            }
-          }
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "ORDRX",
-        "description": "Sistema de automação de pedidos e cardápio digital para restaurantes e bares",
-        "url": "https://ordrx.ai/",
-        "telephone": "+5521993813062",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "BR"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "-22.9068",
-          "longitude": "-43.1729"
-        },
-        "priceRange": "Gratuito (12 meses Beta)",
-        "image": "https://ordrx.ai/images/og-image.jpg"
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "ORDRX - Sistema de Cardápio Digital e Automação",
-        "description": "Plataforma completa para automação de pedidos",
-        "brand": {
-          "@type": "Brand",
-          "name": "ORDRX"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock",
-          "priceValidUntil": "2026-12-31"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "50"
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Início",
-            "item": "https://ordrx.ai/"
-          }
-        ]
-      }
-    </script>
-    <!-- Google Tag Manager -->
-  <script>
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K5DNVRQQ');
+---
+layout: default
+title: ORDRX - Automação Inteligente para Restaurantes
+description: "ORDRX: Sistema completo de cardápio digital com QR Code e automação de pedidos para restaurantes e bares. Dashboard em tempo real, impressão automática. Teste grátis 12 meses."
+keywords: "cardápio digital, automação de pedidos, sistema para restaurante, QR Code cardápio, gestão restaurante, software restaurante, pedidos automáticos, cardápio QR Code, sistema de pedidos, automação bar, menu digital"
+canonical: "https://ordrx.ai/"
+og_title: "ORDRX - Automação Inteligente para Restaurantes"
+og_description: "ORDRX: Sistema completo de cardápio digital com QR Code e automação de pedidos para restaurantes e bares. Dashboard em tempo real, impressão automática. Teste grátis 12 meses."
+structured_data: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ORDRX",
+    "url": "https://ordrx.ai/",
+    "logo": "https://ordrx.ai/images/og-image.jpg",
+    "image": "https://ordrx.ai/images/og-image.jpg",
+    "description": "Automação de pedidos para bares e restaurantes com cardápio digital (QR Code), impressão automática e dashboard em tempo real.",
+    "sameAs": [
+      "https://www.linkedin.com/company/ordrx",
+      "https://www.instagram.com/ordrx.ai"
+    ]
+  }
   </script>
-  <!-- End Google Tag Manager -->
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5DNVRQQ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="container">
-        <div class="nav-content">
-          <div class="logo">
-            <img
-              src="images/logo-a.svg"
-              alt="Logo ORDRX"
-              width="40"
-              height="40"
-            />
-            <span>ORDRX</span>
-          </div>
-          <ul class="nav-menu" id="primaryNav">
-            <li><a href="#features">Funcionalidades</a></li>
-            <li><a href="#benefits">Benefícios</a></li>
-            <li><a href="#about">Quem Somos</a></li>
-            <li><a href="#segments">Segmentos</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li>
-              <a href="#contact" class="btn-primary btn-gradient">
-                Candidate-se ao Beta
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path
-                    d="M7.5 15L12.5 10L7.5 5"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <button
-            class="mobile-menu-toggle"
-            id="mobileMenuToggle"
-            type="button"
-            aria-label="Abrir menu"
-            aria-controls="primaryNav"
-            aria-expanded="false"
-            title="Menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://ordrx.ai/",
+    "name": "ORDRX",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ordrx.ai/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ORDRX",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Preciso comprar tablets ou impressoras?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. Todo equipamento necessário (tablets, impressoras térmicas, QR Codes) é fornecido pela ORDRX com treinamento incluso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona o dashboard de vendas e controle de estoque?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dashboard em tempo real com vendas, produtos mais vendidos, horários de pico e controle automático de estoque."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual a velocidade do sistema?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Do pedido à cozinha em menos de 3 segundos, com impressão automática e notificações em tempo real."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ainda vou precisar de garçons?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, mas em função consultiva e de experiência do cliente; o sistema elimina anotação manual e reduz custos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona a validação de comanda?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cadastro rápido, associação via QR Code e liberação para pedidos pelo celular, garantindo controle e segurança."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O sistema funciona sem internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Possui modo offline que armazena pedidos localmente e sincroniza automaticamente quando a internet volta."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ORDRX",
+    "description": "Sistema de automação de pedidos e cardápio digital para restaurantes e bares",
+    "url": "https://ordrx.ai/",
+    "telephone": "+5521993813062",
+    "address": {
+      "@type": "PostalAddress",
+      "@addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-22.9068",
+      "longitude": "-43.1729"
+    },
+    "priceRange": "Gratuito (12 meses Beta)",
+    "image": "https://ordrx.ai/images/og-image.jpg"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "ORDRX - Sistema de Cardápio Digital e Automação",
+    "description": "Plataforma completa para automação de pedidos",
+    "brand": {
+      "@type": "Brand",
+      "name": "ORDRX"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2026-12-31"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "50"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Início",
+        "item": "https://ordrx.ai/"
+      }
+    ]
+  }
+  </script>
+---
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content fade-in">
+      <div class="hero-badge">
+        <span class="pulse"></span>
+        🚀 Programa Beta Founders - Vagas Limitadas
       </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-bg"></div>
-      <div class="container">
-        <div class="hero-content fade-in">
-          <div class="hero-badge">
-            <span class="pulse"></span>
-            🚀 Programa Beta Founders - Vagas Limitadas
-          </div>
-          <h1 class="hero-title">
-            Revolucione seu<br />
-            <span class="gradient-text">Restaurante</span><br />
-            com Automação<br />
-            Inteligente
-          </h1>
-          <p class="hero-subtitle">
-            Seja um dos primeiros! 12 meses grátis para restaurantes
-            pioneiros.<br />
-            Reduza custos em até 50%, aumente vendas em até 40% e elimine erros
-            de pedidos.
-          </p>
-          <div class="hero-cta">
-            <a href="#contact" class="btn-large btn-gradient">
-              Candidate-se ao Beta Founders
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path
-                  d="M7.5 15L12.5 10L7.5 5"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-            <a href="#about" class="btn-large btn-outline">
-              Conheça o Programa
-            </a>
-          </div>
-          <div class="hero-stats">
-            <div class="stat">
-              <span class="stat-value">50%</span>
-              <span class="stat-label">Redução de Custos</span>
-            </div>
-            <div class="stat">
-              <span class="stat-value">40%</span>
-              <span class="stat-label">Aumento em Vendas</span>
-            </div>
-            <div class="stat">
-              <span class="stat-value">0</span>
-              <span class="stat-label">Erros de Pedidos</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Funcionalidades</span>
-          <h2 class="section-title">
-            Tudo que você precisa<br />em
-            <span class="gradient-text">uma plataforma</span>
-          </h2>
-          <p class="section-subtitle">
-            Sistema completo de automação de pedidos com dashboard gerencial em
-            tempo real
-          </p>
-        </div>
-
-        <div class="features-grid">
-          <div class="feature-card fade-in" style="animation-delay: 0.1s">
-            <div class="feature-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="8" fill="url(#grad-qr)" />
-                <path
-                  d="M10 10H14V14H10V10ZM18 10H22V14H18V10ZM10 18H14V22H10V18Z"
-                  fill="white"
-                />
-                <defs>
-                  <linearGradient id="grad-qr" x1="0" y1="0" x2="32" y2="32">
-                    <stop offset="0%" stop-color="#00F0FF" />
-                    <stop offset="100%" stop-color="#0080FF" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <h3>Cardápio Digital QR Code</h3>
-            <p>
-              Cliente escaneia, escolhe e pede direto do celular. Sem esperar
-              garçom, sem erros de anotação.
-            </p>
-            <ul class="feature-list">
-              <li>✓ Sem aplicativo para instalar</li>
-              <li>✓ Atualização instantânea</li>
-              <li>✓ Fotos em alta qualidade</li>
-            </ul>
-          </div>
-
-          <div class="feature-card fade-in" style="animation-delay: 0.2s">
-            <div class="feature-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="8" fill="url(#grad-dash)" />
-                <path
-                  d="M8 12H24M8 16H24M8 20H16"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-                <defs>
-                  <linearGradient id="grad-dash" x1="0" y1="0" x2="32" y2="32">
-                    <stop offset="0%" stop-color="#FF00E5" />
-                    <stop offset="100%" stop-color="#FF0080" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <h3>Controle Total de Vendas</h3>
-            <p>
-              Dashboard completo com faturamento em tempo real. Controle total
-              sobre seu negócio, de qualquer lugar.
-            </p>
-            <ul class="feature-list">
-              <li>✓ Faturamento atualizado a cada pedido</li>
-              <li>✓ Produtos mais vendidos e menos vendidos</li>
-              <li>✓ Horários de pico e ticket médio</li>
-              <li>✓ Previsão de plano baseada no faturamento</li>
-            </ul>
-          </div>
-
-          <div class="feature-card fade-in" style="animation-delay: 0.3s">
-            <div class="feature-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="8" fill="url(#grad-print)" />
-                <rect
-                  x="10"
-                  y="8"
-                  width="12"
-                  height="16"
-                  rx="2"
-                  stroke="white"
-                  stroke-width="2"
-                />
-                <path
-                  d="M12 12H20M12 16H20M12 20H16"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-                <defs>
-                  <linearGradient id="grad-print" x1="0" y1="0" x2="32" y2="32">
-                    <stop offset="0%" stop-color="#00FF88" />
-                    <stop offset="100%" stop-color="#00CC6A" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <h3>Impressão Automática</h3>
-            <p>
-              Pedidos impressos automaticamente na cozinha com mesa, itens e
-              observações.
-            </p>
-            <ul class="feature-list">
-              <li>✓ Direto na impressora térmica</li>
-              <li>✓ Organização por categoria</li>
-              <li>✓ Observações destacadas</li>
-            </ul>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="8" fill="url(#grad-host)" />
-                <circle cx="16" cy="12" r="4" stroke="white" stroke-width="2" />
-                <path
-                  d="M10 24C10 20 13 18 16 18C19 18 22 20 22 24"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-                <defs>
-                  <linearGradient id="grad-host" x1="0" y1="0" x2="32" y2="32">
-                    <stop offset="0%" stop-color="#FFB800" />
-                    <stop offset="100%" stop-color="#FF8800" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <h3>Gestão de Comandas</h3>
-            <p>
-              Host valida comanda antes do pedido. Controle total sobre quem
-              pode pedir.
-            </p>
-            <ul class="feature-list">
-              <li>✓ Validação via QR Code</li>
-              <li>✓ Cadastro rápido (15s)</li>
-              <li>✓ Associação automática</li>
-            </ul>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="8" fill="url(#grad-speed)" />
-                <path
-                  d="M16 8V16L22 19"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-                <circle
-                  cx="16"
-                  cy="16"
-                  r="10"
-                  stroke="white"
-                  stroke-width="2"
-                />
-                <defs>
-                  <linearGradient id="grad-speed" x1="0" y1="0" x2="32" y2="32">
-                    <stop offset="0%" stop-color="#FF3D00" />
-                    <stop offset="100%" stop-color="#FF6D00" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <h3>Velocidade Extrema</h3>
-            <p>
-              Do pedido à cozinha em menos de 3 segundos. Notificações em tempo
-              real.
-            </p>
-            <ul class="feature-list">
-              <li>✓ Processamento instantâneo</li>
-              <li>✓ WebSocket em tempo real</li>
-              <li>✓ Sem delays ou travamentos</li>
-            </ul>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="8" fill="url(#grad-ecom)" />
-                <path
-                  d="M8 10L10 22H22L24 10H8Z"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linejoin="round"
-                />
-                <circle cx="12" cy="26" r="2" fill="white" />
-                <circle cx="20" cy="26" r="2" fill="white" />
-                <defs>
-                  <linearGradient id="grad-ecom" x1="0" y1="0" x2="32" y2="32">
-                    <stop offset="0%" stop-color="#8B00FF" />
-                    <stop offset="100%" stop-color="#6200EA" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <h3>Experiência E-commerce</h3>
-            <p>
-              Interface moderna que incentiva vendas adicionais e aumenta o
-              ticket médio.
-            </p>
-            <ul class="feature-list">
-              <li>✓ Carrinho inteligente</li>
-              <li>✓ Sugestões personalizadas</li>
-              <li>✓ Combos e promoções</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section id="benefits" class="benefits">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Benefícios</span>
-          <h2 class="section-title">
-            Por que escolher o <span class="gradient-text">ORDRX</span>?
-          </h2>
-        </div>
-
-        <div class="benefits-grid">
-          <div class="benefit-card fade-in">
-            <div class="benefit-number">01</div>
-            <h3>Redução de Custos</h3>
-            <p>
-              Economize até <strong>50% em custos operacionais</strong>. Menos
-              garçons necessários, menos erros, menos desperdício.
-            </p>
-            <div class="benefit-highlight">
-              <span>💰</span>
-              <span>Economia comprovada em centenas de restaurantes</span>
-            </div>
-          </div>
-
-          <div class="benefit-card fade-in">
-            <div class="benefit-number">02</div>
-            <h3>Aumento de Vendas</h3>
-            <p>
-              Aumente o ticket médio em <strong>até 40%</strong> com sugestões
-              inteligentes e combos personalizados.
-            </p>
-            <div class="benefit-highlight">
-              <span>📈</span>
-              <span>Clientes pedem mais quando têm autonomia</span>
-            </div>
-          </div>
-
-          <div class="benefit-card fade-in">
-            <div class="benefit-number">03</div>
-            <h3>Zero Erros</h3>
-            <p>
-              Elimine <strong>100% dos erros de anotação</strong>. Pedido vai
-              direto do cliente para a cozinha.
-            </p>
-            <div class="benefit-highlight">
-              <span>✓</span>
-              <span>Menos devoluções e clientes mais satisfeitos</span>
-            </div>
-          </div>
-
-          <div class="benefit-card fade-in">
-            <div class="benefit-number">04</div>
-            <h3>Equipamento Incluído</h3>
-            <p>
-              <strong>Tablets, impressoras e QR Codes fornecidos</strong> pela
-              ORDRX. Você não investe em hardware.
-            </p>
-            <div class="benefit-highlight">
-              <span>🎁</span>
-              <span>Treinamento completo da equipe incluso</span>
-            </div>
-          </div>
-
-          <div class="benefit-card fade-in">
-            <div class="benefit-number">05</div>
-            <h3>Dashboard Poderoso</h3>
-            <p>
-              Controle <strong>vendas e estoque em tempo real</strong>.
-              Relatórios inteligentes para decisões assertivas.
-            </p>
-            <div class="benefit-highlight">
-              <span>📊</span>
-              <span>Insights valiosos sobre seu negócio</span>
-            </div>
-          </div>
-
-          <div class="benefit-card fade-in">
-            <div class="benefit-number">06</div>
-            <h3>Clientes Mais Satisfeitos</h3>
-            <p>
-              Experiência <strong>moderna e ágil</strong>. Sem espera, sem
-              erros, pedidos mais rápidos.
-            </p>
-            <div class="benefit-highlight">
-              <span>⭐</span>
-              <span>Avaliações 5 estrelas garantidas</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section (Quem Somos) -->
-    <section id="about" class="about">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Quem Somos</span>
-          <h2 class="section-title">
-            A equipe por trás do <span class="gradient-text">ORDRX</span>
-          </h2>
-          <p class="section-subtitle">
-            Somos amigos que decidiram empreender juntos, unindo nossas
-            habilidades para criar algo único.<br />
-            A combinação perfeita entre fotógrafo, desenvolvedores e
-            administrador de empresas.
-          </p>
-        </div>
-
-        <div class="founders-grid">
-          <div class="founder-card fade-in" style="animation-delay: 0.1s">
-            <div class="founder-photo">
-              <img
-                src="images/team/pablo-ungaro.jpeg"
-                alt="Pablo Ungaro - Tech Lead & Co-founder"
-              />
-            </div>
-            <h3 class="founder-name">Pablo Ungaro</h3>
-            <p class="founder-role">Tech Lead & Co-founder</p>
-          </div>
-
-          <div class="founder-card fade-in" style="animation-delay: 0.2s">
-            <div class="founder-photo">
-              <img
-                src="images/team/rafael-pacheco.jpg"
-                alt="Rafael Pacheco - Administrador de Empresas & Co-founder"
-              />
-            </div>
-            <h3 class="founder-name">Rafael Pacheco</h3>
-            <p class="founder-role">Administrador de Empresas & Co-founder</p>
-          </div>
-
-          <div class="founder-card fade-in" style="animation-delay: 0.3s">
-            <div class="founder-photo">
-              <img
-                src="images/team/thiago-lontra.jpeg"
-                alt="Thiago Lontra - Fotógrafo & Co-founder"
-              />
-            </div>
-            <h3 class="founder-name">Thiago Lontra</h3>
-            <p class="founder-role">Fotógrafo & Co-founder</p>
-          </div>
-
-          <div class="founder-card fade-in" style="animation-delay: 0.4s">
-            <div class="founder-photo">
-              <img
-                src="images/team/fagner-pinho.jpeg"
-                alt="Fagner Pinho - Tech Lead & Co-founder"
-              />
-            </div>
-            <h3 class="founder-name">Fagner Pinho</h3>
-            <p class="founder-role">Tech Lead & Co-founder</p>
-          </div>
-
-          <div class="founder-card fade-in" style="animation-delay: 0.5s">
-            <div class="founder-photo">
-              <img
-                src="images/team/erick-fonseca.jpg"
-                alt="Erick Fonseca - Senior Backend Developer & Co-founder"
-              />
-            </div>
-            <h3 class="founder-name">Erick Fonseca</h3>
-            <p class="founder-role">Senior Backend Developer & Co-founder</p>
-          </div>
-
-          <div class="founder-card fade-in" style="animation-delay: 0.6s">
-            <div class="founder-photo">
-              <img
-                src="images/team/roberto-porlan.jpg"
-                alt="Roberto Porlan - Senior Frontend Developer & Co-founder"
-              />
-            </div>
-            <h3 class="founder-name">Roberto Porlan</h3>
-            <p class="founder-role">Senior Frontend Developer & Co-founder</p>
-          </div>
-        </div>
-
-        <!-- SVG Gradient Definitions -->
-        <svg width="0" height="0" style="position: absolute">
-          <defs>
-            <linearGradient
-              id="founder-gradient-1"
-              x1="0"
-              y1="0"
-              x2="80"
-              y2="80"
-            >
-              <stop offset="0%" stop-color="#0066FF" />
-              <stop offset="100%" stop-color="#00C9A7" />
-            </linearGradient>
-            <linearGradient
-              id="founder-gradient-2"
-              x1="0"
-              y1="0"
-              x2="80"
-              y2="80"
-            >
-              <stop offset="0%" stop-color="#00C9A7" />
-              <stop offset="100%" stop-color="#0066FF" />
-            </linearGradient>
-            <linearGradient
-              id="founder-gradient-3"
-              x1="0"
-              y1="0"
-              x2="80"
-              y2="80"
-            >
-              <stop offset="0%" stop-color="#0066FF" />
-              <stop offset="100%" stop-color="#FF6B9D" />
-            </linearGradient>
-            <linearGradient
-              id="founder-gradient-4"
-              x1="0"
-              y1="0"
-              x2="80"
-              y2="80"
-            >
-              <stop offset="0%" stop-color="#FF6B9D" />
-              <stop offset="100%" stop-color="#00C9A7" />
-            </linearGradient>
-            <linearGradient
-              id="founder-gradient-5"
-              x1="0"
-              y1="0"
-              x2="80"
-              y2="80"
-            >
-              <stop offset="0%" stop-color="#00C9A7" />
-              <stop offset="100%" stop-color="#FF6B9D" />
-            </linearGradient>
-            <linearGradient
-              id="founder-gradient-6"
-              x1="0"
-              y1="0"
-              x2="80"
-              y2="80"
-            >
-              <stop offset="0%" stop-color="#FF6B9D" />
-              <stop offset="100%" stop-color="#0066FF" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-    </section>
-
-    <!-- Segments Section -->
-    <section id="segments" class="segments">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Segmentos</span>
-          <h2 class="section-title">
-            Perfeito para todo tipo de
-            <span class="gradient-text">estabelecimento</span>
-          </h2>
-          <p class="section-subtitle">
-            Mais de 400 mil negócios impactados em todo o Brasil
-          </p>
-        </div>
-
-        <div class="segments-grid">
-          <div class="segment-card scale-in">
-            <div class="segment-icon">🍽️</div>
-            <h3>Restaurantes</h3>
-            <p>
-              Agilize pedidos, reduza erros e aumente a rotatividade de mesas
-            </p>
-          </div>
-
-          <div class="segment-card scale-in">
-            <div class="segment-icon">🍺</div>
-            <h3>Bares</h3>
-            <p>
-              Controle comandas, evite perdas e acelere o atendimento em
-              horários de pico
-            </p>
-          </div>
-
-          <div class="segment-card scale-in">
-            <div class="segment-icon">☕</div>
-            <h3>Cafeterias</h3>
-            <p>Ofereça autoatendimento moderno e reduza filas no balcão</p>
-          </div>
-
-          <div class="segment-card scale-in">
-            <div class="segment-icon">🍕</div>
-            <h3>Pizzarias</h3>
-            <p>Personalize pedidos facilmente e integre com delivery próprio</p>
-          </div>
-
-          <div class="segment-card scale-in">
-            <div class="segment-icon">🎵</div>
-            <h3>Casas Noturnas</h3>
-            <p>
-              Gestão de comandas segura e fechamento rápido ao final da noite
-            </p>
-          </div>
-
-          <div class="segment-card scale-in">
-            <div class="segment-icon">🍦</div>
-            <h3>Sorveterias</h3>
-            <p>
-              Monte pedidos personalizados e agilize o atendimento de famílias
-            </p>
-          </div>
-
-          <div class="segment-card scale-in">
-            <div class="segment-icon">🥩</div>
-            <h3>Churrascarias</h3>
-            <p>Controle rodízios, bebidas e acompanhamentos por mesa</p>
-          </div>
-
-          <div class="segment-card scale-in">
-            <div class="segment-icon">🏨</div>
-            <h3>Hotéis</h3>
-            <p>Integre restaurante e room service em uma plataforma</p>
-          </div>
-
-          <div class="segment-card scale-in">
-            <div class="segment-icon">🍣</div>
-            <h3>Sushi Bars</h3>
-            <p>Facilite pedidos rodízio e personalizações de rolls</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Perguntas Frequentes</span>
-          <h2 class="section-title">
-            Dúvidas sobre o <span class="gradient-text">ORDRX</span>?
-          </h2>
-        </div>
-
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Preciso comprar tablets ou impressoras?</span>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M6 9L12 15L18 9"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                <strong>Não!</strong> Todo equipamento necessário (tablets,
-                impressoras térmicas, QR Codes) é fornecido pela ORDRX. Você não
-                precisa investir em hardware. Além disso, oferecemos
-                <strong>treinamento completo da equipe</strong> para garantir
-                que todos saibam usar o sistema desde o primeiro dia.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span
-                >Como funciona o dashboard de vendas e controle de
-                estoque?</span
-              >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M6 9L12 15L18 9"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                O dashboard ORDRX é <strong>atualizado em tempo real</strong>.
-                Você visualiza:
-              </p>
-              <ul>
-                <li>✓ Vendas do dia, semana e mês</li>
-                <li>✓ Produtos mais vendidos</li>
-                <li>✓ Horários de pico</li>
-                <li>
-                  ✓ Controle de estoque automático (baixa quando o pedido é
-                  feito)
-                </li>
-                <li>✓ Alertas de produtos acabando</li>
-                <li>✓ Relatórios financeiros completos</li>
-              </ul>
-              <p>
-                Tudo acessível de qualquer lugar, do seu celular ou computador.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Qual a velocidade do sistema?</span>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M6 9L12 15L18 9"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>O ORDRX é <strong>extremamente rápido</strong>:</p>
-              <ul>
-                <li>
-                  ⚡ Do pedido à cozinha: <strong>menos de 3 segundos</strong>
-                </li>
-                <li>⚡ Impressão automática: <strong>instantânea</strong></li>
-                <li>⚡ Dashboard atualiza: <strong>em tempo real</strong></li>
-                <li>
-                  ⚡ Notificações: <strong>imediatas via WebSocket</strong>
-                </li>
-              </ul>
-              <p>
-                Sem delays, sem travamentos. Testado para suportar centenas de
-                pedidos simultâneos.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Ainda vou precisar de garçons?</span>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M6 9L12 15L18 9"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Sim, mas <strong>com uma função diferente</strong>. Com o ORDRX,
-                os garçons não precisam mais ficar anotando pedidos. Eles se
-                tornam:
-              </p>
-              <ul>
-                <li>✓ Consultores de vendas (sugerem harmonizações)</li>
-                <li>✓ Responsáveis pela experiência do cliente</li>
-                <li>✓ Entregadores dos pratos</li>
-              </ul>
-              <p>
-                Resultado: você não precisa contratar mais pessoas em dias de
-                movimento, reduzindo custos em até 50%.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Como funciona a validação de comanda?</span>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M6 9L12 15L18 9"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>Processo simples em 3 passos:</p>
-              <ol>
-                <li>
-                  <strong>Cliente chega:</strong> Host faz cadastro rápido (nome
-                  + telefone em 15 segundos)
-                </li>
-                <li>
-                  <strong>Associação:</strong> Host escaneia QR Code da comanda
-                  e associa ao cliente
-                </li>
-                <li>
-                  <strong>Liberação:</strong> Cliente pode fazer pedidos pelo
-                  celular
-                </li>
-              </ol>
-              <p>
-                Isso garante <strong>controle total</strong> sobre quem está
-                consumindo e evita fraudes.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>O sistema funciona sem internet?</span>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M6 9L12 15L18 9"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                O ORDRX funciona melhor <strong>com internet</strong> para
-                sincronização em tempo real. Porém, o sistema possui
-                <strong>modo offline</strong> que:
-              </p>
-              <ul>
-                <li>✓ Armazena pedidos localmente</li>
-                <li>✓ Sincroniza automaticamente quando internet voltar</li>
-                <li>✓ Permite continuar operando sem perder pedidos</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Como é o suporte?</span>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M6 9L12 15L18 9"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>Suporte ORDRX é <strong>rápido e eficiente</strong>:</p>
-              <ul>
-                <li>📞 WhatsApp: Resposta em menos de 1 minuto</li>
-                <li>💬 Chat em tempo real no dashboard</li>
-                <li>📧 E-mail: Resposta em até 2 horas</li>
-                <li>🎓 Base de conhecimento completa</li>
-                <li>🎥 Vídeos tutoriais</li>
-              </ul>
-              <p>Estamos aqui para garantir o sucesso do seu restaurante!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="contact-content">
-          <div class="contact-info">
-            <span class="section-badge">🚀 Programa Beta Founders</span>
-            <h2 class="section-title">
-              Candidate-se para ser um
-              <span class="gradient-text">Beta Founder</span>
-            </h2>
-            <p class="contact-description">
-              Seja um dos primeiros restaurantes a usar o ORDRX! Preencha o
-              formulário e nossa equipe entrará em contato para avaliar sua
-              candidatura.
-            </p>
-
-            <div class="contact-features">
-              <div class="contact-feature">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M9 12L11 14L15 10"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <span>12 meses grátis</span>
-              </div>
-              <div class="contact-feature">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M9 12L11 14L15 10"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <span>Suporte prioritário</span>
-              </div>
-              <div class="contact-feature">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M9 12L11 14L15 10"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <span>Influencie o roadmap</span>
-              </div>
-              <div class="contact-feature">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M9 12L11 14L15 10"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <span>Equipamentos inclusos</span>
-              </div>
-            </div>
-          </div>
-
-          <form class="contact-form" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Nome Completo*</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  placeholder="João Silva"
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="email">E-mail*</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  placeholder="joao@exemplo.com.br"
-                />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="phone">Telefone (opcional)</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="(11) 98765-4321"
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="city">Cidade*</label>
-                <input
-                  type="text"
-                  id="city"
-                  name="city"
-                  required
-                  placeholder="São Paulo - SP"
-                />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="segment">Tipo de Estabelecimento*</label>
-                <select id="segment" name="segment" required>
-                  <option value="">Selecione...</option>
-                  <option value="restaurante">Restaurante</option>
-                  <option value="bar">Bar</option>
-                  <option value="cafeteria">Cafeteria</option>
-                  <option value="pizzaria">Pizzaria</option>
-                  <option value="casa-noturna">Casa Noturna</option>
-                  <option value="sorveteria">Sorveteria</option>
-                  <option value="churrascaria">Churrascaria</option>
-                  <option value="hotel">Hotel</option>
-                  <option value="sushi-bar">Sushi Bar</option>
-                  <option value="outro">Outro</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="tables">Número de Mesas*</label>
-                <select id="tables" name="tables" required>
-                  <option value="">Selecione...</option>
-                  <option value="1-5">1 a 5 mesas</option>
-                  <option value="6-10">6 a 10 mesas</option>
-                  <option value="11-20">11 a 20 mesas</option>
-                  <option value="21-50">21 a 50 mesas</option>
-                  <option value="50+">Mais de 50 mesas</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="message"
-                >Conte-nos mais sobre seu restaurante (opcional)</label
-              >
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                placeholder="Ex: Tenho 15 mesas, trabalho com rodízio de pizza, movimento forte nos finais de semana..."
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn-submit btn-gradient">
-              <span>Enviar Candidatura Beta Founders</span>
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path
-                  d="M7.5 15L12.5 10L7.5 5"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-
-            <p class="form-disclaimer">
-              Ao enviar, você concorda com nossos
-              <a href="#terms">Termos de Uso</a> e
-              <a href="#privacy">Política de Privacidade</a>
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEO Content Section -->
-    <section id="seo-content" class="seo-content" style="display: none">
-      <div class="container">
-        <h2>
-          ORDRX: A Melhor Solução de Cardápio Digital e Automação de Pedidos
-          para Restaurantes no Brasil
-        </h2>
-        <p>
-          O ORDRX é um sistema completo de cardápio digital com QR Code e
-          automação de pedidos desenvolvido especificamente para restaurantes,
-          bares, cafeterias e estabelecimentos gastronômicos brasileiros. Nossa
-          plataforma elimina erros de pedidos, reduz custos operacionais em até
-          50% e aumenta as vendas em até 40%.
-        </p>
-
-        <h3>Como Funciona o Cardápio Digital com QR Code</h3>
-        <p>
-          O sistema ORDRX permite que clientes escaneiem um código QR na mesa e
-          façam pedidos diretamente pelo celular, sem necessidade de instalar
-          aplicativos. Os pedidos são enviados automaticamente para a cozinha
-          através de impressoras térmicas, eliminando 100% dos erros de anotação
-          manual.
-        </p>
-
-        <h3>Principais Benefícios da Automação de Pedidos</h3>
-        <ul>
-          <li>
-            Dashboard gerencial em tempo real com controle de vendas e estoque
-          </li>
-          <li>Redução de 50% em custos com pessoal</li>
-          <li>Aumento de 40% no ticket médio com sugestões inteligentes</li>
-          <li>Impressão automática de pedidos em menos de 3 segundos</li>
-          <li>Gestão de comandas com validação por QR Code</li>
-          <li>
-            Equipamentos inclusos: tablets, impressoras térmicas e QR Codes
-          </li>
-        </ul>
-
-        <h3>Ideal Para</h3>
-        <p>
-          Restaurantes, bares, cafeterias, pizzarias, casas noturnas,
-          sorveterias, churrascarias, hotéis e sushi bars de todos os portes.
-        </p>
-
-        <h3>Diferenciais ORDRX</h3>
-        <p>
-          Diferente de outros sistemas de cardápio digital, o ORDRX oferece 12
-          meses gratuitos no programa Beta Founders, suporte prioritário 24/7
-          via WhatsApp, treinamento completo da equipe e todos os equipamentos
-          necessários sem custo adicional.
-        </p>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <div class="logo">
-              <img
-                src="images/logo-a.svg"
-                alt="Logo ORDRX"
-                width="32"
-                height="32"
-              />
-              <span>ORDRX</span>
-            </div>
-            <p>
-              Revolucionando o atendimento em restaurantes com automação
-              inteligente.
-            </p>
-          </div>
-
-          <div class="footer-links">
-            <div class="footer-column">
-              <h4>Menu</h4>
-              <ul>
-                <li><a href="#features">Funcionalidades</a></li>
-                <li><a href="#benefits">Benefícios</a></li>
-                <li><a href="#about">Quem Somos</a></li>
-                <li><a href="#segments">Segmentos</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Candidate-se ao Beta</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>&copy; 2025 ORDRX. Todos os direitos reservados.</p>
-          <div class="footer-social">
-            <a
-              href="https://wa.me/5521993813062"
-              aria-label="WhatsApp"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  d="M10.002 0C4.487 0 0 4.486 0 10c0 1.746.446 3.417 1.294 4.872L.05 19.95l5.233-1.237A9.955 9.955 0 0010.002 20c5.515 0 10.002-4.486 10.002-10S15.517 0 10.002 0zm5.922 14.172c-.247.692-1.224 1.27-2.002 1.44-.534.116-1.229.21-3.57-.765-3.002-1.251-4.941-4.302-5.09-4.5-.149-.198-1.207-1.605-1.207-3.063 0-1.458.764-2.176 1.035-2.473.271-.297.592-.371.79-.371.198 0 .396.001.568.01.183.009.428-.07.67.511.247.594.84 2.051.914 2.2.074.149.124.322.025.52-.099.198-.148.322-.297.496-.148.173-.312.387-.445.519-.149.148-.303.308-.13.605.173.297.768 1.267 1.647 2.053 1.132.999 2.086 1.31 2.383 1.458.297.148.47.124.643-.074.173-.198.74-.865.938-1.162.198-.297.396-.247.668-.148.272.099 1.729.815 2.026.964.297.148.494.222.568.347.074.124.074.717-.173 1.409z"
-                />
-              </svg>
-            </a>
-            <a
-              href="https://www.instagram.com/pablo.ungaro/"
-              aria-label="Instagram"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  d="M10 0C7.284 0 6.944.012 5.877.06 4.813.11 4.086.278 3.45.525a4.662 4.662 0 00-1.683 1.096A4.662 4.662 0 00.671 3.304C.424 3.94.256 4.667.207 5.731.158 6.798.147 7.138.147 9.854c0 2.716.011 3.056.06 4.123.05 1.064.218 1.791.465 2.427a4.662 4.662 0 001.096 1.683 4.662 4.662 0 001.683 1.096c.636.247 1.363.415 2.427.465 1.067.048 1.407.06 4.123.06 2.716 0 3.056-.012 4.123-.06 1.064-.05 1.791-.218 2.427-.465a4.662 4.662 0 001.683-1.096 4.662 4.662 0 001.096-1.683c.247-.636.415-1.363.465-2.427.048-1.067.06-1.407.06-4.123 0-2.716-.012-3.056-.06-4.123-.05-1.064-.218-1.791-.465-2.427a4.662 4.662 0 00-1.096-1.683A4.662 4.662 0 0016.55.525C15.914.278 15.187.11 14.123.061 13.056.012 12.716 0 10 0zm0 1.802c2.67 0 2.987.01 4.04.058.976.045 1.505.207 1.858.344.467.181.8.398 1.15.748.35.35.567.683.748 1.15.137.353.3.882.344 1.857.048 1.054.058 1.37.058 4.041 0 2.67-.01 2.987-.058 4.04-.045.976-.207 1.505-.344 1.858-.181.467-.398.8-.748 1.15-.35.35-.683.567-1.15.748-.353.137-.882.3-1.857.344-1.054.048-1.37.058-4.041.058-2.67 0-2.987-.01-4.04-.058-.976-.045-1.505-.207-1.858-.344a3.097 3.097 0 01-1.15-.748 3.097 3.097 0 01-.748-1.15c-.137-.353-.3-.882-.344-1.857-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.987.058-4.04.045-.976.207-1.505.344-1.858.181-.467.398-.8.748-1.15.35-.35.683-.567 1.15-.748.353-.137.882-.3 1.857-.344 1.054-.048 1.37-.058 4.041-.058z"
-                />
-                <path
-                  d="M10 13.333a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm0-8.468a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm6.538-.203a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"
-                />
-              </svg>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/pablo-ungaro/"
-              aria-label="LinkedIn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  d="M18.335 18.339H15.67v-4.177c0-.996-.02-2.278-1.39-2.278-1.389 0-1.601 1.084-1.601 2.205v4.25h-2.666V9.75h2.56v1.17h.035c.358-.674 1.228-1.387 2.528-1.387 2.7 0 3.2 1.778 3.2 4.091v4.715zM7.003 8.575a1.546 1.546 0 01-1.548-1.549 1.548 1.548 0 111.547 1.549zm1.336 9.764H5.666V9.75H8.34v8.589zM19.67 3H4.329C3.593 3 3 3.58 3 4.297v15.406C3 20.42 3.594 21 4.328 21h15.338C20.4 21 21 20.42 21 19.703V4.297C21 3.58 20.4 3 19.666 3h.003z"
-                />
-              </svg>
-            </a>
-            <a
-              href="https://web.facebook.com/ungaro.pablo"
-              aria-label="Facebook"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Success Modal -->
-    <div id="successModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-icon">
-          <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-            <circle cx="32" cy="32" r="32" fill="url(#grad-success)" />
+      <h1 class="hero-title">
+        Revolucione seu<br />
+        <span class="gradient-text">Restaurante</span><br />
+        com Automação<br />
+        Inteligente
+      </h1>
+      <p class="hero-subtitle">
+        Seja um dos primeiros! 12 meses grátis para restaurantes
+        pioneiros.<br />
+        Reduza custos em até 50%, aumente vendas em até 40% e elimine erros
+        de pedidos.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-large btn-gradient">
+          Candidate-se ao Beta Founders
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path
-              d="M20 32L28 40L44 24"
-              stroke="white"
-              stroke-width="4"
+              d="M7.5 15L12.5 10L7.5 5"
+              stroke="currentColor"
+              stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
             />
+          </svg>
+        </a>
+        <a href="#about" class="btn-large btn-outline">
+          Conheça o Programa
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-value">50%</span>
+          <span class="stat-label">Redução de Custos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">40%</span>
+          <span class="stat-label">Aumento em Vendas</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">0</span>
+          <span class="stat-label">Erros de Pedidos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="features">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Funcionalidades</span>
+      <h2 class="section-title">
+        Tudo que você precisa<br />em
+        <span class="gradient-text">uma plataforma</span>
+      </h2>
+      <p class="section-subtitle">
+        Sistema completo de automação de pedidos com dashboard gerencial em
+        tempo real
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card fade-in" style="animation-delay: 0.1s">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#grad-qr)" />
+            <path
+              d="M10 10H14V14H10V10ZM18 10H22V14H18V10ZM10 18H14V22H10V18Z"
+              fill="white"
+            />
             <defs>
-              <linearGradient id="grad-success" x1="0" y1="0" x2="64" y2="64">
+              <linearGradient id="grad-qr" x1="0" y1="0" x2="32" y2="32">
+                <stop offset="0%" stop-color="#00F0FF" />
+                <stop offset="100%" stop-color="#0080FF" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h3>Cardápio Digital QR Code</h3>
+        <p>
+          Cliente escaneia, escolhe e pede direto do celular. Sem esperar
+          garçom, sem erros de anotação.
+        </p>
+        <ul class="feature-list">
+          <li>✓ Sem aplicativo para instalar</li>
+          <li>✓ Atualização instantânea</li>
+          <li>✓ Fotos em alta qualidade</li>
+        </ul>
+      </div>
+
+      <div class="feature-card fade-in" style="animation-delay: 0.2s">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#grad-dash)" />
+            <path
+              d="M8 12H24M8 16H24M8 20H16"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <defs>
+              <linearGradient id="grad-dash" x1="0" y1="0" x2="32" y2="32">
+                <stop offset="0%" stop-color="#FF00E5" />
+                <stop offset="100%" stop-color="#FF0080" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h3>Controle Total de Vendas</h3>
+        <p>
+          Dashboard completo com faturamento em tempo real. Controle total
+          sobre seu negócio, de qualquer lugar.
+        </p>
+        <ul class="feature-list">
+          <li>✓ Faturamento atualizado a cada pedido</li>
+          <li>✓ Produtos mais vendidos e menos vendidos</li>
+          <li>✓ Horários de pico e ticket médio</li>
+          <li>✓ Previsão de plano baseada no faturamento</li>
+        </ul>
+      </div>
+
+      <div class="feature-card fade-in" style="animation-delay: 0.3s">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#grad-print)" />
+            <rect
+              x="10"
+              y="8"
+              width="12"
+              height="16"
+              rx="2"
+              stroke="white"
+              stroke-width="2"
+            />
+            <path
+              d="M12 12H20M12 16H20M12 20H16"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <defs>
+              <linearGradient id="grad-print" x1="0" y1="0" x2="32" y2="32">
                 <stop offset="0%" stop-color="#00FF88" />
                 <stop offset="100%" stop-color="#00CC6A" />
               </linearGradient>
             </defs>
           </svg>
         </div>
-        <h3>Mensagem Enviada!</h3>
+        <h3>Impressão Automática</h3>
         <p>
-          Obrigado pelo interesse! Nossa equipe entrará em contato em até 1
-          hora.
+          Pedidos impressos automaticamente na cozinha com mesa, itens e
+          observações.
         </p>
-        <button class="btn-close-modal">Fechar</button>
+        <ul class="feature-list">
+          <li>✓ Direto na impressora térmica</li>
+          <li>✓ Organização por categoria</li>
+          <li>✓ Observações destacadas</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#grad-host)" />
+            <circle cx="16" cy="12" r="4" stroke="white" stroke-width="2" />
+            <path
+              d="M10 24C10 20 13 18 16 18C19 18 22 20 22 24"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <defs>
+              <linearGradient id="grad-host" x1="0" y1="0" x2="32" y2="32">
+                <stop offset="0%" stop-color="#FFB800" />
+                <stop offset="100%" stop-color="#FF8800" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h3>Gestão de Comandas</h3>
+        <p>
+          Host valida comanda antes do pedido. Controle total sobre quem
+          pode pedir.
+        </p>
+        <ul class="feature-list">
+          <li>✓ Validação via QR Code</li>
+          <li>✓ Cadastro rápido (15s)</li>
+          <li>✓ Associação automática</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#grad-speed)" />
+            <path
+              d="M16 8V16L22 19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <circle
+              cx="16"
+              cy="16"
+              r="10"
+              stroke="white"
+              stroke-width="2"
+            />
+            <defs>
+              <linearGradient id="grad-speed" x1="0" y1="0" x2="32" y2="32">
+                <stop offset="0%" stop-color="#FF3D00" />
+                <stop offset="100%" stop-color="#FF6D00" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h3>Velocidade Extrema</h3>
+        <p>
+          Do pedido à cozinha em menos de 3 segundos. Notificações em tempo
+          real.
+        </p>
+        <ul class="feature-list">
+          <li>✓ Processamento instantâneo</li>
+          <li>✓ WebSocket em tempo real</li>
+          <li>✓ Sem delays ou travamentos</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#grad-ecom)" />
+            <path
+              d="M8 10L10 22H22L24 10H8Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+            <circle cx="12" cy="26" r="2" fill="white" />
+            <circle cx="20" cy="26" r="2" fill="white" />
+            <defs>
+              <linearGradient id="grad-ecom" x1="0" y1="0" x2="32" y2="32">
+                <stop offset="0%" stop-color="#8B00FF" />
+                <stop offset="100%" stop-color="#6200EA" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h3>Experiência E-commerce</h3>
+        <p>
+          Interface moderna que incentiva vendas adicionais e aumenta o
+          ticket médio.
+        </p>
+        <ul class="feature-list">
+          <li>✓ Carrinho inteligente</li>
+          <li>✓ Sugestões personalizadas</li>
+          <li>✓ Combos e promoções</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section id="benefits" class="benefits">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Benefícios</span>
+      <h2 class="section-title">
+        Por que escolher o <span class="gradient-text">ORDRX</span>?
+      </h2>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card fade-in">
+        <div class="benefit-number">01</div>
+        <h3>Redução de Custos</h3>
+        <p>
+          Economize até <strong>50% em custos operacionais</strong>. Menos
+          garçons necessários, menos erros, menos desperdício.
+        </p>
+        <div class="benefit-highlight">
+          <span>💰</span>
+          <span>Economia comprovada em centenas de restaurantes</span>
+        </div>
+      </div>
+
+      <div class="benefit-card fade-in">
+        <div class="benefit-number">02</div>
+        <h3>Aumento de Vendas</h3>
+        <p>
+          Aumente o ticket médio em <strong>até 40%</strong> com sugestões
+          inteligentes e combos personalizados.
+        </p>
+        <div class="benefit-highlight">
+          <span>📈</span>
+          <span>Clientes pedem mais quando têm autonomia</span>
+        </div>
+      </div>
+
+      <div class="benefit-card fade-in">
+        <div class="benefit-number">03</div>
+        <h3>Zero Erros</h3>
+        <p>
+          Elimine <strong>100% dos erros de anotação</strong>. Pedido vai
+          direto do cliente para a cozinha.
+        </p>
+        <div class="benefit-highlight">
+          <span>✓</span>
+          <span>Menos devoluções e clientes mais satisfeitos</span>
+        </div>
+      </div>
+
+      <div class="benefit-card fade-in">
+        <div class="benefit-number">04</div>
+        <h3>Equipamento Incluído</h3>
+        <p>
+          <strong>Tablets, impressoras e QR Codes fornecidos</strong> pela
+          ORDRX. Você não investe em hardware.
+        </p>
+        <div class="benefit-highlight">
+          <span>🎁</span>
+          <span>Treinamento completo da equipe incluso</span>
+        </div>
+      </div>
+
+      <div class="benefit-card fade-in">
+        <div class="benefit-number">05</div>
+        <h3>Dashboard Poderoso</h3>
+        <p>
+          Controle <strong>vendas e estoque em tempo real</strong>.
+          Relatórios inteligentes para decisões assertivas.
+        </p>
+        <div class="benefit-highlight">
+          <span>📊</span>
+          <span>Insights valiosos sobre seu negócio</span>
+        </div>
+      </div>
+
+      <div class="benefit-card fade-in">
+        <div class="benefit-number">06</div>
+        <h3>Clientes Mais Satisfeitos</h3>
+        <p>
+          Experiência <strong>moderna e ágil</strong>. Sem espera, sem
+          erros, pedidos mais rápidos.
+        </p>
+        <div class="benefit-highlight">
+          <span>⭐</span>
+          <span>Avaliações 5 estrelas garantidas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section (Quem Somos) -->
+<section id="about" class="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Quem Somos</span>
+      <h2 class="section-title">
+        A equipe por trás do <span class="gradient-text">ORDRX</span>
+      </h2>
+      <p class="section-subtitle">
+        Somos amigos que decidiram empreender juntos, unindo nossas
+        habilidades para criar algo único.<br />
+        A combinação perfeita entre fotógrafo, desenvolvedores e
+        administrador de empresas.
+      </p>
+    </div>
+
+    <div class="founders-grid">
+      <div class="founder-card fade-in" style="animation-delay: 0.1s">
+        <div class="founder-photo">
+          <img
+            src="/images/team/pablo-ungaro.jpeg"
+            alt="Pablo Ungaro - Tech Lead & Co-founder"
+          />
+        </div>
+        <h3 class="founder-name">Pablo Ungaro</h3>
+        <p class="founder-role">Tech Lead & Co-founder</p>
+      </div>
+
+      <div class="founder-card fade-in" style="animation-delay: 0.2s">
+        <div class="founder-photo">
+          <img
+            src="/images/team/rafael-pacheco.jpg"
+            alt="Rafael Pacheco - Administrador de Empresas & Co-founder"
+          />
+        </div>
+        <h3 class="founder-name">Rafael Pacheco</h3>
+        <p class="founder-role">Administrador de Empresas & Co-founder</p>
+      </div>
+
+      <div class="founder-card fade-in" style="animation-delay: 0.3s">
+        <div class="founder-photo">
+          <img
+            src="/images/team/thiago-lontra.jpeg"
+            alt="Thiago Lontra - Fotógrafo & Co-founder"
+          />
+        </div>
+        <h3 class="founder-name">Thiago Lontra</h3>
+        <p class="founder-role">Fotógrafo & Co-founder</p>
+      </div>
+
+      <div class="founder-card fade-in" style="animation-delay: 0.4s">
+        <div class="founder-photo">
+          <img
+            src="/images/team/fagner-pinho.jpeg"
+            alt="Fagner Pinho - Tech Lead & Co-founder"
+          />
+        </div>
+        <h3 class="founder-name">Fagner Pinho</h3>
+        <p class="founder-role">Tech Lead & Co-founder</p>
+      </div>
+
+      <div class="founder-card fade-in" style="animation-delay: 0.5s">
+        <div class="founder-photo">
+          <img
+            src="/images/team/erick-fonseca.jpg"
+            alt="Erick Fonseca - Senior Backend Developer & Co-founder"
+          />
+        </div>
+        <h3 class="founder-name">Erick Fonseca</h3>
+        <p class="founder-role">Senior Backend Developer & Co-founder</p>
+      </div>
+
+      <div class="founder-card fade-in" style="animation-delay: 0.6s">
+        <div class="founder-photo">
+          <img
+            src="/images/team/roberto-porlan.jpg"
+            alt="Roberto Porlan - Senior Frontend Developer & Co-founder"
+          />
+        </div>
+        <h3 class="founder-name">Roberto Porlan</h3>
+        <p class="founder-role">Senior Frontend Developer & Co-founder</p>
       </div>
     </div>
 
-    <script src="script.js"></script>
-  </body>
-</html>
+    <!-- SVG Gradient Definitions -->
+    <svg width="0" height="0" style="position: absolute">
+      <defs>
+        <linearGradient
+          id="founder-gradient-1"
+          x1="0"
+          y1="0"
+          x2="80"
+          y2="80"
+        >
+          <stop offset="0%" stop-color="#0066FF" />
+          <stop offset="100%" stop-color="#00C9A7" />
+        </linearGradient>
+        <linearGradient
+          id="founder-gradient-2"
+          x1="0"
+          y1="0"
+          x2="80"
+          y2="80"
+        >
+          <stop offset="0%" stop-color="#00C9A7" />
+          <stop offset="100%" stop-color="#0066FF" />
+        </linearGradient>
+        <linearGradient
+          id="founder-gradient-3"
+          x1="0"
+          y1="0"
+          x2="80"
+          y2="80"
+        >
+          <stop offset="0%" stop-color="#0066FF" />
+          <stop offset="100%" stop-color="#FF6B9D" />
+        </linearGradient>
+        <linearGradient
+          id="founder-gradient-4"
+          x1="0"
+          y1="0"
+          x2="80"
+          y2="80"
+        >
+          <stop offset="0%" stop-color="#FF6B9D" />
+          <stop offset="100%" stop-color="#00C9A7" />
+        </linearGradient>
+        <linearGradient
+          id="founder-gradient-5"
+          x1="0"
+          y1="0"
+          x2="80"
+          y2="80"
+        >
+          <stop offset="0%" stop-color="#00C9A7" />
+          <stop offset="100%" stop-color="#FF6B9D" />
+        </linearGradient>
+        <linearGradient
+          id="founder-gradient-6"
+          x1="0"
+          y1="0"
+          x2="80"
+          y2="80"
+        >
+          <stop offset="0%" stop-color="#FF6B9D" />
+          <stop offset="100%" stop-color="#0066FF" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+</section>
+
+<!-- Segments Section -->
+<section id="segments" class="segments">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Segmentos</span>
+      <h2 class="section-title">
+        Perfeito para todo tipo de
+        <span class="gradient-text">estabelecimento</span>
+      </h2>
+      <p class="section-subtitle">
+        Mais de 400 mil negócios impactados em todo o Brasil
+      </p>
+    </div>
+
+    <div class="segments-grid">
+      <div class="segment-card scale-in">
+        <div class="segment-icon">🍽️</div>
+        <h3>Restaurantes</h3>
+        <p>
+          Agilize pedidos, reduza erros e aumente a rotatividade de mesas
+        </p>
+      </div>
+
+      <div class="segment-card scale-in">
+        <div class="segment-icon">🍺</div>
+        <h3>Bares</h3>
+        <p>
+          Controle comandas, evite perdas e acelere o atendimento em
+          horários de pico
+        </p>
+      </div>
+
+      <div class="segment-card scale-in">
+        <div class="segment-icon">☕</div>
+        <h3>Cafeterias</h3>
+        <p>Ofereça autoatendimento moderno e reduza filas no balcão</p>
+      </div>
+
+      <div class="segment-card scale-in">
+        <div class="segment-icon">🍕</div>
+        <h3>Pizzarias</h3>
+        <p>Personalize pedidos facilmente e integre com delivery próprio</p>
+      </div>
+
+      <div class="segment-card scale-in">
+        <div class="segment-icon">🎵</div>
+        <h3>Casas Noturnas</h3>
+        <p>
+          Gestão de comandas segura e fechamento rápido ao final da noite
+        </p>
+      </div>
+
+      <div class="segment-card scale-in">
+        <div class="segment-icon">🍦</div>
+        <h3>Sorveterias</h3>
+        <p>
+          Monte pedidos personalizados e agilize o atendimento de famílias
+        </p>
+      </div>
+
+      <div class="segment-card scale-in">
+        <div class="segment-icon">🥩</div>
+        <h3>Churrascarias</h3>
+        <p>Controle rodízios, bebidas e acompanhamentos por mesa</p>
+      </div>
+
+      <div class="segment-card scale-in">
+        <div class="segment-icon">🏨</div>
+        <h3>Hotéis</h3>
+        <p>Integre restaurante e room service em uma plataforma</p>
+      </div>
+
+      <div class="segment-card scale-in">
+        <div class="segment-icon">🍣</div>
+        <h3>Sushi Bars</h3>
+        <p>Facilite pedidos rodízio e personalizações de rolls</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Perguntas Frequentes</span>
+      <h2 class="section-title">
+        Dúvidas sobre o <span class="gradient-text">ORDRX</span>?
+      </h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Preciso comprar tablets ou impressoras?</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M6 9L12 15L18 9"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>
+            <strong>Não!</strong> Todo equipamento necessário (tablets,
+            impressoras térmicas, QR Codes) é fornecido pela ORDRX. Você não
+            precisa investir em hardware. Além disso, oferecemos
+            <strong>treinamento completo da equipe</strong> para garantir
+            que todos saibam usar o sistema desde o primeiro dia.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span
+            >Como funciona o dashboard de vendas e controle de
+            estoque?</span
+          >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M6 9L12 15L18 9"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>
+            O dashboard ORDRX é <strong>atualizado em tempo real</strong>.
+            Você visualiza:
+          </p>
+          <ul>
+            <li>✓ Vendas do dia, semana e mês</li>
+            <li>✓ Produtos mais vendidos</li>
+            <li>✓ Horários de pico</li>
+            <li>
+              ✓ Controle de estoque automático (baixa quando o pedido é
+              feito)
+            </li>
+            <li>✓ Alertas de produtos acabando</li>
+            <li>✓ Relatórios financeiros completos</li>
+          </ul>
+          <p>
+            Tudo acessível de qualquer lugar, do seu celular ou computador.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Qual a velocidade do sistema?</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M6 9L12 15L18 9"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>O ORDRX é <strong>extremamente rápido</strong>:</p>
+          <ul>
+            <li>
+              ⚡ Do pedido à cozinha: <strong>menos de 3 segundos</strong>
+            </li>
+            <li>⚡ Impressão automática: <strong>instantânea</strong></li>
+            <li>⚡ Dashboard atualiza: <strong>em tempo real</strong></li>
+            <li>
+              ⚡ Notificações: <strong>imediatas via WebSocket</strong>
+            </li>
+          </ul>
+          <p>
+            Sem delays, sem travamentos. Testado para suportar centenas de
+            pedidos simultâneos.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Ainda vou precisar de garçons?</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M6 9L12 15L18 9"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Sim, mas <strong>com uma função diferente</strong>. Com o ORDRX,
+            os garçons não precisam mais ficar anotando pedidos. Eles se
+            tornam:
+          </p>
+          <ul>
+            <li>✓ Consultores de vendas (sugerem harmonizações)</li>
+            <li>✓ Responsáveis pela experiência do cliente</li>
+            <li>✓ Entregadores dos pratos</li>
+          </ul>
+          <p>
+            Resultado: você não precisa contratar mais pessoas em dias de
+            movimento, reduzindo custos em até 50%.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Como funciona a validação de comanda?</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M6 9L12 15L18 9"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Processo simples em 3 passos:</p>
+          <ol>
+            <li>
+              <strong>Cliente chega:</strong> Host faz cadastro rápido (nome
+              + telefone em 15 segundos)
+            </li>
+            <li>
+              <strong>Associação:</strong> Host escaneia QR Code da comanda
+              e associa ao cliente
+            </li>
+            <li>
+              <strong>Liberação:</strong> Cliente pode fazer pedidos pelo
+              celular
+            </li>
+          </ol>
+          <p>
+            Isso garante <strong>controle total</strong> sobre quem está
+            consumindo e evita fraudes.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>O sistema funciona sem internet?</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M6 9L12 15L18 9"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>
+            O ORDRX funciona melhor <strong>com internet</strong> para
+            sincronização em tempo real. Porém, o sistema possui
+            <strong>modo offline</strong> que:
+          </p>
+          <ul>
+            <li>✓ Armazena pedidos localmente</li>
+            <li>✓ Sincroniza automaticamente quando internet voltar</li>
+            <li>✓ Permite continuar operando sem perder pedidos</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Como é o suporte?</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M6 9L12 15L18 9"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Suporte ORDRX é <strong>rápido e eficiente</strong>:</p>
+          <ul>
+            <li>📞 WhatsApp: Resposta em menos de 1 minuto</li>
+            <li>💬 Chat em tempo real no dashboard</li>
+            <li>📧 E-mail: Resposta em até 2 horas</li>
+            <li>🎓 Base de conhecimento completa</li>
+            <li>🎥 Vídeos tutoriais</li>
+          </ul>
+          <p>Estamos aqui para garantir o sucesso do seu restaurante!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-content">
+      <div class="contact-info">
+        <span class="section-badge">🚀 Programa Beta Founders</span>
+        <h2 class="section-title">
+          Candidate-se para ser um
+          <span class="gradient-text">Beta Founder</span>
+        </h2>
+        <p class="contact-description">
+          Seja um dos primeiros restaurantes a usar o ORDRX! Preencha o
+          formulário e nossa equipe entrará em contato para avaliar sua
+          candidatura.
+        </p>
+
+        <div class="contact-features">
+          <div class="contact-feature">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M9 12L11 14L15 10"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>12 meses grátis</span>
+          </div>
+          <div class="contact-feature">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M9 12L11 14L15 10"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Suporte prioritário</span>
+          </div>
+          <div class="contact-feature">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M9 12L11 14L15 10"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Influencie o roadmap</span>
+          </div>
+          <div class="contact-feature">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M9 12L11 14L15 10"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Equipamentos inclusos</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nome Completo*</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="João Silva"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="joao@exemplo.com.br"
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Telefone (opcional)</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="(11) 98765-4321"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="city">Cidade*</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              required
+              placeholder="São Paulo - SP"
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="segment">Tipo de Estabelecimento*</label>
+            <select id="segment" name="segment" required>
+              <option value="">Selecione...</option>
+              <option value="restaurante">Restaurante</option>
+              <option value="bar">Bar</option>
+              <option value="cafeteria">Cafeteria</option>
+              <option value="pizzaria">Pizzaria</option>
+              <option value="casa-noturna">Casa Noturna</option>
+              <option value="sorveteria">Sorveteria</option>
+              <option value="churrascaria">Churrascaria</option>
+              <option value="hotel">Hotel</option>
+              <option value="sushi-bar">Sushi Bar</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="tables">Número de Mesas*</label>
+            <select id="tables" name="tables" required>
+              <option value="">Selecione...</option>
+              <option value="1-5">1 a 5 mesas</option>
+              <option value="6-10">6 a 10 mesas</option>
+              <option value="11-20">11 a 20 mesas</option>
+              <option value="21-50">21 a 50 mesas</option>
+              <option value="50+">Mais de 50 mesas</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message"
+            >Conte-nos mais sobre seu restaurante (opcional)</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Ex: Tenho 15 mesas, trabalho com rodízio de pizza, movimento forte nos finais de semana..."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit btn-gradient">
+          <span>Enviar Candidatura Beta Founders</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path
+              d="M7.5 15L12.5 10L7.5 5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+        <p class="form-disclaimer">
+          Ao enviar, você concorda com nossos
+          <a href="#terms">Termos de Uso</a> e
+          <a href="#privacy">Política de Privacidade</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- SEO Content Section -->
+<section id="seo-content" class="seo-content" style="display: none">
+  <div class="container">
+    <h2>
+      ORDRX: A Melhor Solução de Cardápio Digital e Automação de Pedidos
+      para Restaurantes no Brasil
+    </h2>
+    <p>
+      O ORDRX é um sistema completo de cardápio digital com QR Code e
+      automação de pedidos desenvolvido especificamente para restaurantes,
+      bares, cafeterias e estabelecimentos gastronômicos brasileiros. Nossa
+      plataforma elimina erros de pedidos, reduz custos operacionais em até
+      50% e aumenta as vendas em até 40%.
+    </p>
+
+    <h3>Como Funciona o Cardápio Digital com QR Code</h3>
+    <p>
+      O sistema ORDRX permite que clientes escaneiem um código QR na mesa e
+      façam pedidos diretamente pelo celular, sem necessidade de instalar
+      aplicativos. Os pedidos são enviados automaticamente para a cozinha
+      através de impressoras térmicas, eliminando 100% dos erros de anotação
+      manual.
+    </p>
+
+    <h3>Principais Benefícios da Automação de Pedidos</h3>
+    <ul>
+      <li>
+        Dashboard gerencial em tempo real com controle de vendas e estoque
+      </li>
+      <li>Redução de 50% em custos com pessoal</li>
+      <li>Aumento de 40% no ticket médio com sugestões inteligentes</li>
+      <li>Impressão automática de pedidos em menos de 3 segundos</li>
+      <li>Gestão de comandas com validação por QR Code</li>
+      <li>
+        Equipamentos inclusos: tablets, impressoras térmicas e QR Codes
+      </li>
+    </ul>
+
+    <h3>Ideal Para</h3>
+    <p>
+      Restaurantes, bares, cafeterias, pizzarias, casas noturnas,
+      sorveterias, churrascarias, hotéis e sushi bars de todos os portes.
+    </p>
+
+    <h3>Diferenciais ORDRX</h3>
+    <p>
+      Diferente de outros sistemas de cardápio digital, o ORDRX oferece 12
+      meses gratuitos no programa Beta Founders, suporte prioritário 24/7
+      via WhatsApp, treinamento completo da equipe e todos os equipamentos
+      necessários sem custo adicional.
+    </p>
+  </div>
+</section>

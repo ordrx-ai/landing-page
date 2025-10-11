@@ -220,3 +220,4 @@ Dúvidas?
 
 **Implementado**: 10/10/2025  
 **Versão**: 1.0
+

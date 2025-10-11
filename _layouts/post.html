@@ -1,0 +1,299 @@
+---
+layout: default
+---
+
+<article class="article-container">
+  <header class="article-header">
+    {% if page.category %}
+    <span class="article-category">{{ page.category }}</span>
+    {% endif %}
+    
+    <h1 class="article-title">{{ page.title }}</h1>
+    
+    <div class="article-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%d de %B de %Y" }}
+      </time>
+      {% if page.author %}
+      <span class="article-author">por {{ page.author }}</span>
+      {% endif %}
+      {% if page.read_time %}
+      <span class="article-read-time">{{ page.read_time }} min de leitura</span>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="article-content">
+    {{ content }}
+  </div>
+
+  {% if page.tags %}
+  <footer class="article-footer">
+    <div class="article-tags">
+      <strong>Tags:</strong>
+      {% for tag in page.tags %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  </footer>
+  {% endif %}
+
+  <div class="article-cta">
+    <h3>Quer transformar seu restaurante?</h3>
+    <p>Candidate-se ao programa Beta Founders e ganhe 12 meses grátis do ORDRX!</p>
+    <a href="/#contact" class="btn-primary btn-gradient">
+      Candidate-se ao Beta
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path
+          d="M7.5 15L12.5 10L7.5 5"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+  </div>
+
+  <nav class="article-navigation">
+    {% if page.previous.url %}
+    <a href="{{ page.previous.url }}" class="nav-previous">
+      ← {{ page.previous.title }}
+    </a>
+    {% endif %}
+    
+    {% if page.next.url %}
+    <a href="{{ page.next.url }}" class="nav-next">
+      {{ page.next.title }} →
+    </a>
+    {% endif %}
+  </nav>
+
+  <div class="back-to-blog">
+    <a href="/blog.html">← Voltar para o Blog</a>
+  </div>
+</article>
+
+<!-- Structured Data for Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.title }}",
+  "description": "{{ page.description | default: page.excerpt }}",
+  "author": {
+    "@type": "Organization",
+    "name": "ORDRX"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ORDRX",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ordrx.ai/images/logo-a.svg"
+    }
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ordrx.ai{{ page.url }}"
+  },
+  "image": "{{ page.image | default: 'https://ordrx.ai/images/og-image.jpg' }}"
+}
+</script>
+
+<style>
+  .article-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 8rem 2rem 4rem;
+  }
+
+  .article-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .article-category {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 102, 255, 0.1),
+      rgba(0, 201, 167, 0.1)
+    );
+    border-radius: 50px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+
+  .article-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .article-meta {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .article-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+  }
+
+  .article-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    color: var(--text-primary);
+  }
+
+  .article-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    color: var(--text-primary);
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content ul,
+  .article-content ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+  }
+
+  .article-content li {
+    margin-bottom: 0.75rem;
+  }
+
+  .article-content strong {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+  .article-content a {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--text-muted);
+  }
+
+  .article-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+  }
+
+  .article-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .tag {
+    padding: 0.25rem 0.75rem;
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+
+  .article-cta {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.05), rgba(0, 201, 167, 0.05));
+    border-radius: var(--radius-lg);
+    text-align: center;
+  }
+
+  .article-cta h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .article-cta p {
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+  }
+
+  .article-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 3rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .nav-previous,
+  .nav-next {
+    flex: 1;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+  }
+
+  .nav-previous:hover,
+  .nav-next:hover {
+    background: var(--bg-tertiary);
+    transform: translateY(-2px);
+  }
+
+  .nav-next {
+    text-align: right;
+  }
+
+  .back-to-blog {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .back-to-blog a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 6rem 1.5rem 3rem;
+    }
+
+    .article-title {
+      font-size: 1.75rem;
+    }
+
+    .article-content {
+      font-size: 1rem;
+    }
+
+    .article-navigation {
+      flex-direction: column;
+    }
+  }
+</style>
+

@@ -1,0 +1,74 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}ORDRX: Sistema completo de cardápio digital com QR Code e automação de pedidos para restaurantes e bares. Dashboard em tempo real, impressão automática. Teste grátis 12 meses.{% endif %}" />
+<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}cardápio digital, automação de pedidos, sistema para restaurante, QR Code cardápio, gestão restaurante, software restaurante, pedidos automáticos, cardápio QR Code, sistema de pedidos, automação bar, menu digital{% endif %}" />
+<meta name="author" content="ORDRX" />
+<meta name="language" content="pt-BR" />
+<meta name="robots" content="{% if page.robots %}{{ page.robots }}{% else %}index,follow{% endif %}" />
+<link rel="canonical" href="{% if page.canonical %}{{ page.canonical }}{% else %}https://ordrx.ai{{ page.url }}{% endif %}" />
+<link rel="alternate" hreflang="pt-BR" href="https://ordrx.ai{{ page.url }}" />
+
+<!-- Open Graph -->
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="{% if page.og_type %}{{ page.og_type }}{% else %}website{% endif %}" />
+<meta property="og:site_name" content="ORDRX" />
+<meta property="og:title" content="{% if page.og_title %}{{ page.og_title }}{% elsif page.title %}{{ page.title }}{% else %}ORDRX - Automação Inteligente para Restaurantes{% endif %}" />
+<meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% elsif page.description %}{{ page.description }}{% else %}ORDRX: Sistema completo de cardápio digital com QR Code e automação de pedidos para restaurantes e bares. Dashboard em tempo real, impressão automática. Teste grátis 12 meses.{% endif %}" />
+<meta property="og:url" content="https://ordrx.ai{{ page.url }}" />
+<meta property="og:image" content="https://ordrx.ai/images/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ORDRX - Automação Inteligente para Restaurantes - Cardápio Digital com QR Code" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}ORDRX - Automação Inteligente para Restaurantes{% endif %}" />
+<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}ORDRX: Sistema completo de cardápio digital com QR Code e automação de pedidos para restaurantes e bares. Dashboard em tempo real, impressão automática. Teste grátis 12 meses.{% endif %}" />
+<meta name="twitter:image" content="https://ordrx.ai/images/og-image.jpg" />
+<meta name="twitter:image:alt" content="ORDRX - Automação Inteligente para Restaurantes - Cardápio Digital com QR Code" />
+
+<!-- Title -->
+<title>{% if page.title %}{{ page.title }}{% else %}ORDRX - Automação Inteligente para Restaurantes{% endif %}</title>
+
+<!-- Favicon -->
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="/images/favicon.svg" />
+
+<!-- Preload -->
+<link rel="preload" as="image" href="/images/logo-a.svg" />
+<link rel="preload" as="style" href="/styles.css" />
+
+<!-- CSS -->
+<link rel="stylesheet" href="/styles.css" />
+
+<!-- Fonts -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K5DNVRQQ');
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PQJWWZ7RZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5PQJWWZ7RZ');
+</script>
+
+<!-- Structured Data / Schema.org (page-specific structured data can be added in page front matter) -->
+{% if page.structured_data %}
+{{ page.structured_data }}
+{% endif %}
+
+

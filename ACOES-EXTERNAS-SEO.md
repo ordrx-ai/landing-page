@@ -12,12 +12,12 @@ Este documento lista todas as ações que devem ser realizadas FORA do site para
 
 **Ações**:
 
-- [ ] Cadastrar propriedade ordrx.ai
-- [ ] Verificar propriedade (método DNS ou arquivo HTML)
-- [ ] Enviar sitemap.xml (https://ordrx.ai/sitemap.xml)
-- [ ] Verificar indexação de páginas
-- [ ] Monitorar erros de rastreamento
-- [ ] Analisar queries de busca semanalmente
+- [x] Cadastrar propriedade ordrx.ai
+- [x] Verificar propriedade (método DNS ou arquivo HTML)
+- [x] Enviar sitemap.xml (https://ordrx.ai/sitemap.xml)
+- [x] Verificar indexação de páginas
+- [x] Monitorar erros de rastreamento
+- [x] Analisar queries de busca semanalmente
 
 **Impacto**: ALTO - Essential para monitorar performance no Google
 
@@ -29,10 +29,10 @@ Este documento lista todas as ações que devem ser realizadas FORA do site para
 
 **Ações**:
 
-- [ ] Criar conta Google Analytics
-- [ ] Criar propriedade GA4 para ordrx.ai
-- [ ] Obter ID de medição (G-XXXXXXXXXX)
-- [ ] Instalar tag GA4 no site (adicionar no <head> de todas páginas)
+- [x] Criar conta Google Analytics
+- [x] Criar propriedade GA4 para ordrx.ai
+- [x] Obter ID de medição (G-XXXXXXXXXX)
+- [x] Instalar tag GA4 no site (adicionar no <head> de todas páginas)
 - [ ] Configurar eventos personalizados:
   - Clique em "Candidate-se ao Beta"
   - Submissão de formulário

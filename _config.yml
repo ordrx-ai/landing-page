@@ -1,0 +1,103 @@
+# Site settings
+title: ORDRX
+url: https://ordrx.ai
+description: Sistema completo de cardápio digital com QR Code e automação de pedidos para restaurantes e bares
+timezone: America/Sao_Paulo
+lang: pt-BR
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# SEO Tag settings
+twitter:
+  username: ordrx_ai
+  card: summary_large_image
+
+logo: /images/logo-a.svg
+social:
+  name: ORDRX
+  links:
+    - https://www.linkedin.com/company/ordrx
+    - https://www.instagram.com/ordrx.ai
+    - https://www.facebook.com/ordrx
+
+# Exclude from processing
+exclude:
+  - README.md
+  - README-SEO.md
+  - CHANGELOG.md
+  - ACOES-EXTERNAS-SEO.md
+  - ATUALIZACAO-LANDING-PAGE.md
+  - BETA-FOUNDERS-UPDATE.md
+  - BLOG-MIGRATION-SUMMARY.md
+  - BLOG-SYSTEM-GUIDE.md
+  - COMECE-AQUI.md
+  - CONFIGURACAO-DOMINIO.md
+  - deploy.sh
+  - DNS-GODADDY-ORDRX-AI.txt
+  - GUIA-TESTE-SEO.md
+  - INDICE.md
+  - INICIO-RAPIDO.md
+  - JEKYLL-MIGRATION-GUIDE.md
+  - MIGRATION-README.md
+  - POST-FIX-README.md
+  - REINICIAR-JEKYLL.md
+  - RESUMO-DEPLOY.md
+  - RESUMO-SEO-IMPLEMENTACAO.md
+  - TEMA-CLARO-FINAL.md
+  - TEMA-CLARO-UPDATE.md
+  - TEMPLATES-ANALYTICS.md
+  - TESTE-RESPONSIVIDADE.md
+  - TRANSFORMACAO-VISUAL.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor
+  - .bundle
+  - .sass-cache
+  - _site
+
+# Blog settings
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Pagination
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Excerpt
+excerpt_separator: "<!--more-->"
+
+# Reading
+safe: false
+include: [".htaccess"]
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Sass/SCSS settings
+sass:
+  style: compressed
