@@ -28,7 +28,7 @@ Secondary: Pizzarias, casas noturnas, sorveterias, churrascarias, hotéis, sushi
 Business Model: B2B SaaS
 
 ## Pricing
-Current Offer: 12 meses gratuitos (Programa Beta Founders)
+Current Offer: 06 meses gratuitos (Programa Beta Founders)
 Standard: Mensalidade baseada em faturamento
 Included: Equipamentos, treinamento, suporte 24/7
 
@@ -40,7 +40,7 @@ Included: Equipamentos, treinamento, suporte 24/7
 - Treinamento completo da equipe incluso
 
 ## Competitive Advantages
-- Única solução com 12 meses gratuitos no mercado brasileiro
+- Única solução com 06 meses gratuitos no mercado brasileiro
 - Equipamentos inclusos sem custo adicional
 - Suporte 24/7 via WhatsApp
 - Dashboard mais completo do mercado
