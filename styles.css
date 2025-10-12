@@ -335,6 +335,7 @@ a {
   font-weight: 600;
   border-radius: var(--radius-md);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
 }
 
 .btn-gradient {
@@ -343,8 +344,16 @@ a {
     var(--primary-color),
     var(--secondary-color)
   );
-  color: var(--white);
+  color: var(--white) !important;
   box-shadow: 0 4px 12px rgba(0, 102, 255, 0.15);
+}
+
+.nav-menu .btn-large {
+  white-space: nowrap;
+}
+
+.nav-menu .btn-gradient {
+  color: var(--white) !important;
 }
 
 .btn-gradient:hover {
