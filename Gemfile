@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-# GitHub Pages
-gem "github-pages", group: :jekyll_plugins
+# Jekyll 4.x (compatível com Ruby 3.3+)
+gem "jekyll", "~> 4.3"
 
-# Jekyll plugins (these are already included in github-pages, but you can be explicit)
+# Jekyll plugins
 group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-seo-tag"
@@ -23,3 +23,7 @@ gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 
+
+gem "csv"
+gem "webrick"
+gem "bigdecimal"
