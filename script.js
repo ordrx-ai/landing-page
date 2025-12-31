@@ -67,67 +67,128 @@ document.addEventListener("DOMContentLoaded", () => {
 // ========================================
 // Contact Form Submission (EmailJS)
 // ========================================
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", async function (e) {
+// Wait for DOM to be ready before accessing form
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById("contactForm");
+  
+  if (!contactForm) {
+    console.error("Formulário de contato não encontrado");
+    return;
+  }
+
+  contactForm.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const form = e.target;
     const submitBtn = form.querySelector(".btn-submit");
+    if (!submitBtn) {
+      console.error("Botão de submit não encontrado");
+      return;
+    }
+    
     const originalBtnText = submitBtn.innerHTML;
 
     // Disable button and show loading
     submitBtn.disabled = true;
     submitBtn.innerHTML = "<span>Enviando...</span>";
 
-    // Get form data
-    const formData = {
-      name: form.name.value,
-      email: form.email.value,
-      phone: form.phone.value || "Não informado",
-      segment: form.segment.value,
-      tables: form.tables.value,
-      city: form.city.value,
-      message: form.message.value || "Nenhuma mensagem adicional",
+    // Get form data using getElementById for safer access
+    const getName = (id) => {
+      const el = document.getElementById(id);
+      return el ? el.value.trim() : "";
+    };
+    
+    const getSelectValue = (id) => {
+      const el = document.getElementById(id);
+      return el ? el.value : "";
     };
 
+    const formData = {
+      name: getName("name"),
+      email: getName("email"),
+      phone: getName("phone") || "Não informado",
+      restaurant: getName("restaurant") || "Não informado",
+      segment: getSelectValue("segment"),
+      tables: getSelectValue("tables"),
+      city: getName("city"),
+      revenue: getSelectValue("revenue") || "Não informado",
+    };
+    
+    // Validate required fields
+    if (!formData.name || !formData.email || !formData.phone || !formData.restaurant || !formData.segment || !formData.tables || !formData.city) {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+      return;
+    }
+
     // Format email body
+    const segmentLabels = {
+      "restaurante": "Restaurante",
+      "bar": "Bar",
+      "cafeteria": "Cafeteria",
+      "pizzaria": "Pizzaria",
+      "casa-noturna": "Casa Noturna",
+      "sorveteria": "Sorveteria",
+      "churrascaria": "Churrascaria",
+      "lanchonete": "Lanchonete",
+      "sushi-bar": "Sushi Bar",
+      "outro": "Outro"
+    };
+    
+    const revenueLabels = {
+      "ate-30k": "Até R$ 30.000",
+      "30k-100k": "R$ 30.000 a R$ 100.000",
+      "100k-300k": "R$ 100.000 a R$ 300.000",
+      "300k+": "Acima de R$ 300.000",
+      "nao-informar": "Prefiro não informar"
+    };
+    
     const emailBody = `
-Nova Solicitação de Demonstração - ORDRX
+🚀 NOVA SOLICITAÇÃO DE CONTA GRÁTIS - ORDRX.AI
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DADOS DO CONTATO
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+═══════════════════════════════════════════════════════
+📋 DADOS DO CONTATO
+═══════════════════════════════════════════════════════
 
-Nome: ${formData.name}
-E-mail: ${formData.email}
-Telefone: ${formData.phone}
-Cidade: ${formData.city}
+👤 Nome Completo: ${formData.name}
+📧 E-mail: ${formData.email}
+📱 WhatsApp: ${formData.phone}
+📍 Cidade: ${formData.city}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-INFORMAÇÕES DO ESTABELECIMENTO
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+═══════════════════════════════════════════════════════
+🏪 INFORMAÇÕES DO ESTABELECIMENTO
+═══════════════════════════════════════════════════════
 
-Tipo: ${formData.segment}
-Número de Mesas: ${formData.tables}
+🍽️  Nome do Restaurante: ${formData.restaurant}
+🏷️  Tipo de Estabelecimento: ${segmentLabels[formData.segment] || formData.segment}
+🪑 Número de Mesas: ${formData.tables}
+💰 Faturamento Médio Mensal: ${revenueLabels[formData.revenue] || formData.revenue}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-MENSAGEM
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+═══════════════════════════════════════════════════════
+📅 Data/Hora: ${new Date().toLocaleString("pt-BR", { 
+  day: "2-digit", 
+  month: "2-digit", 
+  year: "numeric", 
+  hour: "2-digit", 
+  minute: "2-digit" 
+})}
+🌐 Origem: Landing Page ORDRX.AI
+═══════════════════════════════════════════════════════
 
-${formData.message}
+✨ Próximos Passos:
+1. Criar conta no sistema ORDRX.AI
+2. Enviar credenciais de acesso por e-mail
+3. Fornecer suporte inicial para configuração
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Data: ${new Date().toLocaleString("pt-BR")}
-Origem: Landing Page ORDRX
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+═══════════════════════════════════════════════════════
     `.trim();
 
     try {
       // Send email using mailto (fallback method for static site)
       // For production, you should use EmailJS or similar service
       const mailtoLink = `mailto:ungaro.pablo@gmail.com?subject=${encodeURIComponent(
-        "🚀 Nova Candidatura Beta Founders - " + formData.name
+        "🚀 Nova Conta Grátis - " + formData.name
       )}&body=${encodeURIComponent(emailBody)}`;
 
       // Alternative: Use FormSubmit.co (no backend needed)
@@ -143,11 +204,12 @@ Origem: Landing Page ORDRX
             name: formData.name,
             email: formData.email,
             phone: formData.phone,
+            restaurant: formData.restaurant,
             segment: formData.segment,
             tables: formData.tables,
             city: formData.city,
-            message: formData.message,
-            _subject: `🚀 Nova Candidatura Beta Founders - ${formData.name} (${formData.email})`,
+            revenue: formData.revenue,
+            _subject: `🚀 Nova Conta Grátis ORDRX.AI - ${formData.restaurant} (${formData.name})`,
             _template: "box",
             _replyto: formData.email,
           }),
@@ -155,8 +217,8 @@ Origem: Landing Page ORDRX
       );
 
       if (response.ok) {
-        // Show success modal
-        showSuccessModal();
+        // Show success message in form
+        showSuccessMessage(form);
 
         // Reset form
         form.reset();
@@ -168,12 +230,12 @@ Origem: Landing Page ORDRX
 
       // Fallback: Open mailto link
       window.location.href = `mailto:ungaro.pablo@gmail.com?subject=${encodeURIComponent(
-        "🚀 Nova Candidatura Beta Founders - " + formData.name
+        "🚀 Nova Conta Grátis ORDRX.AI - " + formData.restaurant
       )}&body=${encodeURIComponent(emailBody)}`;
 
-      // Show success modal anyway
+      // Show success message anyway
       setTimeout(() => {
-        showSuccessModal();
+        showSuccessMessage(form);
         form.reset();
       }, 1000);
     } finally {
@@ -182,42 +244,62 @@ Origem: Landing Page ORDRX
       submitBtn.innerHTML = originalBtnText;
     }
   });
-
-// ========================================
-// Success Modal
-// ========================================
-function showSuccessModal() {
-  const modal = document.getElementById("successModal");
-  modal.classList.add("active");
-}
-
-// Close modal when clicking close button
-document.querySelector(".btn-close-modal").addEventListener("click", () => {
-  const modal = document.getElementById("successModal");
-  modal.classList.remove("active");
 });
 
-// Close modal when clicking outside
-document.getElementById("successModal").addEventListener("click", (e) => {
-  if (e.target.id === "successModal") {
-    e.target.classList.remove("active");
+// ========================================
+// Success Message in Form
+// ========================================
+function showSuccessMessage(form) {
+  // Remove any existing success message
+  const existingMessage = form.querySelector(".form-success-message");
+  if (existingMessage) {
+    existingMessage.remove();
   }
-});
+
+  // Create success message
+  const successMessage = document.createElement("div");
+  successMessage.className = "form-success-message";
+  successMessage.innerHTML = `
+    <div class="success-icon">✓</div>
+    <div class="success-content">
+      <h3>Cadastro Enviado com Sucesso!</h3>
+      <p>📧 Você receberá um e-mail com suas credenciais de acesso em poucos minutos.</p>
+      <p>Verifique sua caixa de entrada e spam.</p>
+    </div>
+  `;
+
+  // Insert before the submit button
+  const submitButton = form.querySelector(".btn-submit");
+  if (submitButton) {
+    form.insertBefore(successMessage, submitButton);
+  } else {
+    form.appendChild(successMessage);
+  }
+
+  // Scroll to message
+  successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+}
 
 // ========================================
 // Mobile Menu Toggle
 // ========================================
-document
-  .getElementById("mobileMenuToggle")
-  .addEventListener("click", function () {
-    const navMenu = document.querySelector(".nav-menu");
-    const toggle = this;
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+  
+  if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener("click", function () {
+      const navMenu = document.querySelector(".nav-menu");
+      const toggle = this;
 
-    toggle.classList.toggle("active");
-    navMenu.classList.toggle("active");
-    const isOpen = toggle.classList.contains("active");
-    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-  });
+      if (navMenu) {
+        toggle.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        const isOpen = toggle.classList.contains("active");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      }
+    });
+  }
+});
 
 // ========================================
 // Smooth Scroll with Offset
@@ -249,22 +331,28 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // ========================================
 // Phone Input Mask
 // ========================================
-document.getElementById("phone").addEventListener("input", function (e) {
-  let value = e.target.value.replace(/\D/g, "");
+document.addEventListener("DOMContentLoaded", () => {
+  const phoneInput = document.getElementById("phone");
+  
+  if (phoneInput) {
+    phoneInput.addEventListener("input", function (e) {
+      let value = e.target.value.replace(/\D/g, "");
 
-  if (value.length > 11) {
-    value = value.slice(0, 11);
+      if (value.length > 11) {
+        value = value.slice(0, 11);
+      }
+
+      if (value.length >= 2) {
+        value = "(" + value.slice(0, 2) + ") " + value.slice(2);
+      }
+
+      if (value.length >= 10) {
+        value = value.slice(0, 10) + "-" + value.slice(10);
+      }
+
+      e.target.value = value;
+    });
   }
-
-  if (value.length >= 2) {
-    value = "(" + value.slice(0, 2) + ") " + value.slice(2);
-  }
-
-  if (value.length >= 10) {
-    value = value.slice(0, 10) + "-" + value.slice(10);
-  }
-
-  e.target.value = value;
 });
 
 // ========================================
@@ -394,21 +482,26 @@ document.addEventListener("DOMContentLoaded", () => {
 // ========================================
 // Form Validation
 // ========================================
-const form = document.getElementById("contactForm");
-const inputs = form.querySelectorAll("input[required], select[required]");
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  
+  if (form) {
+    const inputs = form.querySelectorAll("input[required], select[required]");
 
-inputs.forEach((input) => {
-  input.addEventListener("blur", function () {
-    if (!this.value.trim()) {
-      this.style.borderColor = "rgba(255, 0, 0, 0.5)";
-    } else {
-      this.style.borderColor = "rgba(255, 255, 255, 0.1)";
-    }
-  });
+    inputs.forEach((input) => {
+      input.addEventListener("blur", function () {
+        if (!this.value.trim()) {
+          this.style.borderColor = "rgba(255, 0, 0, 0.5)";
+        } else {
+          this.style.borderColor = "rgba(255, 255, 255, 0.1)";
+        }
+      });
 
-  input.addEventListener("input", function () {
-    this.style.borderColor = "rgba(0, 240, 255, 0.5)";
-  });
+      input.addEventListener("input", function () {
+        this.style.borderColor = "rgba(168, 85, 247, 0.5)";
+      });
+    });
+  }
 });
 
 // ========================================
