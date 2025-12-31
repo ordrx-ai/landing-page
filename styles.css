@@ -176,6 +176,28 @@ a {
 .logo img {
   display: block;
   flex-shrink: 0;
+  object-fit: contain;
+}
+
+.logo-mascot {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: transparent;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.logo:hover .logo-mascot {
+  transform: scale(1.1) rotate(5deg);
+}
+
+@media (max-width: 428px) {
+  .logo-mascot {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .logo span {
@@ -1975,7 +1997,7 @@ section {
     font-size: 1.25rem;
   }
 
-  .logo img {
+  .logo img:not(.logo-mascot) {
     width: 32px;
     height: 32px;
   }

@@ -432,10 +432,10 @@ Teste em múltiplos dispositivos antes de fazer deploy.
 ### Logo
 
 - 3 variações SVG disponíveis em `/images/`
-  - `logo-a.svg` - Principal
+  - `mascote.png` - Logo principal (mascote)
   - `logo-b.svg` - Alternativo
   - `logo-c.svg` - Simplificado
-- Favicon em `favicon.svg`
+- Favicon em `logo.png` (mesma imagem do logo)
 
 ### Slogan
 
@@ -443,7 +443,7 @@ Teste em múltiplos dispositivos antes de fazer deploy.
 
 ### Imagens
 
-- Open Graph: `/images/og-image.jpg`, `.png`, `.svg`
+- Open Graph: `/images/mascote2.png`
 - Equipe: `/images/team/*.jpg`
 
 ## 🔍 Estrutura de URLs

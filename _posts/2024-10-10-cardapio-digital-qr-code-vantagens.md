@@ -7,7 +7,7 @@ category: "Tecnologia"
 author: "ORDRX"
 read_time: 10
 tags: [cardápio digital, QR Code, automação, restaurantes, tecnologia]
-image: "https://ordrx.ai/images/og-image.jpg"
+image: "https://ordrx.ai/images/mascote2.png"
 ---
 
 O **cardápio digital com QR Code** está revolucionando a forma como restaurantes e bares operam no Brasil. Com a transformação digital acelerada pela pandemia, milhares de estabelecimentos descobriram que essa tecnologia não é apenas uma tendência passageira, mas sim uma ferramenta essencial para aumentar vendas, reduzir custos e melhorar a experiência do cliente.

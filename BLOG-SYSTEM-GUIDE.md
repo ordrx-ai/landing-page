@@ -64,7 +64,7 @@ category: "Gestão"
 author: "ORDRX"
 read_time: 8
 tags: [vendas, gestão, estratégias, restaurantes]
-image: "https://ordrx.ai/images/og-image.jpg"
+image: "https://ordrx.ai/images/mascote2.png"
 ---
 ```
 
@@ -222,7 +222,7 @@ category: "Gestão"
 author: "ORDRX"
 read_time: 12
 tags: [custos, gestão, eficiência, lucratividade, economia]
-image: "https://ordrx.ai/images/og-image.jpg"
+image: "https://ordrx.ai/images/mascote2.png"
 ---
 
 Reduzir custos sem comprometer a qualidade é o desafio de todo gestor de restaurante. Neste guia, vamos explorar **5 estratégias comprovadas** que podem reduzir seus custos em até 40%.

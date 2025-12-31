@@ -417,7 +417,7 @@ Ordem recomendada para adicionar scripts:
     <!-- ... outras meta tags ... -->
 
     <!-- Preload/DNS Prefetch -->
-    <link rel="preload" as="image" href="images/logo-a.svg" />
+    <link rel="preload" as="image" href="images/mascote.png" />
     <link rel="preload" as="style" href="styles.css" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 
