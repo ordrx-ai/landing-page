@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     
     const emailBody = `
-🚀 NOVA SOLICITAÇÃO DE CONTA GRÁTIS - ORDRX.AI
+🚀 NOVA SOLICITAÇÃO DE TESTE GRÁTIS - ORDRX.AI
 
 ═══════════════════════════════════════════════════════
 📋 DADOS DO CONTATO
@@ -166,6 +166,11 @@ document.addEventListener("DOMContentLoaded", () => {
 💰 Faturamento Médio Mensal: ${revenueLabels[formData.revenue] || formData.revenue}
 
 ═══════════════════════════════════════════════════════
+💰 INFORMAÇÕES DO PLANO
+═══════════════════════════════════════════════════════
+
+✨ Período de Teste: 30 dias grátis
+💵 Valor Após Teste: R$ 119,90/mês
 📅 Data/Hora: ${new Date().toLocaleString("pt-BR", { 
   day: "2-digit", 
   month: "2-digit", 
@@ -180,6 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
 1. Criar conta no sistema ORDRX.AI
 2. Enviar credenciais de acesso por e-mail
 3. Fornecer suporte inicial para configuração
+4. Informar sobre período de teste de 30 dias
 
 ═══════════════════════════════════════════════════════
     `.trim();
@@ -188,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Send email using mailto (fallback method for static site)
       // For production, you should use EmailJS or similar service
       const mailtoLink = `mailto:ungaro.pablo@gmail.com?subject=${encodeURIComponent(
-        "🚀 Nova Conta Grátis - " + formData.name
+        "🚀 Nova Solicitação de Teste Grátis - " + formData.name
       )}&body=${encodeURIComponent(emailBody)}`;
 
       // Alternative: Use FormSubmit.co (no backend needed)
@@ -209,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
             tables: formData.tables,
             city: formData.city,
             revenue: formData.revenue,
-            _subject: `🚀 Nova Conta Grátis ORDRX.AI - ${formData.restaurant} (${formData.name})`,
+            _subject: `🚀 Nova Solicitação de Teste Grátis ORDRX.AI - ${formData.restaurant} (${formData.name})`,
             _template: "box",
             _replyto: formData.email,
           }),
@@ -230,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Fallback: Open mailto link
       window.location.href = `mailto:ungaro.pablo@gmail.com?subject=${encodeURIComponent(
-        "🚀 Nova Conta Grátis ORDRX.AI - " + formData.restaurant
+        "🚀 Nova Solicitação de Teste Grátis ORDRX.AI - " + formData.restaurant
       )}&body=${encodeURIComponent(emailBody)}`;
 
       // Show success message anyway
@@ -264,7 +270,8 @@ function showSuccessMessage(form) {
     <div class="success-content">
       <h3>Cadastro Enviado com Sucesso!</h3>
       <p>📧 Você receberá um e-mail com suas credenciais de acesso em poucos minutos.</p>
-      <p>Verifique sua caixa de entrada e spam.</p>
+      <p>✨ Teste grátis por 30 dias. Depois, apenas R$ 119,90/mês.</p>
+      <p><small>Verifique sua caixa de entrada e spam.</small></p>
     </div>
   `;
 

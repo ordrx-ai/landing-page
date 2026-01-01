@@ -169,7 +169,6 @@ a {
 .logo a {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   text-decoration: none;
 }
 
@@ -180,13 +179,13 @@ a {
 }
 
 .logo-mascot {
-  width: 48px;
-  height: 48px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
-  border-radius: 12px;
   background: transparent;
   transition: transform 0.3s ease;
   flex-shrink: 0;
+  margin-top: -23px;
 }
 
 .logo:hover .logo-mascot {
@@ -195,8 +194,9 @@ a {
 
 @media (max-width: 428px) {
   .logo-mascot {
-    width: 40px;
-    height: 40px;
+    width: 100px;
+    height: 100px;
+    margin-top: -28px;
   }
 }
 
@@ -2875,6 +2875,24 @@ section {
 .price-period {
   font-size: 1rem;
   color: var(--text-muted);
+}
+
+.pricing-trial {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 212, 255, 0.15),
+    rgba(168, 85, 247, 0.15)
+  );
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: var(--radius-sm);
+}
+
+.pricing-trial strong {
+  color: var(--secondary-color);
+  font-size: 0.95rem;
 }
 
 .pricing-features {
