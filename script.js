@@ -193,13 +193,13 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       // Send email using mailto (fallback method for static site)
       // For production, you should use EmailJS or similar service
-      const mailtoLink = `mailto:ungaro.pablo@gmail.com?subject=${encodeURIComponent(
+      const mailtoLink = `mailto:ordrx.ai@gmail.com?subject=${encodeURIComponent(
         "🚀 Nova Solicitação de Teste Grátis - " + formData.name
       )}&body=${encodeURIComponent(emailBody)}`;
 
       // Alternative: Use FormSubmit.co (no backend needed)
       const response = await fetch(
-        "https://formsubmit.co/ajax/ungaro.pablo@gmail.com",
+        "https://formsubmit.co/ajax/ordrx.ai@gmail.com",
         {
           method: "POST",
           headers: {
@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error:", error);
 
       // Fallback: Open mailto link
-      window.location.href = `mailto:ungaro.pablo@gmail.com?subject=${encodeURIComponent(
+      window.location.href = `mailto:ordrx.ai@gmail.com?subject=${encodeURIComponent(
         "🚀 Nova Solicitação de Teste Grátis ORDRX.AI - " + formData.restaurant
       )}&body=${encodeURIComponent(emailBody)}`;
 

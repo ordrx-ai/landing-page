@@ -66,7 +66,7 @@ Coleta:
 - Cidade
 - Mensagem (opcional)
 
-**Envio:** E-mail para `ungaro.pablo@gmail.com` via FormSubmit.co
+**Envio:** E-mail para `ordrx.ai@gmail.com` via FormSubmit.co
 
 ## 🚀 Como Rodar Localmente
 
@@ -508,7 +508,7 @@ Verifique:
 
 ## 📞 Contato e Suporte
 
-- **E-mail:** <ungaro.pablo@gmail.com>
+- **E-mail:** <ordrx.ai@gmail.com>
 - **Site:** <https://ordrx.ai>
 - **Documentação:** Veja seção "Documentação Adicional" acima
 
