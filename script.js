@@ -218,32 +218,61 @@ document.addEventListener("DOMContentLoaded", () => {
             _subject: `🚀 Nova Solicitação de Teste Grátis ORDRX.AI - ${formData.restaurant} (${formData.name})`,
             _template: "box",
             _replyto: formData.email,
+            _captcha: "false",
           }),
         }
       );
 
-      if (response.ok) {
-        // Show success message in form
-        showSuccessMessage(form);
+      // Parse response
+      let responseData;
+      try {
+        const responseText = await response.text();
+        // Log raw response for debugging
+        console.log("FormSubmit Raw Response:", responseText);
+        
+        // Try to parse as JSON
+        if (responseText) {
+          responseData = JSON.parse(responseText);
+        } else {
+          responseData = { success: response.ok };
+        }
+      } catch (parseError) {
+        console.warn("Could not parse response as JSON:", parseError);
+        // If response is ok but not JSON, assume success
+        responseData = { success: response.ok };
+      }
+      
+      // Log parsed response for debugging
+      console.log("FormSubmit Parsed Response:", responseData);
 
-        // Reset form
-        form.reset();
+      if (response.ok) {
+        // Check if email needs confirmation (first time using this email)
+        // FormSubmit returns success: false with message when email needs confirmation
+        if (responseData.success === false) {
+          // Email needs confirmation
+          const message = responseData.message || "É necessário confirmar o e-mail antes de receber os formulários.";
+          showEmailConfirmationMessage(form, message);
+          // Don't reset form - user might want to resubmit after confirmation
+        } else {
+          // Success - show success message
+          showSuccessMessage(form);
+          // Reset form
+          form.reset();
+        }
       } else {
-        throw new Error("Falha no envio");
+        // Handle error response
+        const errorMessage = responseData.message || responseData.error || "Falha no envio do formulário. Tente novamente.";
+        throw new Error(errorMessage);
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("FormSubmit Error:", error);
 
-      // Fallback: Open mailto link
-      window.location.href = `mailto:ordrx.ai@gmail.com?subject=${encodeURIComponent(
-        "🚀 Nova Solicitação de Teste Grátis ORDRX.AI - " + formData.restaurant
-      )}&body=${encodeURIComponent(emailBody)}`;
+      // Show error message to user
+      showErrorMessage(form, error.message || "Erro ao enviar formulário. Tente novamente ou entre em contato diretamente.");
 
-      // Show success message anyway
-      setTimeout(() => {
-        showSuccessMessage(form);
-        form.reset();
-      }, 1000);
+      // Fallback: Offer mailto option
+      console.log("Fallback: Using mailto link");
+      // Don't auto-open mailto, just show error and let user decide
     } finally {
       // Re-enable button
       submitBtn.disabled = false;
@@ -256,8 +285,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // Success Message in Form
 // ========================================
 function showSuccessMessage(form) {
-  // Remove any existing success message
-  const existingMessage = form.querySelector(".form-success-message");
+  // Remove any existing messages
+  const existingMessage = form.querySelector(".form-success-message, .form-error-message, .form-confirmation-message");
   if (existingMessage) {
     existingMessage.remove();
   }
@@ -271,7 +300,7 @@ function showSuccessMessage(form) {
       <h3>Cadastro Enviado com Sucesso!</h3>
       <p>📧 Você receberá um e-mail com suas credenciais de acesso em poucos minutos.</p>
       <p>✨ Teste grátis por 30 dias. Depois, apenas R$ 119,90/mês.</p>
-      <p><small>Verifique sua caixa de entrada e spam.</small></p>
+      <p><small>💡 <strong>Importante:</strong> Verifique sua caixa de entrada e pasta de spam. Se não receber em alguns minutos, entre em contato conosco.</small></p>
     </div>
   `;
 
@@ -285,6 +314,83 @@ function showSuccessMessage(form) {
 
   // Scroll to message
   successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+// ========================================
+// Email Confirmation Message
+// ========================================
+function showEmailConfirmationMessage(form, message) {
+  // Remove any existing messages
+  const existingMessage = form.querySelector(".form-success-message, .form-error-message, .form-confirmation-message");
+  if (existingMessage) {
+    existingMessage.remove();
+  }
+
+  // Create confirmation message
+  const confirmationMessage = document.createElement("div");
+  confirmationMessage.className = "form-confirmation-message";
+  confirmationMessage.innerHTML = `
+    <div class="success-icon" style="background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));">📧</div>
+    <div class="success-content">
+      <h3>Confirmação de E-mail Necessária</h3>
+      <p><strong>Primeira vez usando este e-mail?</strong></p>
+      <p>O FormSubmit enviou um e-mail de confirmação para <strong>ordrx.ai@gmail.com</strong>.</p>
+      <p>📬 <strong>Próximos passos:</strong></p>
+      <ol style="text-align: left; margin: 1rem 0; padding-left: 1.5rem;">
+        <li>Verifique a caixa de entrada de <strong>ordrx.ai@gmail.com</strong></li>
+        <li>Verifique também a pasta de <strong>spam/lixo eletrônico</strong></li>
+        <li>Clique no link de confirmação no e-mail</li>
+        <li>Após confirmar, os formulários começarão a ser entregues normalmente</li>
+      </ol>
+      <p><small>💡 <strong>Dica:</strong> Marque o e-mail do FormSubmit como "não é spam" para garantir entregas futuras.</small></p>
+      <p><small>Seu formulário foi salvo e será enviado automaticamente após a confirmação.</small></p>
+    </div>
+  `;
+
+  // Insert before the submit button
+  const submitButton = form.querySelector(".btn-submit");
+  if (submitButton) {
+    form.insertBefore(confirmationMessage, submitButton);
+  } else {
+    form.appendChild(confirmationMessage);
+  }
+
+  // Scroll to message
+  confirmationMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+// ========================================
+// Error Message
+// ========================================
+function showErrorMessage(form, errorText) {
+  // Remove any existing messages
+  const existingMessage = form.querySelector(".form-success-message, .form-error-message, .form-confirmation-message");
+  if (existingMessage) {
+    existingMessage.remove();
+  }
+
+  // Create error message
+  const errorMessage = document.createElement("div");
+  errorMessage.className = "form-error-message";
+  errorMessage.innerHTML = `
+    <div class="success-icon" style="background: linear-gradient(135deg, #dc2626, #991b1b);">⚠️</div>
+    <div class="success-content">
+      <h3>Erro ao Enviar Formulário</h3>
+      <p>${errorText}</p>
+      <p><small>💡 <strong>Tente novamente</strong> ou entre em contato diretamente pelo e-mail <a href="mailto:ordrx.ai@gmail.com">ordrx.ai@gmail.com</a></small></p>
+    </div>
+  `;
+
+  // Insert before the submit button
+  const submitButton = form.querySelector(".btn-submit");
+  if (submitButton) {
+    form.insertBefore(errorMessage, submitButton);
+  } else {
+    form.appendChild(errorMessage);
+  }
+
+  // Scroll to message
+  errorMessage.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
 // ========================================

@@ -1819,7 +1819,9 @@ section {
 /* ========================================
    Form Success Message
    ======================================== */
-.form-success-message {
+.form-success-message,
+.form-confirmation-message,
+.form-error-message {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
@@ -1891,6 +1893,49 @@ section {
   margin-bottom: 0;
   font-size: 0.875rem;
   color: var(--text-muted);
+}
+
+.success-content ol,
+.success-content ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.success-content li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.success-content a {
+  color: var(--secondary-color);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.success-content a:hover {
+  color: var(--accent-color);
+}
+
+/* Confirmation Message Specific Styles */
+.form-confirmation-message {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 53, 0.1),
+    rgba(168, 85, 247, 0.1)
+  );
+  border: 2px solid rgba(255, 107, 53, 0.3);
+}
+
+/* Error Message Specific Styles */
+.form-error-message {
+  background: linear-gradient(
+    135deg,
+    rgba(220, 38, 38, 0.1),
+    rgba(153, 27, 27, 0.1)
+  );
+  border: 2px solid rgba(220, 38, 38, 0.3);
 }
 
 /* ========================================
