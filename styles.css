@@ -2179,6 +2179,33 @@ section {
     gap: 1.25rem;
   }
 
+  .pain-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .pain-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .pain-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 3rem;
+  }
+
+  .pain-cost {
+    font-size: 1.5rem;
+  }
+
+  .pain-total {
+    font-size: 1.25rem;
+  }
+
+  .pain-total strong {
+    font-size: 1.75rem;
+  }
+
   .contact-content,
   .about-content {
     grid-template-columns: 1fr;
@@ -2272,6 +2299,11 @@ section {
 
   .segments-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pain-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
   .about-content,
@@ -2472,6 +2504,20 @@ section {
 .pain-points {
   padding: var(--spacing-xl) 0;
   background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.pain-points::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 50%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .pain-grid {
@@ -2479,61 +2525,189 @@ section {
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
 }
 
 .pain-card {
-  background: var(--white);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.98) 100%);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid var(--gray-200);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 32px rgba(26, 31, 58, 0.08),
+              0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(168, 85, 247, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.pain-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--secondary-color), var(--teal-color), var(--accent-color));
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .pain-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(26, 31, 58, 0.15),
+              0 4px 16px rgba(168, 85, 247, 0.1);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+.pain-card:hover::before {
+  opacity: 1;
+}
+
+.pain-card:nth-child(1) {
+  border-top: 3px solid var(--secondary-color);
+}
+
+.pain-card:nth-child(2) {
+  border-top: 3px solid var(--accent-color);
+}
+
+.pain-card:nth-child(3) {
+  border-top: 3px solid var(--teal-color);
+}
+
+.pain-card:nth-child(4) {
+  border-top: 3px solid var(--secondary-color);
 }
 
 .pain-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(0, 212, 255, 0.1));
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.pain-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.pain-card:nth-child(1) .pain-icon {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(168, 85, 247, 0.05));
+}
+
+.pain-card:nth-child(2) .pain-icon {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.15), rgba(255, 107, 53, 0.05));
+}
+
+.pain-card:nth-child(3) .pain-icon {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 212, 255, 0.05));
+}
+
+.pain-card:nth-child(4) .pain-icon {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(0, 212, 255, 0.1));
+}
+
+.pain-card:hover .pain-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 24px rgba(168, 85, 247, 0.2);
+}
+
+.pain-card:hover .pain-icon img {
+  transform: scale(1.05);
 }
 
 .pain-cost {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #dc2626;
-  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.pain-card:nth-child(1) .pain-cost {
+  background: linear-gradient(135deg, var(--secondary-color), var(--purple-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pain-card:nth-child(2) .pain-cost {
+  background: linear-gradient(135deg, var(--accent-color), #e55a2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pain-card:nth-child(3) .pain-cost {
+  background: linear-gradient(135deg, var(--teal-color), #00a8cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pain-card:nth-child(4) .pain-cost {
+  background: linear-gradient(135deg, var(--secondary-color), var(--teal-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .pain-card h3 {
-  font-size: 1.125rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
 }
 
 .pain-card p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+.pain-card p strong {
+  color: var(--primary-color);
+  font-weight: 700;
 }
 
 .pain-cta {
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .pain-total {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--text-primary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
 }
 
 .pain-total strong {
-  color: #dc2626;
-  font-size: 1.5rem;
+  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
 }
 
 /* ========================================
