@@ -150,29 +150,232 @@ structured_data: |
   </script>
 ---
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-bg"></div>
+<!-- Contact Section -->
+<section id="contact" class="contact">
   <div class="container">
-    <div class="hero-wrapper">
-      <div class="hero-content fade-in">
-      <div class="hero-badge">
-         Primeiro Mês Grátis • Sem Cartão de Crédito
+    <div class="contact-content">
+      <div class="contact-info">
+        <span class="section-badge" style="color: #ffffff; background: rgba(10, 15, 28, 0.78); border: 1px solid rgba(173, 216, 255, 0.65); text-shadow: none; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);">🚀 Oferta de Lançamento</span>
+        <h2 class="section-title" style="color: #f8fbff;">
+          OrdrX: O Sistema Completo de Automação para Restaurantes<br />
+        </h2>
+        <p class="contact-description" style="color: #eaf2ff;">
+          Nesta fase de lancamento, novos clientes testam todas as funcionalidades do sistema pagando apenas o plano basico. Do salao ao delivery, voce opera com plano fixo, todas as funcionalidades inclusas sem surpresa no valor mensal. Teste grátis por 30 dias, depois apenas R$ 119,90/mês.
+        </p>
+
+        <div class="contact-features">
+          <div class="contact-feature">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M9 12L11 14L15 10"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span style="color: #f8fbff;"><strong>Dashboard do Gerente</strong> com visao em tempo real</span>
+          </div>
+          <div class="contact-feature">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M9 12L11 14L15 10"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span style="color: #f8fbff;"><strong>Painel do Garcom</strong> para atendimento agil nas mesas</span>
+          </div>
+          <div class="contact-feature">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M9 12L11 14L15 10"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span style="color: #f8fbff;"><strong>Painel da Cozinha (KDS)</strong> com fila e prioridade de pedidos</span>
+          </div>
+          <div class="contact-feature">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M9 12L11 14L15 10"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span style="color: #f8fbff;"><strong>Cardapio Digital + Vitrine + Kanban de Delivery</strong> em um fluxo unico</span>
+          </div>
+          <div class="contact-feature">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M9 12L11 14L15 10"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span style="color: #f8fbff;"><strong>CMV inteligente</strong> que calcula o custo e o preco ideal de cada prato no restaurante e no delivery</span>
+          </div>
+        </div>
+
+        <div class="contact-trust">
+          <p style="color: #dbe7ff;">🔒 Seus dados estao seguros. Cashback e IA inclusos sem surpresa no valor mensal.</p>
+        </div>
       </div>
-      <h1 class="hero-title">
-        Automação com IA<br />
-        <span class="gradient-text">Para Seu Restaurante</span><br />
-        Primeiro Mês Grátis<br />
-        <span class="gradient-text">Depois R$ 119,90/mês</span>
-      </h1>
-      <p class="hero-subtitle">
-        Enquanto você anota pedidos errados, seu concorrente já usa IA.<br />
-        <strong>Cardápio digital + Dashboard inteligente + Automação completa.</strong><br />
-        Teste grátis por 30 dias. Depois, apenas R$ 119,90/mês.
-      </p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn-large btn-gradient">
-          Testar Grátis por 30 Dias
+
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/ordrx.ai@gmail.com" method="POST">
+        <!-- FormSubmit.co hidden fields -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_next" value="">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nome Completo*</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="João Silva"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="joao@seurestaurante.com.br"
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">WhatsApp*</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="(11) 98765-4321"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="restaurant">Nome do Restaurante*</label>
+            <input
+              type="text"
+              id="restaurant"
+              name="restaurant"
+              required
+              placeholder="Restaurante do João"
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">Cidade*</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              required
+              placeholder="São Paulo - SP"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="segment">Tipo de Estabelecimento*</label>
+            <select id="segment" name="segment" required>
+              <option value="">Selecione...</option>
+              <option value="restaurante">Restaurante</option>
+              <option value="bar">Bar</option>
+              <option value="cafeteria">Cafeteria</option>
+              <option value="pizzaria">Pizzaria</option>
+              <option value="casa-noturna">Casa Noturna</option>
+              <option value="sorveteria">Sorveteria</option>
+              <option value="churrascaria">Churrascaria</option>
+              <option value="lanchonete">Lanchonete</option>
+              <option value="sushi-bar">Sushi Bar</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="tables">Número de Mesas*</label>
+            <select id="tables" name="tables" required>
+              <option value="">Selecione...</option>
+              <option value="1-10">1 a 10 mesas</option>
+              <option value="11-20">11 a 20 mesas</option>
+              <option value="21-50">21 a 50 mesas</option>
+              <option value="50+">Mais de 50 mesas</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="revenue">Faturamento Médio Mensal</label>
+            <select id="revenue" name="revenue">
+              <option value="">Selecione...</option>
+              <option value="ate-30k">Até R$ 30.000</option>
+              <option value="30k-100k">R$ 30.000 a R$ 100.000</option>
+              <option value="100k-300k">R$ 100.000 a R$ 300.000</option>
+              <option value="300k+">Acima de R$ 300.000</option>
+              <option value="nao-informar">Prefiro não informar</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit btn-gradient">
+          <span>Testar Grátis por 30 Dias</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path
               d="M7.5 15L12.5 10L7.5 5"
@@ -182,37 +385,43 @@ structured_data: |
               stroke-linejoin="round"
             />
           </svg>
-        </a>
-        <a href="#calculator" class="btn-large btn-outline">
-          Quanto Você Está Perdendo?
-        </a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-value">50%</span>
-          <span class="stat-label">Menos Custos</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">40%</span>
-          <span class="stat-label">Mais Vendas</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">0</span>
-          <span class="stat-label">Erros de Pedido</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">3s</span>
-          <span class="stat-label">Pedido na Cozinha</span>
-        </div>
-      </div>
-      <p class="hero-trust">
-        <span>✓ Restaurantes já estão usando</span>
-        <span>✓ Setup em minutos</span>
-        <span>✓ Suporte humano real</span>
+        </button>
+
+        <p class="form-disclaimer">
+          Ao enviar, você concorda com nossos
+          <a href="/termos-de-uso" target="_blank">Termos de Uso</a> e
+          <a href="/politica-de-privacidade" target="_blank">Política de Privacidade</a>.
+          <br /><br />
+          <strong>📧 Você receberá um e-mail com suas credenciais de acesso em poucos minutos.</strong><br />
+          <strong>✨ Teste grátis por 30 dias. Depois, apenas R$ 119,90/mês.</strong>
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Hero Section -->
+<section class="hero hero-reference">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-wrapper">
+      <div class="hero-content fade-in">
+      <h1 class="hero-title">
+        Restaurant order<br />
+        management System
+      </h1>
+      <p class="hero-subtitle">
+        OrdrX also comprehensively counts and outlays,
+        for restaurant order management system.
       </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-large btn-gradient">
+          TESTAR GRÁTIS
+        </a>
+        <a href="#contact" class="btn-large btn-outline">
+          AGENDAR DEMO
+        </a>
       </div>
-      <div class="hero-mascot fade-in" style="animation-delay: 0.3s">
-        <img src="/images/mascote.png" alt="Mascote ORDRX" class="mascot-image" />
       </div>
     </div>
   </div>
@@ -487,6 +696,192 @@ structured_data: |
           <li>✓ Zero travamentos</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Feature Focus Sections (Full-Screen + Parallax) -->
+<section id="dashboard-gerente" class="feature-focus-section feature-focus-dark">
+  <div class="focus-parallax" data-parallax-speed="0.08"></div>
+  <div class="container feature-focus-content">
+    <div class="feature-focus-copy fade-in">
+      <span class="section-badge">Dashboard do Gerente</span>
+      <h2 class="section-title">Visão estratégica para decisões rápidas e seguras</h2>
+      <p class="section-subtitle">
+        Acompanhe vendas, ticket médio, horários de pico e desempenho da operação em tempo real para agir com precisão.
+      </p>
+      <ul class="feature-focus-list">
+        <li>Indicadores de faturamento e performance em um único painel</li>
+        <li>Visão consolidada de mesas, pedidos e produtividade</li>
+        <li>Insights práticos para reduzir desperdício e aumentar margem</li>
+      </ul>
+      <div class="feature-focus-cta">
+        <a href="#contact" class="btn-large btn-gradient">Testar Dashboard do Gerente</a>
+        <a href="#features" class="btn-large btn-outline">Saber Mais</a>
+      </div>
+    </div>
+    <div class="feature-focus-mockup fade-in" style="animation-delay: 0.15s">
+      <div class="focus-window">
+        <div class="focus-topbar"></div>
+        <div class="focus-grid">
+          <div></div><div></div><div></div><div></div>
+        </div>
+        <div class="focus-chart"></div>
+      </div>
+      <p class="focus-caption">Mockup: dashboard analítico com métricas em tempo real</p>
+    </div>
+  </div>
+</section>
+
+<section id="painel-garcom" class="feature-focus-section feature-focus-light">
+  <div class="focus-parallax" data-parallax-speed="0.1"></div>
+  <div class="container feature-focus-content reverse">
+    <div class="feature-focus-copy fade-in">
+      <span class="section-badge">Painel do Garçom</span>
+      <h2 class="section-title">Atendimento ágil em ambiente de alta pressão</h2>
+      <p class="section-subtitle">
+        Interface mobile-first para abrir mesas, lançar pedidos e acompanhar o fluxo sem atrito durante os picos.
+      </p>
+      <ul class="feature-focus-list">
+        <li>Fluxo de pedido em poucos toques</li>
+        <li>Atualização instantânea com cozinha e caixa</li>
+        <li>Controles grandes e claros para uso em tablet e celular</li>
+      </ul>
+      <div class="feature-focus-cta">
+        <a href="#contact" class="btn-large btn-gradient">Testar Painel do Garçom</a>
+        <a href="#features" class="btn-large btn-outline">Saber Mais</a>
+      </div>
+    </div>
+    <div class="feature-focus-mockup fade-in" style="animation-delay: 0.15s">
+      <div class="focus-window focus-mobile">
+        <div class="focus-list-item"></div>
+        <div class="focus-list-item"></div>
+        <div class="focus-list-item"></div>
+        <div class="focus-action"></div>
+      </div>
+      <p class="focus-caption">Mockup: operação mobile de atendimento e pedidos</p>
+    </div>
+  </div>
+</section>
+
+<section id="painel-cozinha" class="feature-focus-section feature-focus-dark">
+  <div class="focus-parallax" data-parallax-speed="0.12"></div>
+  <div class="container feature-focus-content">
+    <div class="feature-focus-copy fade-in">
+      <span class="section-badge">Painel da Cozinha (KDS)</span>
+      <h2 class="section-title">Fila visual para preparar com prioridade e ritmo</h2>
+      <p class="section-subtitle">
+        Organize pedidos por urgência, reduza atrasos e aumente previsibilidade no preparo com uma visão clara da produção.
+      </p>
+      <ul class="feature-focus-list">
+        <li>Pedidos organizados por tempo e prioridade</li>
+        <li>Status claros: pendente, em preparo e pronto</li>
+        <li>Leitura rápida para operação intensa</li>
+      </ul>
+      <div class="feature-focus-cta">
+        <a href="#contact" class="btn-large btn-gradient">Testar Painel da Cozinha</a>
+        <a href="#features" class="btn-large btn-outline">Saber Mais</a>
+      </div>
+    </div>
+    <div class="feature-focus-mockup fade-in" style="animation-delay: 0.15s">
+      <div class="focus-window focus-kds">
+        <div class="focus-kds-card urgent"></div>
+        <div class="focus-kds-card medium"></div>
+        <div class="focus-kds-card low"></div>
+      </div>
+      <p class="focus-caption">Mockup: KDS com gestão visual de urgência</p>
+    </div>
+  </div>
+</section>
+
+<section id="cardapio-digital" class="feature-focus-section feature-focus-light">
+  <div class="focus-parallax" data-parallax-speed="0.08"></div>
+  <div class="container feature-focus-content reverse">
+    <div class="feature-focus-copy fade-in">
+      <span class="section-badge">Cardápio Digital</span>
+      <h2 class="section-title">Experiência intuitiva para o cliente pedir sem fricção</h2>
+      <p class="section-subtitle">
+        Do QR Code ao pedido confirmado, tudo foi desenhado para velocidade, clareza e aumento do ticket médio.
+      </p>
+      <ul class="feature-focus-list">
+        <li>Navegação simples por categorias e produtos</li>
+        <li>Descrição e preço em destaque para decisão rápida</li>
+        <li>Fluxo de carrinho direto ao ponto</li>
+      </ul>
+      <div class="feature-focus-cta">
+        <a href="#contact" class="btn-large btn-gradient">Testar Cardápio Digital</a>
+        <a href="#features" class="btn-large btn-outline">Saber Mais</a>
+      </div>
+    </div>
+    <div class="feature-focus-mockup fade-in" style="animation-delay: 0.15s">
+      <div class="focus-window focus-mobile">
+        <div class="focus-chip-row"><span></span><span></span><span></span></div>
+        <div class="focus-product"></div>
+        <div class="focus-product"></div>
+        <div class="focus-product"></div>
+      </div>
+      <p class="focus-caption">Mockup: cardápio digital com foco em conversão</p>
+    </div>
+  </div>
+</section>
+
+<section id="vitrine-delivery" class="feature-focus-section feature-focus-dark">
+  <div class="focus-parallax" data-parallax-speed="0.1"></div>
+  <div class="container feature-focus-content">
+    <div class="feature-focus-copy fade-in">
+      <span class="section-badge">Vitrine do Delivery</span>
+      <h2 class="section-title">Presença digital forte para vender mais fora do salão</h2>
+      <p class="section-subtitle">
+        Mostre seu cardápio online com identidade profissional e facilite o pedido de quem está em casa.
+      </p>
+      <ul class="feature-focus-list">
+        <li>Layout pensado para confiança e conversão</li>
+        <li>Destaque de produtos estratégicos e promoções</li>
+        <li>Fluxo rápido para finalizar o pedido</li>
+      </ul>
+      <div class="feature-focus-cta">
+        <a href="#contact" class="btn-large btn-gradient">Ver Vitrine do Delivery</a>
+        <a href="#features" class="btn-large btn-outline">Saber Mais</a>
+      </div>
+    </div>
+    <div class="feature-focus-mockup fade-in" style="animation-delay: 0.15s">
+      <div class="focus-window">
+        <div class="focus-banner"></div>
+        <div class="focus-list-item"></div>
+        <div class="focus-list-item"></div>
+        <div class="focus-list-item"></div>
+      </div>
+      <p class="focus-caption">Mockup: vitrine online para pedidos de delivery</p>
+    </div>
+  </div>
+</section>
+
+<section id="kanban-delivery" class="feature-focus-section feature-focus-light">
+  <div class="focus-parallax" data-parallax-speed="0.12"></div>
+  <div class="container feature-focus-content reverse">
+    <div class="feature-focus-copy fade-in">
+      <span class="section-badge">Kanban de Delivery</span>
+      <h2 class="section-title">Controle visual do pedido do aceite até a entrega</h2>
+      <p class="section-subtitle">
+        Acompanhe cada etapa com clareza e sincronize equipe, cozinha e entrega em um fluxo único.
+      </p>
+      <ul class="feature-focus-list">
+        <li>Status organizados por etapa operacional</li>
+        <li>Menos atraso por falta de acompanhamento</li>
+        <li>Visibilidade completa para tomada de ação imediata</li>
+      </ul>
+      <div class="feature-focus-cta">
+        <a href="#contact" class="btn-large btn-gradient">Testar Kanban de Delivery</a>
+        <a href="#features" class="btn-large btn-outline">Saber Mais</a>
+      </div>
+    </div>
+    <div class="feature-focus-mockup fade-in" style="animation-delay: 0.15s">
+      <div class="focus-window focus-kanban">
+        <div class="focus-kanban-col"><span></span><span></span></div>
+        <div class="focus-kanban-col"><span></span><span></span></div>
+        <div class="focus-kanban-col"><span></span><span></span></div>
+      </div>
+      <p class="focus-caption">Mockup: kanban operacional de delivery em tempo real</p>
     </div>
   </div>
 </section>
@@ -942,238 +1337,6 @@ structured_data: |
           </p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact">
-  <div class="container">
-    <div class="contact-content">
-      <div class="contact-info">
-        <span class="section-badge">🚀 Comece Agora</span>
-        <h2 class="section-title">
-          Teste Grátis por 30 Dias<br />
-          <span class="gradient-text">Sem Cartão de Crédito</span>
-        </h2>
-        <p class="contact-description">
-          Preencha o formulário e receba suas credenciais de acesso por e-mail em poucos minutos. Teste todas as funcionalidades por 30 dias. Depois, apenas R$ 119,90/mês.
-        </p>
-
-        <div class="contact-features">
-          <div class="contact-feature">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <path
-                d="M9 12L11 14L15 10"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <span>Primeiro mês grátis</span>
-          </div>
-          <div class="contact-feature">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <path
-                d="M9 12L11 14L15 10"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <span>Sem cartão de crédito</span>
-          </div>
-          <div class="contact-feature">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <path
-                d="M9 12L11 14L15 10"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <span>Acesso imediato por e-mail</span>
-          </div>
-          <div class="contact-feature">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <path
-                d="M9 12L11 14L15 10"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <span>Cancele quando quiser</span>
-          </div>
-        </div>
-
-        <div class="contact-trust">
-          <p>🔒 Seus dados estão seguros. Não vendemos informações.</p>
-        </div>
-      </div>
-
-      <form class="contact-form" id="contactForm" action="https://formsubmit.co/ordrx.ai@gmail.com" method="POST">
-        <!-- FormSubmit.co hidden fields -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="box">
-        <input type="hidden" name="_next" value="">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Nome Completo*</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              placeholder="João Silva"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="email">E-mail*</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              placeholder="joao@seurestaurante.com.br"
-            />
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="phone">WhatsApp*</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              required
-              placeholder="(11) 98765-4321"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="restaurant">Nome do Restaurante*</label>
-            <input
-              type="text"
-              id="restaurant"
-              name="restaurant"
-              required
-              placeholder="Restaurante do João"
-            />
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="city">Cidade*</label>
-            <input
-              type="text"
-              id="city"
-              name="city"
-              required
-              placeholder="São Paulo - SP"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="segment">Tipo de Estabelecimento*</label>
-            <select id="segment" name="segment" required>
-              <option value="">Selecione...</option>
-              <option value="restaurante">Restaurante</option>
-              <option value="bar">Bar</option>
-              <option value="cafeteria">Cafeteria</option>
-              <option value="pizzaria">Pizzaria</option>
-              <option value="casa-noturna">Casa Noturna</option>
-              <option value="sorveteria">Sorveteria</option>
-              <option value="churrascaria">Churrascaria</option>
-              <option value="lanchonete">Lanchonete</option>
-              <option value="sushi-bar">Sushi Bar</option>
-              <option value="outro">Outro</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="tables">Número de Mesas*</label>
-            <select id="tables" name="tables" required>
-              <option value="">Selecione...</option>
-              <option value="1-10">1 a 10 mesas</option>
-              <option value="11-20">11 a 20 mesas</option>
-              <option value="21-50">21 a 50 mesas</option>
-              <option value="50+">Mais de 50 mesas</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="revenue">Faturamento Médio Mensal</label>
-            <select id="revenue" name="revenue">
-              <option value="">Selecione...</option>
-              <option value="ate-30k">Até R$ 30.000</option>
-              <option value="30k-100k">R$ 30.000 a R$ 100.000</option>
-              <option value="100k-300k">R$ 100.000 a R$ 300.000</option>
-              <option value="300k+">Acima de R$ 300.000</option>
-              <option value="nao-informar">Prefiro não informar</option>
-            </select>
-          </div>
-        </div>
-
-        <button type="submit" class="btn-submit btn-gradient">
-          <span>Testar Grátis por 30 Dias</span>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path
-              d="M7.5 15L12.5 10L7.5 5"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-
-        <p class="form-disclaimer">
-          Ao enviar, você concorda com nossos
-          <a href="/termos-de-uso" target="_blank">Termos de Uso</a> e
-          <a href="/politica-de-privacidade" target="_blank">Política de Privacidade</a>.
-          <br /><br />
-          <strong>📧 Você receberá um e-mail com suas credenciais de acesso em poucos minutos.</strong><br />
-          <strong>✨ Teste grátis por 30 dias. Depois, apenas R$ 119,90/mês.</strong>
-        </p>
-      </form>
     </div>
   </div>
 </section>

@@ -31,10 +31,16 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
 
-    if (currentScroll > 50) {
+    if (currentScroll > 300) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
+    }
+
+    if (currentScroll > 400) {
+      navbar.classList.add("shadowed");
+    } else {
+      navbar.classList.remove("shadowed");
     }
 
     lastScroll = currentScroll;
@@ -636,6 +642,51 @@ if ("IntersectionObserver" in window) {
     imageObserver.observe(img);
   });
 }
+
+// ========================================
+// Feature Focus Parallax (subtle)
+// ========================================
+document.addEventListener("DOMContentLoaded", () => {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (prefersReducedMotion || window.innerWidth < 768) {
+    return;
+  }
+
+  const layers = Array.from(document.querySelectorAll(".focus-parallax[data-parallax-speed]"));
+  if (!layers.length) return;
+
+  let ticking = false;
+
+  const applyParallax = () => {
+    const viewportCenter = window.scrollY + window.innerHeight * 0.5;
+
+    layers.forEach((layer) => {
+      const speed = Number(layer.getAttribute("data-parallax-speed")) || 0.08;
+      const section = layer.closest(".feature-focus-section");
+      if (!section) return;
+
+      const sectionCenter = section.offsetTop + section.offsetHeight * 0.5;
+      const distance = viewportCenter - sectionCenter;
+      layer.style.transform = `translate3d(0, ${distance * speed}px, 0)`;
+    });
+
+    ticking = false;
+  };
+
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(applyParallax);
+      ticking = true;
+    }
+  };
+
+  applyParallax();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+});
 
 // ========================================
 // Console Easter Egg
