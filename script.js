@@ -115,13 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
       phone: getName("phone") || "Não informado",
       restaurant: getName("restaurant") || "Não informado",
       segment: getSelectValue("segment"),
-      tables: getSelectValue("tables"),
       city: getName("city"),
-      revenue: getSelectValue("revenue") || "Não informado",
     };
     
     // Validate required fields
-    if (!formData.name || !formData.email || !formData.phone || !formData.restaurant || !formData.segment || !formData.tables || !formData.city) {
+    if (!formData.name || !formData.email || !formData.phone || !formData.restaurant || !formData.segment || !formData.city) {
       alert("Por favor, preencha todos os campos obrigatórios.");
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalBtnText;
@@ -134,20 +132,11 @@ document.addEventListener("DOMContentLoaded", () => {
       "bar": "Bar",
       "cafeteria": "Cafeteria",
       "pizzaria": "Pizzaria",
-      "casa-noturna": "Casa Noturna",
       "sorveteria": "Sorveteria",
       "churrascaria": "Churrascaria",
       "lanchonete": "Lanchonete",
       "sushi-bar": "Sushi Bar",
       "outro": "Outro"
-    };
-    
-    const revenueLabels = {
-      "ate-30k": "Até R$ 30.000",
-      "30k-100k": "R$ 30.000 a R$ 100.000",
-      "100k-300k": "R$ 100.000 a R$ 300.000",
-      "300k+": "Acima de R$ 300.000",
-      "nao-informar": "Prefiro não informar"
     };
     
     const emailBody = `
@@ -168,8 +157,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 🍽️  Nome do Restaurante: ${formData.restaurant}
 🏷️  Tipo de Estabelecimento: ${segmentLabels[formData.segment] || formData.segment}
-🪑 Número de Mesas: ${formData.tables}
-💰 Faturamento Médio Mensal: ${revenueLabels[formData.revenue] || formData.revenue}
 
 ═══════════════════════════════════════════════════════
 💰 INFORMAÇÕES DO PLANO
@@ -218,9 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
             phone: formData.phone,
             restaurant: formData.restaurant,
             segment: formData.segment,
-            tables: formData.tables,
             city: formData.city,
-            revenue: formData.revenue,
             _subject: `🚀 Nova Solicitação de Teste Grátis ORDRX.AI - ${formData.restaurant} (${formData.name})`,
             _template: "box",
             _replyto: formData.email,
@@ -472,6 +457,362 @@ document.addEventListener("DOMContentLoaded", () => {
       e.target.value = value;
     });
   }
+});
+
+// ========================================
+// System Showcase Carousel
+// ========================================
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("systemCarouselTrack");
+  const dotsWrap = document.getElementById("systemCarouselDots");
+  const activeTitle = document.getElementById("systemCarouselTitle");
+  const activeSubtitle = document.getElementById("systemCarouselSubtitle");
+
+  if (!track || !dotsWrap) {
+    return;
+  }
+
+  const slides = Array.from(track.querySelectorAll(".carousel-slide"));
+  const prevBtn = document.querySelector(".system-carousel .carousel-btn.prev");
+  const nextBtn = document.querySelector(".system-carousel .carousel-btn.next");
+
+  if (!slides.length || !prevBtn || !nextBtn) {
+    return;
+  }
+
+  // Build dots dynamically based on the number of slides.
+  dotsWrap.innerHTML = "";
+  slides.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.className = index === 0 ? "carousel-dot active" : "carousel-dot";
+    dot.type = "button";
+    dot.setAttribute("aria-label", `Ir para slide ${index + 1}`);
+    dotsWrap.appendChild(dot);
+  });
+
+  const dots = Array.from(dotsWrap.querySelectorAll(".carousel-dot"));
+
+  let currentIndex = 0;
+  let autoPlayId = null;
+  let isPointerDown = false;
+  let startX = 0;
+  let startY = 0;
+  let dragDeltaX = 0;
+  let dragAxis = null;
+  let hasSwiped = false;
+  let lastMoveX = 0;
+  let lastMoveTime = 0;
+  let velocityX = 0;
+  let isHoveringCarousel = false;
+
+  const getRelativePosition = (slideIndex, activeIndex, total) => {
+    let diff = slideIndex - activeIndex;
+    if (diff > total / 2) diff -= total;
+    if (diff < -total / 2) diff += total;
+    return diff;
+  };
+
+  const updateActiveContent = () => {
+    if (!activeTitle || !activeSubtitle) {
+      return;
+    }
+
+    const activeSlide = slides[currentIndex];
+    if (!activeSlide) {
+      return;
+    }
+
+    const title = activeSlide.querySelector("figcaption:not(.carousel-slide-info)");
+    const subtitle = activeSlide.querySelector(".carousel-slide-info");
+
+    activeTitle.textContent = title ? title.textContent.trim() : "";
+    activeSubtitle.textContent = subtitle ? subtitle.textContent.trim() : "";
+    activeSubtitle.hidden = !subtitle || !subtitle.textContent.trim();
+  };
+
+  const goToSlide = (index) => {
+    currentIndex = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, i) => {
+      slide.style.removeProperty("transform");
+      slide.style.removeProperty("transition");
+      slide.classList.remove(
+        "active",
+        "is-active",
+        "is-prev",
+        "is-next",
+        "is-prev-2",
+        "is-next-2"
+      );
+
+      const pos = getRelativePosition(i, currentIndex, slides.length);
+
+      if (pos === 0) {
+        slide.classList.add("active", "is-active");
+        slide.removeAttribute("aria-hidden");
+      } else if (pos === -1) {
+        slide.classList.add("is-prev");
+        slide.setAttribute("aria-hidden", "true");
+      } else if (pos === 1) {
+        slide.classList.add("is-next");
+        slide.setAttribute("aria-hidden", "true");
+      } else if (pos === -2) {
+        slide.classList.add("is-prev-2");
+        slide.setAttribute("aria-hidden", "true");
+      } else if (pos === 2) {
+        slide.classList.add("is-next-2");
+        slide.setAttribute("aria-hidden", "true");
+      } else {
+        slide.setAttribute("aria-hidden", "true");
+      }
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentIndex);
+    });
+
+    updateActiveContent();
+  };
+
+  const nextSlide = () => goToSlide(currentIndex + 1);
+  const prevSlide = () => goToSlide(currentIndex - 1);
+
+  const getActiveSlide = () => slides[currentIndex] || null;
+
+  const applyDragVisual = (deltaX) => {
+    const activeSlide = getActiveSlide();
+    if (!activeSlide) {
+      return;
+    }
+
+    const clamped = Math.max(-140, Math.min(140, deltaX));
+    const tilt = clamped * -0.04;
+
+    activeSlide.style.transition = "none";
+    activeSlide.style.transform = `translateX(calc(-50% + ${clamped}px)) scale(1) rotateY(${tilt}deg) translateZ(0)`;
+  };
+
+  const resetDragVisual = () => {
+    const activeSlide = getActiveSlide();
+    if (!activeSlide) {
+      return;
+    }
+
+    activeSlide.style.removeProperty("transition");
+    activeSlide.style.removeProperty("transform");
+  };
+
+  const startAutoPlay = () => {
+    if (slides.length <= 1 || isHoveringCarousel) {
+      return;
+    }
+    stopAutoPlay();
+    autoPlayId = window.setInterval(() => {
+      if (!isHoveringCarousel) {
+        nextSlide();
+      }
+    }, 10000);
+  };
+
+  const stopAutoPlay = () => {
+    if (autoPlayId) {
+      window.clearInterval(autoPlayId);
+      autoPlayId = null;
+    }
+  };
+
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    startAutoPlay();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+    startAutoPlay();
+  });
+
+  if (slides.length <= 1) {
+    prevBtn.setAttribute("disabled", "true");
+    nextBtn.setAttribute("disabled", "true");
+    dotsWrap.style.display = "none";
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      goToSlide(index);
+      startAutoPlay();
+    });
+  });
+
+  const carousel = track.closest(".system-carousel");
+  if (carousel) {
+    carousel.addEventListener("mouseenter", () => {
+      isHoveringCarousel = true;
+      stopAutoPlay();
+    });
+
+    carousel.addEventListener("mouseleave", () => {
+      isHoveringCarousel = false;
+      startAutoPlay();
+    });
+
+    const SWIPE_THRESHOLD = 45;
+
+    const beginDrag = (x, y) => {
+      isPointerDown = true;
+      hasSwiped = false;
+      dragAxis = null;
+      startX = x;
+      startY = y;
+      dragDeltaX = 0;
+      velocityX = 0;
+      lastMoveX = x;
+      lastMoveTime = performance.now();
+      carousel.style.cursor = "grabbing";
+      carousel.style.userSelect = "none";
+    };
+
+    const handleDragMove = (x, y, event) => {
+      if (!isPointerDown || hasSwiped || slides.length <= 1) {
+        return;
+      }
+
+      const deltaX = x - startX;
+      const deltaY = y - startY;
+      dragDeltaX = deltaX;
+
+      const now = performance.now();
+      const dt = Math.max(1, now - lastMoveTime);
+      const dx = x - lastMoveX;
+      // Exponential moving average for smoother momentum.
+      const instantV = dx / dt;
+      velocityX = velocityX * 0.65 + instantV * 0.35;
+      lastMoveX = x;
+      lastMoveTime = now;
+
+      if (!dragAxis && (Math.abs(deltaX) > 8 || Math.abs(deltaY) > 8)) {
+        dragAxis = Math.abs(deltaX) >= Math.abs(deltaY) ? "x" : "y";
+      }
+
+      if (dragAxis !== "x") {
+        return;
+      }
+
+      if (event && typeof event.preventDefault === "function") {
+        event.preventDefault();
+      }
+
+      applyDragVisual(deltaX);
+
+      if (Math.abs(deltaX) >= SWIPE_THRESHOLD) {
+        if (deltaX < 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+
+        hasSwiped = true;
+        startAutoPlay();
+      }
+    };
+
+    carousel.addEventListener("pointerdown", (event) => {
+      if (
+        event.target instanceof Element &&
+        event.target.closest(".carousel-controls")
+      ) {
+        return;
+      }
+
+      if (event.pointerType === "mouse" && event.button !== 0) {
+        return;
+      }
+
+      beginDrag(event.clientX, event.clientY);
+      if (carousel.setPointerCapture) {
+        carousel.setPointerCapture(event.pointerId);
+      }
+    });
+
+    carousel.addEventListener("pointermove", (event) => {
+      handleDragMove(event.clientX, event.clientY, event);
+    });
+
+    const endPointerDrag = (event) => {
+      if (isPointerDown && !hasSwiped) {
+        const MOMENTUM_VELOCITY_THRESHOLD = 0.38;
+        const hasMomentum = Math.abs(velocityX) >= MOMENTUM_VELOCITY_THRESHOLD;
+
+        if (dragAxis === "x" && (Math.abs(dragDeltaX) >= SWIPE_THRESHOLD || hasMomentum)) {
+          if (hasMomentum ? velocityX < 0 : dragDeltaX < 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
+          startAutoPlay();
+        } else {
+          resetDragVisual();
+        }
+      }
+
+      isPointerDown = false;
+      hasSwiped = false;
+      dragDeltaX = 0;
+      dragAxis = null;
+      velocityX = 0;
+      carousel.style.cursor = "";
+      carousel.style.userSelect = "";
+
+      if (event && carousel.releasePointerCapture) {
+        try {
+          carousel.releasePointerCapture(event.pointerId);
+        } catch (error) {
+          // Ignore release errors when no pointer is captured.
+        }
+      }
+    };
+
+    carousel.addEventListener("pointerup", endPointerDrag);
+    carousel.addEventListener("pointercancel", endPointerDrag);
+    carousel.addEventListener("pointerleave", endPointerDrag);
+
+    carousel.addEventListener(
+      "touchstart",
+      (event) => {
+        if (
+          event.target instanceof Element &&
+          event.target.closest(".carousel-controls")
+        ) {
+          return;
+        }
+
+        if (!event.touches || event.touches.length !== 1) {
+          return;
+        }
+        const touch = event.touches[0];
+        beginDrag(touch.clientX, touch.clientY);
+      },
+      { passive: true }
+    );
+
+    carousel.addEventListener(
+      "touchmove",
+      (event) => {
+        if (!event.touches || event.touches.length !== 1) {
+          return;
+        }
+        const touch = event.touches[0];
+        handleDragMove(touch.clientX, touch.clientY, event);
+      },
+      { passive: false }
+    );
+
+    carousel.addEventListener("touchend", endPointerDrag);
+    carousel.addEventListener("touchcancel", endPointerDrag);
+  }
+
+  goToSlide(0);
+  startAutoPlay();
 });
 
 // ========================================
