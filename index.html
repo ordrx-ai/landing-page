@@ -295,106 +295,53 @@ structured_data: |
   </div>
 </section>
 
-<!-- System Showcase Section -->
+<!-- System Showcase Section 01 -->
 <section id="overview" class="system-showcase">
   <div class="container">
     <div class="system-showcase-header section-header">
-      <span class="section-badge">Saiba mais sobre o OrdrX</span>
-      <h2 class="section-title">
-        Um sistema completo para sua operação vender mais, errar menos e lucrar
-        com previsibilidade.
-      </h2>
+      <span class="section-badge">1. O Salão em Movimento</span>
+      <h2 class="section-title">Operação Ágil e Experiência Sem Atrito</h2>
       <p class="section-subtitle">
-        O OrdrX unifica salão, cozinha, delivery e gestão financeira em uma
-        única plataforma. Você ganha velocidade na operação, visão em tempo real
-        e decisões mais inteligentes com IA, sem pagar por vários sistemas
-        separados.
+        Dê autonomia ao seu cliente e agilidade à sua equipe. Integre o autoatendimento na mesa diretamente com a sua gestão e a cozinha, eliminando esperas e erros.
       </p>
     </div>
 
     <div class="system-showcase-content">
-      <div class="system-showcase-copy" style="display: none;">
-        <ul class="system-highlights">
-          <li>
-            <strong>Painel do Gerente:</strong> vendas, ticket médio e horários
-            de pico em tempo real.
-          </li>
-          <li>
-            <strong>Painel do Garçom:</strong> pedidos mais rápidos, menos
-            retrabalho e atendimento mais fluido.
-          </li>
-          <li>
-            <strong>Cardápio + Delivery:</strong> operação integrada do salão ao
-            kanban de entrega.
-          </li>
-          <li>
-            <strong>CMV Inteligente:</strong> custo e preço ideal por prato para
-            proteger sua margem.
-          </li>
-        </ul>
-        <p class="system-proof">
-          Resultado prático: mais controle, menos desperdício e uma operação
-          preparada para crescer.
-        </p>
-      </div>
-
-      <div class="system-carousel" aria-label="Carrossel de telas do sistema">
-        <div class="carousel-track" id="systemCarouselTrack">
+      <div class="system-carousel" data-carousel-id="carousel-1" aria-label="Carrossel de telas do sistema">
+        <div class="carousel-track">
+          <!-- Slide 1 -->
           <figure class="carousel-slide active">
-            <img
-              src="/images/dashboard.gif"
-              alt="Tela do Dashboard do Gerente no OrdrX"
-              loading="lazy"
-            />
-            <figcaption>Dashboard do Gerente</figcaption>
+            <img src="/images/cardapio-fazer--novo-pedido-v2.gif" alt="Autoatendimento QR Code" loading="lazy" />
+            <figcaption>Autoatendimento com Gestão em Tempo Real</figcaption>
             <figcaption class="carousel-slide-info">
-              vendas, ticket médio e horários de pico em tempo real.
+              Do QR Code ao preparo: seu cliente pede pelo navegador, e o sistema atualiza o status da mesa instantaneamente. Transforme a cor da mesa no seu painel assim que o pedido chega.
             </figcaption>
           </figure>
+          
+          <!-- Slide 2 -->
           <figure class="carousel-slide" data-image-fit="contain">
-            <img
-              src="/images/cardapio-mobile---.gif"
+            <img src="/images/cardapio-chamar-garçom-v2.gif"
               alt="Tela do Cardápio Mobile no OrdrX"
               loading="lazy"
             />
-            <figcaption>Cardápio Mobile</figcaption>
+            <figcaption>Garçom a um Clique de Distância</figcaption>
             <figcaption class="carousel-slide-info">
-              O cliente faz o pedido direto do celular e envia diretamente para a cozinha. Sem intermediário, sem erro.
+              Chega de esperas e acenos. O cliente aciona o garçom pelo menu e o card da mesa pisca no seu painel administrativo, garantindo atendimento em tempo recorde.
             </figcaption>
           </figure>
+          <!-- Slide 3 -->
           <figure class="carousel-slide">
             <img
-              src="/images/bg-10.png"
+              src="/images/cardapio-visualizar-historico-de-pedidos.gif"
               alt="Tela do Painel do Garçom no OrdrX"
               loading="lazy"
             />
-            <figcaption>Painel do Garçom</figcaption>
+            <figcaption>Visibilidade Total da Jornada da Mesa</figcaption>
             <figcaption class="carousel-slide-info">
-              pedidos mais rápidos, menos retrabalho e atendimento mais fluido.
+              Recebeu um novo pedido da mesma mesa? O sistema agrupa e diferencia os itens. Veja o histórico completo em uma tela organizada, facilitando o fechamento.
             </figcaption>
           </figure>
-          <figure class="carousel-slide">
-            <img
-              src="/images/dashboard.gif"
-              alt="Tela de Delivery e Kanban operacional no OrdrX"
-              loading="lazy"
-            />
-            <figcaption>Delivery e Kanban</figcaption>
-            <figcaption class="carousel-slide-info">
-              operação integrada do salão ao kanban de entrega.
-            </figcaption>
-          </figure>
-          <figure class="carousel-slide">
-            <img
-              src="/images/bg-10.png"
-              alt="Tela de Delivery e Kanban operacional no OrdrX"
-              loading="lazy"
-            />
-            <figcaption>CMV Inteligente:</figcaption>
-            <figcaption class="carousel-slide-info">
-              custo e preço ideal por prato para proteger sua margem.
-            </figcaption>
-          </figure>
+          <!-- Slide 4 -->
         </div>
         <div class="carousel-controls" aria-label="Controles do carrossel">
           <button
@@ -406,7 +353,6 @@ structured_data: |
           </button>
           <div
             class="carousel-dots"
-            id="systemCarouselDots"
             aria-label="Indicadores do carrossel"
           >
             <button
@@ -434,17 +380,199 @@ structured_data: |
           </button>
         </div>
         <div class="system-showcase-header section-header carousel-active-content">
-          <h3 class="section-sub-title" id="systemCarouselTitle" aria-live="polite">
-            Dashboard do Gerente
-          </h3>
-          <p class="section-subtitle" id="systemCarouselSubtitle" aria-live="polite">
-            vendas, ticket médio e horários de pico em tempo real.
+          <h3 class="section-sub-title" id="title1" aria-live="polite">Autoatendimento com Gestão em Tempo Real</h3>
+          <p class="section-subtitle" id="subtitle1" aria-live="polite">
+            Do QR Code ao preparo: seu cliente pede pelo navegador, e o sistema atualiza o status da mesa instantaneamente.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
+
+<!-- System Showcase Section 02 -->
+<section id="overview-2" class="system-showcase feature-focus-section feature-focus-light">
+  <div class="container">
+    <div class="system-showcase-header section-header light-theme-header">
+      <span class="section-badge light-theme-badge">2. A Engrenagem</span>
+      <h2 class="section-title light-theme-title">
+        Retaguarda Forte e Controle de Fluxo
+      </h2>
+      <p class="section-subtitle light-theme-subtitle">
+        Feche contas em segundos, gerencie comandas individuais e tenha o controle físico e digital das suas mesas na palma da mão, protegendo sua margem de erro.
+      </p>
+    </div>
+
+    <div class="system-showcase-content">
+      <div class="system-carousel" data-carousel-id="carousel-2" aria-label="Carrossel de telas do sistema">
+        <div class="carousel-track">
+          <!-- Slide 1 -->
+          <figure class="carousel-slide active">
+            <img class="carousel-image" src="/images/cardapio-liberar-mesa.gif" alt="Fechamento de Conta" loading="lazy" />
+            <figcaption>Da Conta Paga ao Dashboard Atualizado</figcaption>
+            <figcaption class="carousel-slide-info">
+              Encerre mesas de forma intuitiva: selecione o cliente e confirme. O status da mesa reseta visualmente e os dados de venda vão direto para seus relatórios.
+            </figcaption>
+          </figure>
+          <!-- Slide 2 -->
+          <figure class="carousel-slide">
+            <img class="carousel-image" src="/images/admin-comanda-por-qr-code.gif" alt="Comandas Individuais" loading="lazy" />
+            <figcaption>Comandas Individuais: Configurável</figcaption>
+            <figcaption class="carousel-slide-info">
+              Seu restaurante, seu modelo. Ative o controle de Comandas Físicas via QR Code no painel, vinculando ao nome e telefone do cliente. Segurança total no fechamento.
+            </figcaption>
+          </figure>
+          <!-- Slide 3 -->
+          <figure class="carousel-slide">
+            <img class="carousel-image" src="/images/admin-gerenciar-mesas.gif" alt="Gestão de Mesas" loading="lazy" />
+            <figcaption>Gestão Inteligente de QR Codes</figcaption>
+            <figcaption class="carousel-slide-info">
+              Gere, imprima e gerencie os QR Codes de cada mesa. Precisa fechar uma área do salão? Desative mesas no sistema instantaneamente com autonomia total.
+            </figcaption>
+          </figure>
+
+          
+        </div>
+        <div class="carousel-controls" aria-label="Controles do carrossel">
+          <button
+            class="carousel-btn prev"
+            type="button"
+            aria-label="Imagem anterior"
+          >
+            ‹
+          </button>
+          <div
+            class="carousel-dots"
+            aria-label="Indicadores do carrossel"
+          >
+            <button
+              class="carousel-dot active"
+              type="button"
+              aria-label="Ir para slide 1"
+            ></button>
+            <button
+              class="carousel-dot"
+              type="button"
+              aria-label="Ir para slide 2"
+            ></button>
+            <button
+              class="carousel-dot"
+              type="button"
+              aria-label="Ir para slide 3"
+            ></button>
+          </div>
+          <button
+            class="carousel-btn next"
+            type="button"
+            aria-label="Próxima imagem"
+          >
+            ›
+          </button>
+        </div>
+        <div class="system-showcase-header section-header carousel-active-content">
+          <h3 class="section-sub-title" id="title2" aria-live="polite">Da Conta Paga ao Dashboard Atualizado</h3>
+          <p class="section-subtitle" aria-live="polite">
+            Encerre mesas de forma intuitiva: selecione o cliente e confirme. O status da mesa reseta e os dados alimentam os relatórios.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- System Showcase Section 03 -->
+<section id="overview-3" class="system-showcase">
+  <div class="container">
+    <div class="system-showcase-header section-header">
+      <span class="section-badge">3. O Cérebro da Operação</span>
+      <h2 class="section-title">Inteligência, Cadastro Avançado e Gestão 360°</h2>
+      <p class="section-subtitle">
+        Transforme cada pedido em dado estratégico. Monitore faturamento, utilize automações de cadastro e blinde sua reputação online em uma central de comando completa.
+      </p>
+    </div>
+
+    <div class="system-showcase-content">
+      <div class="system-carousel" data-carousel-id="carousel-1" aria-label="Carrossel de telas do sistema">
+        <div class="carousel-track">
+          <!-- Slide 1 -->
+          <figure class="carousel-slide active two-images-slide">
+            <img class="carousel-image first-image-slide" src="/images/admin-dashboard.gif" alt="Dashboard 360" loading="lazy" />
+            <img class="carousel-image second-image-slide" src="/images/admin-dashboard-2.gif" alt="Dashboard 360" loading="lazy" />
+            <figcaption>Dashboard Estratégico em Tempo Real</figcaption>
+            <figcaption class="carousel-slide-info">
+              Acompanhe o faturamento, ticket médio e a ocupação em tempo real. Identifique horários de pico e os produtos mais vendidos através de gráficos intuitivos.
+            </figcaption>
+          </figure>
+          <!-- Slide 2 -->
+          <figure class="carousel-slide active two-images-slide">
+            <img class="carousel-image first-image-slide" src="/images/admin-gerenciar-produtos.gif" alt="Cadastro de Produtos" loading="lazy" />
+            <img class="carousel-image second-image-slide" src="/images/admin-gerenciar-produtos-2.gif" alt="Cadastro de Produtos" loading="lazy" />
+            <figcaption>Gestão Avançada de Cardápio e Estoque</figcaption>
+            <figcaption class="carousel-slide-info">
+              Importe itens em massa via planilha. O OrdrX oferece suporte para traduções (Inglês/Espanhol), tags estratégicas e produtos relacionados (cross-selling).
+            </figcaption>
+          </figure>
+          <!-- Slide 3 -->
+          <figure class="carousel-slide">
+            <img class="carousel-image" src="/images/cardapio-fazer-avaliação.gif" alt="Filtro Google" loading="lazy" />
+            <figcaption>Sua Marca e Avaliações Inteligentes</figcaption>
+            <figcaption class="carousel-slide-info">
+              Configure sua identidade e ative nosso filtro inteligente: direcione clientes 5 estrelas para o Google Meu Negócio, e resolva críticas internamente no painel.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="carousel-controls" aria-label="Controles do carrossel">
+          <button
+            class="carousel-btn prev"
+            type="button"
+            aria-label="Imagem anterior"
+          >
+            ‹
+          </button>
+          <div
+            class="carousel-dots"
+            aria-label="Indicadores do carrossel"
+          >
+            <button
+              class="carousel-dot active"
+              type="button"
+              aria-label="Ir para slide 1"
+            ></button>
+            <button
+              class="carousel-dot"
+              type="button"
+              aria-label="Ir para slide 2"
+            ></button>
+            <button
+              class="carousel-dot"
+              type="button"
+              aria-label="Ir para slide 3"
+            ></button>
+          </div>
+          <button
+            class="carousel-btn next"
+            type="button"
+            aria-label="Próxima imagem"
+          >
+            ›
+          </button>
+        </div>
+        <div class="system-showcase-header section-header carousel-active-content">
+          <h3 class="section-sub-title" id="title1" aria-live="polite">Autoatendimento com Gestão em Tempo Real</h3>
+          <p class="section-subtitle" id="subtitle1" aria-live="polite">
+            Do QR Code ao preparo: seu cliente pede pelo navegador, e o sistema atualiza o status da mesa instantaneamente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <!-- Pain Points Section -->
 <section id="calculator" class="pain-points">
@@ -469,7 +597,7 @@ structured_data: |
             loading="lazy"
           />
         </div>
-        <div class="pain-cost">6-8% do faturamento</div>
+        <div class="pain-cost">4-6% do faturamento</div>
         <h3>Garçom Extra nos Picos</h3>
         <p>
           Nas sextas e sábados lotados, você contrata mais gente. Com
@@ -485,7 +613,7 @@ structured_data: |
             loading="lazy"
           />
         </div>
-        <div class="pain-cost">1-2% do faturamento</div>
+        <div class="pain-cost">2-5% do faturamento</div>
         <h3>Pedido Errado</h3>
         <p>
           Cada prato devolvido = refeição não vendida + cliente insatisfeito + avaliação
@@ -501,11 +629,26 @@ structured_data: |
             loading="lazy"
           />
         </div>
-        <div class="pain-cost">8-10% do faturamento</div>
-        <h3>Mesas Ociosas</h3>
+        <div class="pain-cost">3-5% do faturamento</div>
+        <h3>Perda de giro de mesas</h3>
         <p>
-          Cliente esperando 10min pra pedir = cliente que não volta. 
+          Cliente esperando para ser atendido consome menos e a mesa demora o dobro do tempo para desocupar. <br> <strong>ORDRX acelera o atendimento e aumenta o giro</strong>.
           <strong>Cada mesa pode virar 3-4 serviços por noite</strong>.
+        </p>
+      </div>
+
+      <div class="pain-card fade-in">
+        <div class="pain-icon">
+          <img
+            src="/images/pain-icon-wrong-order.png"
+            alt="Controle de Caixa"
+            loading="lazy"
+          />
+        </div>
+        <div class="pain-cost">2-4% do faturamento</div>
+        <h3>Controle de Caixa</h3>
+        <p>
+          Erros no fechamento de contas e falta de controle sobre o fluxo de caixa podem levar a perdas significativas. <strong>Com ORDRX, cada transação é registrada e monitorada em tempo real</strong>, garantindo precisão e segurança financeira.
         </p>
       </div>
 
@@ -517,19 +660,19 @@ structured_data: |
             loading="lazy"
           />
         </div>
-        <div class="pain-cost">4-5% do lucro</div>
+        <div class="pain-cost">2-3% do lucro</div>
         <h3>Decisões no Escuro</h3>
         <p>
-          Qual prato dá mais lucro? Qual horário vende mais? 
-          <strong>Sem dados, você deixa grana na mesa</strong>.
+          O dono acha que o prato que mais vende é o que sustenta a casa, sem sistema; ele não sabe que esse prato tem custo de mercadoria altíssimo e margem de lugro esmagada. Enquanto isso um prato altamente lucrativo fica escondido no menu sem destaque.
+          <strong>ORDRX traz dados reais para decisões estratégicas, revelando onde está o lucro de verdade</strong>.
         </p>
       </div>
     </div>
 
     <div class="pain-cta">
       <p class="pain-total">
-        <strong>Soma Total: 30% a 40% de prejuízo evitável</strong><br />
-        <span class="pain-subtitle">Se você fatura R$ 50 mil/mês, está perdendo R$ 15.000 a R$ 20.000 por mês</span>
+        <strong>Soma Total: 15% a 25% de prejuízo evitável</strong><br />
+        <span class="pain-subtitle">Se você fatura R$ 50 mil/mês, está perdendo R$ 7.500 a R$ 12.500 por mês</span>
       </p>
       <a href="#contact" class="btn-large btn-gradient"
         >Parar de Perder Dinheiro Agora</a
