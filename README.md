@@ -72,7 +72,7 @@ Coleta:
 
 ### Pré-requisitos
 
-1. **Ruby** (versão 2.7 ou superior)
+1. **Ruby** (versão 3.0 ou superior)
 2. **Bundler** (gerenciador de gems do Ruby)
 
 ### Instalação
