@@ -153,28 +153,34 @@ structured_data: |
 <!-- Contact Section -->
 <section id="contact" class="contact">
   <div class="container">
-    <span
-      class="section-badge"
-      style="
-        color: #ffffff;
-        background: rgba(10, 15, 28, 0.78);
-        border: 1px solid rgba(173, 216, 255, 0.65);
-        text-shadow: none;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-      "
-      >🚀 Oferta de Lançamento</span
-    >
-    <h2 class="section-title" style="color: #f8fbff">
-      Gerencie seu restaurante de ponta a ponta — do salão ao delivery — em uma
-      única plataforma.
-    </h2>
-    <p class="contact-description" style="color: #eaf2ff">
-      Durante nossa fase de lançamento, você acessa
-      <strong style="color: #ffffff">todas as funcionalidades</strong> do OrdrX
-      pelo preço do plano básico. Sem taxas ocultas, sem surpresas na fatura.
-      Preencha o formulário, receba seu acesso em minutos e teste grátis por 30
-      dias — depois, apenas R$&nbsp;119,90/mês.
-    </p>
+<span
+  class="section-badge section-badge-launch"
+>
+  🚀 Oferta de Lançamento
+</span>
+
+<h2 class="section-title contact-title">
+  O ecossistema completo para acelerar o atendimento e blindar o seu lucro — operando 100% em nuvem.
+</h2>
+
+<p class="contact-description contact-description-highlight">
+  Esqueça mensalidades abusivas e servidores caros que travam sua operação. Com o OrdrX, <strong>você gerencia todo o restaurante por um simples tablet</strong>, enquanto seu cliente faz o pedido usando o próprio celular. Preencha o formulário ao lado, receba o acesso no seu e-mail em minutos e transforme o seu negócio hoje mesmo. Teste sem compromisso — depois, apenas R$&nbsp;119,90/mês.
+</p>
+
+<ul class="contact-benefits-list">
+        <li class="contact-benefit-item">
+          <svg class="contact-benefit-icon contact-benefit-icon-purple" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span><strong>Zero infraestrutura:</strong> Sem computadores caros. Um tablet resolve tudo.</span>
+        </li>
+        <li class="contact-benefit-item">
+          <svg class="contact-benefit-icon contact-benefit-icon-orange" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span><strong>Zero erros:</strong> O cliente pede no celular, o prato sai na impressora da cozinha.</span>
+        </li>
+        <li class="contact-benefit-item">
+          <svg class="contact-benefit-icon contact-benefit-icon-cyan" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span><strong>Zero risco:</strong> Configure tudo hoje e teste o 1º mês por nossa conta.</span>
+        </li>
+      </ul>
     <div class="contact-content">
       <form
         class="contact-form"
@@ -194,7 +200,7 @@ structured_data: |
               id="name"
               name="name"
               required
-              placeholder="João Silva"
+              placeholder="Carlos Henrique Souza"
             />
           </div>
 
@@ -205,7 +211,7 @@ structured_data: |
               id="email"
               name="email"
               required
-              placeholder="joao@seurestaurante.com.br"
+              placeholder="contato@restauranteexemplo.com.br"
             />
           </div>
         </div>
@@ -218,7 +224,7 @@ structured_data: |
               id="phone"
               name="phone"
               required
-              placeholder="(11) 98765-4321"
+              placeholder="(11) 91234-5678"
             />
           </div>
 
@@ -229,7 +235,7 @@ structured_data: |
               id="restaurant"
               name="restaurant"
               required
-              placeholder="Restaurante do João"
+              placeholder="Bistro Jardim Paulista"
             />
           </div>
         </div>
@@ -242,7 +248,7 @@ structured_data: |
               id="city"
               name="city"
               required
-              placeholder="São Paulo - SP"
+              placeholder="Sao Paulo - SP"
             />
           </div>
 
@@ -263,8 +269,8 @@ structured_data: |
           </div>
         </div>
 
-        <button type="submit" class="btn-submit btn-gradient">
-          <span>Testar Grátis por 30 Dias</span>
+        <button type="submit" class="btn-submit btn-gradient contact-submit-btn">
+          <span>Quero Começar Meu Teste Gratuito</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path
               d="M7.5 15L12.5 10L7.5 5"
@@ -302,8 +308,12 @@ structured_data: |
       <span class="section-badge">1. O Salão em Movimento</span>
       <h2 class="section-title">Operação Ágil e Experiência Sem Atrito</h2>
       <p class="section-subtitle">
-        Dê autonomia ao seu cliente e agilidade à sua equipe. Integre o autoatendimento na mesa diretamente com a sua gestão e a cozinha, eliminando esperas e erros.
+        Dê autonomia ao seu cliente e agilidade à sua equipe. O OrdrX gerencia desde a chegada do cliente até o último pedido, eliminando esperas e gargalos operacionais.
       </p>
+      <a href="#modulo-fila-de-espera" class="carousel-slide-link">Ver módulo Fila de Espera →</a>
+      <a href="#modulo-autoatendimento" class="carousel-slide-link">Ver módulo Auto Atendimento →</a>
+      <a href="#modulo-chamar-garcom" class="carousel-slide-link">Ver módulo Chamar Garçom →</a>
+      <a href="#modulo-pedidos-acumulados" class="carousel-slide-link">Ver módulo Pedidos Acumulados →</a>
     </div>
 
     <div class="system-showcase-content">
@@ -311,11 +321,24 @@ structured_data: |
         <div class="carousel-track">
           <!-- Slide 1 -->
           <figure class="carousel-slide active">
+            <img src="/images/admin-gerenciar-fila-de-espera.gif" alt="Fila Virtual e Alerta via WhatsApp" loading="lazy" />
+            <figcaption>Fila Virtual e Alerta via WhatsApp </figcaption>
+            
+            <figcaption class="carousel-slide-info">
+              Acabe com as aglomerações na porta. O cliente entra na fila pelo celular e navega no cardápio enquanto aguarda. Com um clique no painel, o sistema dispara um aviso automático no WhatsApp informando que a mesa está pronta.
+            </figcaption>
+            
+          </figure>
+          
+          <!-- Slide 1 -->
+          <figure class="carousel-slide active">
             <img src="/images/cardapio-fazer--novo-pedido-v2.gif" alt="Autoatendimento QR Code" loading="lazy" />
             <figcaption>Autoatendimento com Gestão em Tempo Real</figcaption>
+            
             <figcaption class="carousel-slide-info">
               Do QR Code ao preparo: seu cliente pede pelo navegador, e o sistema atualiza o status da mesa instantaneamente. Transforme a cor da mesa no seu painel assim que o pedido chega.
             </figcaption>
+            
           </figure>
           
           <!-- Slide 2 -->
@@ -328,6 +351,7 @@ structured_data: |
             <figcaption class="carousel-slide-info">
               Chega de esperas e acenos. O cliente aciona o garçom pelo menu e o card da mesa pisca no seu painel administrativo, garantindo atendimento em tempo recorde.
             </figcaption>
+            
           </figure>
           <!-- Slide 3 -->
           <figure class="carousel-slide">
@@ -340,6 +364,7 @@ structured_data: |
             <figcaption class="carousel-slide-info">
               Recebeu um novo pedido da mesma mesa? O sistema agrupa e diferencia os itens. Veja o histórico completo em uma tela organizada, facilitando o fechamento.
             </figcaption>
+            
           </figure>
           <!-- Slide 4 -->
         </div>
@@ -380,9 +405,9 @@ structured_data: |
           </button>
         </div>
         <div class="system-showcase-header section-header carousel-active-content">
-          <h3 class="section-sub-title" id="title1" aria-live="polite">Autoatendimento com Gestão em Tempo Real</h3>
+          <h3 class="section-sub-title" id="title1" aria-live="polite">Fila Virtual e Alerta via WhatsApp </h3>
           <p class="section-subtitle" id="subtitle1" aria-live="polite">
-            Do QR Code ao preparo: seu cliente pede pelo navegador, e o sistema atualiza o status da mesa instantaneamente.
+            Acabe com as aglomerações na porta. O cliente entra na fila pelo celular e recebe um aviso automático no WhatsApp quando a mesa liberar.
           </p>
         </div>
       </div>
@@ -403,6 +428,9 @@ structured_data: |
       <p class="section-subtitle light-theme-subtitle">
         Feche contas em segundos, gerencie comandas individuais e tenha o controle físico e digital das suas mesas na palma da mão, protegendo sua margem de erro.
       </p>
+      <a href="#modulo-checkout" class="carousel-slide-link">Ver módulo checkout →</a>
+      <a href="#modulo-comandas" class="carousel-slide-link">Ver módulo comandas →</a>
+      <a href="#modulo-configuracoes" class="carousel-slide-link">Ver módulo configurações →</a>
     </div>
 
     <div class="system-showcase-content">
@@ -415,6 +443,7 @@ structured_data: |
             <figcaption class="carousel-slide-info">
               Encerre mesas de forma intuitiva: selecione o cliente e confirme. O status da mesa reseta visualmente e os dados de venda vão direto para seus relatórios.
             </figcaption>
+            
           </figure>
           <!-- Slide 2 -->
           <figure class="carousel-slide">
@@ -423,6 +452,7 @@ structured_data: |
             <figcaption class="carousel-slide-info">
               Seu restaurante, seu modelo. Ative o controle de Comandas Físicas via QR Code no painel, vinculando ao nome e telefone do cliente. Segurança total no fechamento.
             </figcaption>
+            
           </figure>
           <!-- Slide 3 -->
           <figure class="carousel-slide">
@@ -431,6 +461,7 @@ structured_data: |
             <figcaption class="carousel-slide-info">
               Gere, imprima e gerencie os QR Codes de cada mesa. Precisa fechar uma área do salão? Desative mesas no sistema instantaneamente com autonomia total.
             </figcaption>
+            
           </figure>
 
           
@@ -493,6 +524,9 @@ structured_data: |
       <p class="section-subtitle">
         Transforme cada pedido em dado estratégico. Monitore faturamento, utilize automações de cadastro e blinde sua reputação online em uma central de comando completa.
       </p>
+      <a href="#modulo-dashboard-360" class="carousel-slide-link">Ver módulo dashboard 360 →</a>
+      <a href="#modulo-engenharia-cardapio" class="carousel-slide-link">Ver módulo engenharia de cardápio →</a>
+      <a href="#modulo-pos-pedido" class="carousel-slide-link">Ver módulo pós-pedido →</a>
     </div>
 
     <div class="system-showcase-content">
@@ -506,6 +540,7 @@ structured_data: |
             <figcaption class="carousel-slide-info">
               Acompanhe o faturamento, ticket médio e a ocupação em tempo real. Identifique horários de pico e os produtos mais vendidos através de gráficos intuitivos.
             </figcaption>
+            
           </figure>
           <!-- Slide 2 -->
           <figure class="carousel-slide active two-images-slide">
@@ -515,6 +550,7 @@ structured_data: |
             <figcaption class="carousel-slide-info">
               Importe itens em massa via planilha. O OrdrX oferece suporte para traduções (Inglês/Espanhol), tags estratégicas e produtos relacionados (cross-selling).
             </figcaption>
+            
           </figure>
           <!-- Slide 3 -->
           <figure class="carousel-slide">
@@ -523,6 +559,7 @@ structured_data: |
             <figcaption class="carousel-slide-info">
               Configure sua identidade e ative nosso filtro inteligente: direcione clientes 5 estrelas para o Google Meu Negócio, e resolva críticas internamente no painel.
             </figcaption>
+            
           </figure>
         </div>
         <div class="carousel-controls" aria-label="Controles do carrossel">
@@ -597,11 +634,11 @@ structured_data: |
             loading="lazy"
           />
         </div>
-        <div class="pain-cost">4-6% do faturamento</div>
+        <div class="pain-cost">4-6% <br> do faturamento</div>
         <h3>Garçom Extra nos Picos</h3>
         <p>
           Nas sextas e sábados lotados, você contrata mais gente. Com
-          autoatendimento, <strong>essa despesa some</strong>.
+          autoatendimento, essa despesa some.
         </p>
       </div>
 
@@ -613,11 +650,11 @@ structured_data: |
             loading="lazy"
           />
         </div>
-        <div class="pain-cost">2-5% do faturamento</div>
+        <div class="pain-cost">2-5% <br> do faturamento</div>
         <h3>Pedido Errado</h3>
         <p>
           Cada prato devolvido = refeição não vendida + cliente insatisfeito + avaliação
-          ruim. <strong>Com ORDRX: zero erros</strong>.
+          ruim. <strong>Com ORDRX</strong>: zero erros.
         </p>
       </div>
 
@@ -637,36 +674,39 @@ structured_data: |
         </p>
       </div>
 
-      <div class="pain-card fade-in">
-        <div class="pain-icon">
-          <img
-            src="/images/pain-icon-wrong-order.png"
-            alt="Controle de Caixa"
-            loading="lazy"
-          />
+       <div class="pain-card fade-in">
+          <div class="pain-icon">
+            <img
+              src="/images/pain-icon-wrong-order.png"
+              alt="Controle de Caixa"
+              loading="lazy"
+            />
+          </div>
+          <div class="pain-cost">2-4% <br> do faturamento</div>
+          <h3>Controle de Caixa</h3>
+          <p>
+            Erros no fechamento de contas e falta de controle sobre o fluxo de caixa podem levar a perdas significativas.<br> 
+            <strong>ORDRX</strong>, cada transação é registrada e monitorada em tempo real, garantindo precisão e segurança financeira.
+          </p>
         </div>
-        <div class="pain-cost">2-4% do faturamento</div>
-        <h3>Controle de Caixa</h3>
-        <p>
-          Erros no fechamento de contas e falta de controle sobre o fluxo de caixa podem levar a perdas significativas. <strong>Com ORDRX, cada transação é registrada e monitorada em tempo real</strong>, garantindo precisão e segurança financeira.
-        </p>
-      </div>
 
-      <div class="pain-card fade-in">
-        <div class="pain-icon">
-          <img
-            src="/images/pain-icon-invisible-profit.png"
-            alt="Lucro Invisível"
-            loading="lazy"
-          />
+        <div class="pain-card fade-in">
+          <div class="pain-icon">
+            <img
+              src="/images/pain-icon-invisible-profit.png"
+              alt="Lucro Invisível"
+              loading="lazy"
+            />
+          </div>
+          <div class="pain-cost">2-3% <br> do faturamento</div>
+          <h3>Decisões no Escuro</h3>
+          <p>
+            O dono acredita que o prato mais vendido é o mais lucrativo, mas sem sistema, ignora custos altos e margens baixas. Enquanto isso, pratos realmente lucrativos ficam escondidos no cardápio.
+            <br><strong>ORDRX</strong> revela dados reais para decisões estratégicas, mostrando onde está o lucro de verdade.
+          </p>
         </div>
-        <div class="pain-cost">2-3% do lucro</div>
-        <h3>Decisões no Escuro</h3>
-        <p>
-          O dono acha que o prato que mais vende é o que sustenta a casa, sem sistema; ele não sabe que esse prato tem custo de mercadoria altíssimo e margem de lugro esmagada. Enquanto isso um prato altamente lucrativo fica escondido no menu sem destaque.
-          <strong>ORDRX traz dados reais para decisões estratégicas, revelando onde está o lucro de verdade</strong>.
-        </p>
-      </div>
+
+      
     </div>
 
     <div class="pain-cta">
@@ -697,7 +737,7 @@ structured_data: |
     </div>
 
     <div class="features-grid">
-      <div class="feature-card fade-in" style="animation-delay: 0.1s">
+      <div class="feature-card fade-in fade-delay-10">
         <div class="feature-icon">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
             <rect width="32" height="32" rx="8" fill="url(#grad-qr)" />
@@ -727,7 +767,7 @@ structured_data: |
         </ul>
       </div>
 
-      <div class="feature-card featured fade-in" style="animation-delay: 0.2s">
+      <div class="feature-card featured fade-in fade-delay-20">
         <div class="feature-badge">🔥 Destaque</div>
         <div class="feature-icon">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -752,12 +792,12 @@ structured_data: |
           <li>✓ Ticket médio em tempo real</li>
           <li>✓ Produtos mais e menos vendidos</li>
           <li>✓ Horários de pico identificados</li>
-          <li style="display: none;">✓ <strong>Sugestões de promoções automáticas</strong></li>
-          <li style="display: none;">✓ <strong>Alertas de desperdício</strong></li>
+          <li class="is-hidden">✓ <strong>Sugestões de promoções automáticas</strong></li>
+          <li class="is-hidden">✓ <strong>Alertas de desperdício</strong></li>
         </ul>
       </div>
 
-      <div class="feature-card fade-in" style="animation-delay: 0.3s">
+      <div class="feature-card fade-in fade-delay-30">
         <div class="feature-icon">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
             <rect width="32" height="32" rx="8" fill="url(#grad-print)" />
@@ -797,7 +837,7 @@ structured_data: |
         </ul>
       </div>
 
-      <div class="feature-card fade-in" style="animation-delay: 0.4s">
+      <div class="feature-card fade-in fade-delay-40">
         <div class="feature-icon">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
             <rect width="32" height="32" rx="8" fill="url(#grad-host)" />
@@ -829,7 +869,7 @@ structured_data: |
         </ul>
       </div>
 
-      <div class="feature-card fade-in" style="animation-delay: 0.5s">
+      <div class="feature-card fade-in fade-delay-50">
         <div class="feature-icon">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
             <rect width="32" height="32" rx="8" fill="url(#grad-stock)" />
@@ -865,7 +905,7 @@ structured_data: |
         </ul>
       </div>
 
-      <div class="feature-card fade-in" style="animation-delay: 0.6s">
+      <div class="feature-card fade-in fade-delay-60">
         <div class="feature-icon">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
             <rect width="32" height="32" rx="8" fill="url(#grad-speed)" />
@@ -900,242 +940,337 @@ structured_data: |
   </div>
 </section>
 
-<!-- Feature Focus Sections (Full-Screen + Parallax) -->
-<section
-  id="dashboard-gerente"
-  class="feature-focus-section feature-focus-dark"
->
-  <div class="focus-parallax" data-parallax-speed="0.08"></div>
-  <div class="container feature-focus-content">
-    <div class="feature-focus-copy fade-in">
-      <span class="section-badge">Dashboard do Gerente</span>
-      <h2 class="section-title">
-        Visão estratégica para decisões rápidas e seguras
-      </h2>
-      <p class="section-subtitle">
-        Acompanhe vendas, ticket médio, horários de pico e desempenho da
-        operação em tempo real para agir com precisão.
-      </p>
-      <ul class="feature-focus-list">
-        <li>Indicadores de faturamento e performance em um único painel</li>
-        <li>Visão consolidada de mesas, pedidos e produtividade</li>
-        <li>Insights práticos para reduzir desperdício e aumentar margem</li>
-      </ul>
-      <div class="feature-focus-cta">
-        <a href="#contact" class="btn-large btn-gradient"
-          >Testar Dashboard do Gerente</a
-        >
-        <a href="#features" class="btn-large btn-outline">Saber Mais</a>
-      </div>
-    </div>
-    <div class="feature-focus-mockup fade-in" style="animation-delay: 0.15s">
-      <div class="focus-window">
-        <div class="focus-topbar"></div>
-        <div class="focus-grid">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="focus-chart"></div>
-      </div>
-      <p class="focus-caption">
-        Mockup: dashboard analítico com métricas em tempo real
-      </p>
-    </div>
-  </div>
-</section>
+<!-- ========================================================
+     FEATURE FOCUS SECTIONS (FULL-SCREEN + PARALLAX)
+     Módulos Estratégicos Unificados e Revezados (Dark/Light)
+     ======================================================== -->
 
-<section id="painel-garcom" class="feature-focus-section feature-focus-light">
+<!-- Módulo 1: Autoatendimento e Fluxo de Pedidos (Mesa/QR Code) -->
+<section id="modulo-fila-de-espera" class="feature-focus-section feature-focus-light">
   <div class="focus-parallax" data-parallax-speed="0.1"></div>
   <div class="container feature-focus-content reverse">
     <div class="feature-focus-copy fade-in">
-      <span class="section-badge">Painel do Garçom</span>
-      <h2 class="section-title">
-        Atendimento ágil em ambiente de alta pressão
-      </h2>
+      <span class="section-badge section-badge-whatsapp">📱 Integração WhatsApp</span>
+      <h2 class="section-title">Fila Virtual Inteligente: Acabe com as Aglomerações</h2>
       <p class="section-subtitle">
-        Interface mobile-first para abrir mesas, lançar pedidos e acompanhar o
-        fluxo sem atrito durante os picos.
+        Não perca clientes pela demora. Permita que eles entrem na fila de espera pelo celular, naveguem pelo seu cardápio enquanto aguardam e sejam notificados automaticamente.
       </p>
       <ul class="feature-focus-list">
-        <li>Fluxo de pedido em poucos toques</li>
-        <li>Atualização instantânea com cozinha e caixa</li>
-        <li>Controles grandes e claros para uso em tablet e celular</li>
+        <li><strong>Autoatendimento na Porta:</strong> O cliente se cadastra sozinho e informa o tamanho do grupo (ex: 4 pessoas).</li>
+        <li><strong>Antecipação de Pedidos:</strong> O cliente "saliva" vendo o cardápio na fila, acelerando o pedido assim que sentar à mesa.</li>
+        <li><strong>Aviso Automático:</strong> Um clique no painel do gerente dispara uma mensagem no WhatsApp do cliente. Fim dos pagers caros e nomes gritados.</li>
       </ul>
       <div class="feature-focus-cta">
-        <a href="#contact" class="btn-large btn-gradient"
-          >Testar Painel do Garçom</a
-        >
-        <a href="#features" class="btn-large btn-outline">Saber Mais</a>
+        <a href="#contact" class="btn-large btn-gradient">Zerar Filas Caóticas</a>
+        <a href="#features" class="btn-large btn-outline">Ver Fluxo na Prática</a>
+        <a href="#overview" class="btn-large btn-outline">Voltar</a>
       </div>
     </div>
-    <div class="feature-focus-mockup fade-in" style="animation-delay: 0.15s">
-      <div class="focus-window focus-mobile">
-        <div class="focus-list-item"></div>
-        <div class="focus-list-item"></div>
-        <div class="focus-list-item"></div>
-        <div class="focus-action"></div>
+    <div class="feature-focus-mockup fade-in fade-delay-15">
+      <div class="focus-window">
+        <div class="focus-video focus-video-light">
+          <img class="focus-video-image" src="/images/admin-gerenciar-fila-de-espera.gif" alt="Visualização: Cliente entrando na fila e host disparando o aviso de mesa liberada no WhatsApp">
+        </div>
       </div>
-      <p class="focus-caption">
-        Mockup: operação mobile de atendimento e pedidos
-      </p>
+      <p class="focus-caption">Visualização: Cliente entrando na fila e host disparando o aviso de mesa liberada no WhatsApp</p>
     </div>
   </div>
 </section>
 
-<section id="painel-cozinha" class="feature-focus-section feature-focus-dark">
+<!-- ========================================================
+     FEATURE FOCUS SECTIONS (FULL-SCREEN + PARALLAX)
+     Módulos Estratégicos Unificados e Revezados (Dark/Light)
+     ======================================================== -->
+
+<!-- Módulo 1: Autoatendimento e Fluxo de Pedidos (Mesa/QR Code) -->
+<section id="modulo-autoatendimento" class="feature-focus-section feature-focus-dark">
+  <div class="focus-parallax" data-parallax-speed="0.08"></div>
+  <div class="container feature-focus-content">
+    <div class="feature-focus-copy fade-in">
+      <span class="section-badge">Autoatendimento Inteligente</span>
+      <h2 class="section-title">Do QR Code à Cozinha sem Atrito ou Erros</h2>
+      <p class="section-subtitle">
+        Seu cliente escaneia o código da mesa, acessa o cardápio pelo próprio navegador e faz o pedido em segundos. Sem baixar aplicativos, sem digitação exaustiva e com conversão instantânea.
+      </p>
+      <ul class="feature-focus-list">
+        <li><strong>Zero barreiras:</strong> Cadastro simplificado apenas com Nome e Telefone opcional.</li>
+        <li><strong>Status em Tempo Real:</strong> Painel muda de verde para amarelo no exato momento do clique.</li>
+        <li><strong>Produção Imediata:</strong> Validação do gerente em um clique enviando direto para as impressoras.</li>
+      </ul>
+      <div class="feature-focus-cta">
+        <a href="#contact" class="btn-large btn-gradient">Testar Cardápio Digital</a>
+        <a href="#pricing" class="btn-large btn-outline">Ver Planos</a>
+        <a href="#overview" class="btn-large btn-outline">Voltar</a>
+      </div>
+    </div>
+    <div class="feature-focus-mockup fade-in fade-delay-15">
+      <div class="focus-window">
+        <!-- Espaço reservado para o vídeo lado a lado (Tablet Horizontal + Celular) -->
+        <div class="focus-video focus-video-dark">
+          <img class="focus-video-image" src="/images/cardapio-chamar-garçom-v2.gif" alt="Visualização: Cliente entrando na fila e host disparando o aviso de mesa liberada no WhatsApp">
+        </div>
+      </div>
+      <p class="focus-caption">Visualização integrada: Tela do cliente (celular) conectado ao mapa de mesas (painel gerencial)</p>
+    </div>
+  </div>
+</section>
+
+<!-- Módulo 2: Engajamento Pós-Pedido e Filtro de Avaliação do Google -->
+<section id="modulo-pos-pedido" class="feature-focus-section feature-focus-light">
+  <div class="focus-parallax" data-parallax-speed="0.1"></div>
+  <div class="container feature-focus-content reverse">
+    <div class="feature-focus-copy fade-in">
+      <span class="section-badge">Engajamento e Inteligência</span>
+      <h2 class="section-title">Transforme a Espera em Avaliações 5 Estrelas</h2>
+      <p class="section-subtitle">
+        Assim que o primeiro pedido é feito, o OrdrX destrava recursos de conveniência e ativa nossa inteligência secreta de blindagem e otimização de reputação online.
+      </p>
+      <ul class="feature-focus-list">
+        <li><strong>Conectividade Direta:</strong> Liberação automatizada de Wi-Fi e dados institucionais do local.</li>
+        <li><strong>Filtro de Reviews do Google:</strong> Clientes que avaliam acima de 4 são guiados para o seu Google Meu Negócio.</li>
+        <li><strong>Retenção de Críticas:</strong> Notas baixas ficam salvas apenas no seu Admin para correção imediata sem expor sua marca.</li>
+      </ul>
+      <div class="feature-focus-cta">
+        <a href="#contact" class="btn-large btn-gradient">Impulsionar Google Reviews</a>
+        <a href="#features" class="btn-large btn-outline">Saber Mais</a>
+        <a href="#overview-3" class="btn-large btn-outline">Voltar</a>
+      </div>
+    </div>
+    <div class="feature-focus-mockup fade-in fade-delay-15">
+      <div class="focus-window">
+        <div class="focus-video focus-video-light">
+          <img class="focus-video-image" src="/images/cardapio-fazer-avaliação.gif" alt="Visualização: Cliente entrando na fila e host disparando o aviso de mesa liberada no WhatsApp">
+        </div>
+      </div>
+      <p class="focus-caption">Visualização: Menu pós-pedido destravado no celular coletando feedbacks e insights</p>
+    </div>
+  </div>
+</section>
+
+<!-- Módulo 3: Botão de Chamar Garçom com Alerta Pulsante -->
+<section id="modulo-chamar-garcom" class="feature-focus-section feature-focus-dark">
   <div class="focus-parallax" data-parallax-speed="0.12"></div>
   <div class="container feature-focus-content">
     <div class="feature-focus-copy fade-in">
-      <span class="section-badge">Painel da Cozinha (KDS)</span>
-      <h2 class="section-title">
-        Fila visual para preparar com prioridade e ritmo
-      </h2>
+      <span class="section-badge">Eficiência no Salão</span>
+      <h2 class="section-title">Atendimento Prioritário Sem Acenos ou Esperas</h2>
       <p class="section-subtitle">
-        Organize pedidos por urgência, reduza atrasos e aumente previsibilidade
-        no preparo com uma visão clara da produção.
+        Elimine o estresse do cliente tentando encontrar o garçom visualmente em um salão lotado. Com o sistema de alertas diretos, sua equipe atua exatamente onde há demanda.
       </p>
       <ul class="feature-focus-list">
-        <li>Pedidos organizados por tempo e prioridade</li>
-        <li>Status claros: pendente, em preparo e pronto</li>
-        <li>Leitura rápida para operação intensa</li>
+        <li><strong>Acionamento Rápido:</strong> Ícone de sininho na barra de navegação do cliente para suporte imediato.</li>
+        <li><strong>Alerta Pulsante no Admin:</strong> O card da mesa pisca e muda de cor na tela central do estabelecimento.</li>
+        <li><strong>Otimização de Rota:</strong> Sua equipe gasta menos tempo rodando em mesas ociosas e atende com foco.</li>
       </ul>
       <div class="feature-focus-cta">
-        <a href="#contact" class="btn-large btn-gradient"
-          >Testar Painel da Cozinha</a
-        >
+        <a href="#contact" class="btn-large btn-gradient">Testar Chamadas do Salão</a>
         <a href="#features" class="btn-large btn-outline">Saber Mais</a>
+        <a href="#overview" class="btn-large btn-outline">Voltar</a>
       </div>
     </div>
-    <div class="feature-focus-mockup fade-in" style="animation-delay: 0.15s">
-      <div class="focus-window focus-kds">
-        <div class="focus-kds-card urgent"></div>
-        <div class="focus-kds-card medium"></div>
-        <div class="focus-kds-card low"></div>
+    <div class="feature-focus-mockup fade-in fade-delay-15">
+      <div class="focus-window">
+        <div class="focus-video focus-video-dark">
+          <img class="focus-video-image" src="/images/cardapio-chamar-garçom-v2.gif" alt="Visualização: Disparo no celular do cliente e card piscando em tempo real no Admin">
+        </div>
       </div>
-      <p class="focus-caption">Mockup: KDS com gestão visual de urgência</p>
+      <p class="focus-caption">Visualização: Disparo no celular do cliente e card piscando em tempo real no Admin</p>
     </div>
   </div>
 </section>
 
-<section
-  id="cardapio-digital"
-  class="feature-focus-section feature-focus-light"
->
+<!-- Módulo 4: Monitoramento e Linha do Tempo de Pedidos Acumulados -->
+<section id="modulo-pedidos-acumulados" class="feature-focus-section feature-focus-light">
   <div class="focus-parallax" data-parallax-speed="0.08"></div>
   <div class="container feature-focus-content reverse">
     <div class="feature-focus-copy fade-in">
-      <span class="section-badge">Cardápio Digital</span>
-      <h2 class="section-title">
-        Experiência intuitiva para o cliente pedir sem fricção
-      </h2>
+      <span class="section-badge">Controle Consolidado</span>
+      <h2 class="section-title">Histórico de Consumo por Mesa Sem Confusão</h2>
       <p class="section-subtitle">
-        Do QR Code ao pedido confirmado, tudo foi desenhado para velocidade,
-        clareza e aumento do ticket médio.
+        Monitore múltiplos pedidos sequenciais de uma mesma mesa sem perder as rédeas da cozinha ou misturar contas de clientes diferentes que compartilham o mesmo espaço.
       </p>
       <ul class="feature-focus-list">
-        <li>Navegação simples por categorias e produtos</li>
-        <li>Descrição e preço em destaque para decisão rápida</li>
-        <li>Fluxo de carrinho direto ao ponto</li>
+        <li><strong>Linha do Tempo Limpa:</strong> Separação visual clara entre pratos já entregues e novos pedidos pendentes.</li>
+        <li><strong>Prevenção de Duplicidade:</strong> Sistema impede que a cozinha prepare itens repetidos por engano.</li>
+        <li><strong>Transparência Total:</strong> Facilidade extrema para o caixa ou garçom conferirem a conta no salão.</li>
       </ul>
       <div class="feature-focus-cta">
-        <a href="#contact" class="btn-large btn-gradient"
-          >Testar Cardápio Digital</a
-        >
+        <a href="#contact" class="btn-large btn-gradient">Experimentar Controle de Mesas</a>
         <a href="#features" class="btn-large btn-outline">Saber Mais</a>
+        <a href="#overview" class="btn-large btn-outline">Voltar</a>
       </div>
     </div>
-    <div class="feature-focus-mockup fade-in" style="animation-delay: 0.15s">
-      <div class="focus-window focus-mobile">
-        <div class="focus-chip-row">
-          <span></span><span></span><span></span>
+    <div class="feature-focus-mockup fade-in fade-delay-15">
+      <div class="focus-window">
+        <div class="focus-video focus-video-light">
+          <img class="focus-video-image" src="/images/cardapio-visualizar-historico-de-pedidos.gif" alt="Visualização: Cliente entrando na fila e host disparando o aviso de mesa liberada no WhatsApp">
         </div>
-        <div class="focus-product"></div>
-        <div class="focus-product"></div>
-        <div class="focus-product"></div>
       </div>
-      <p class="focus-caption">
-        Mockup: cardápio digital com foco em conversão
-      </p>
+      <p class="focus-caption">Visualização: Painel detalhado agrupando pedidos anteriores e novas entradas da mesa</p>
     </div>
   </div>
 </section>
 
-<section id="vitrine-delivery" class="feature-focus-section feature-focus-dark">
+<!-- Módulo 5: Encerramento de Mesa, Checkout e Relatórios Rápidos -->
+<section id="modulo-checkout" class="feature-focus-section feature-focus-dark">
   <div class="focus-parallax" data-parallax-speed="0.1"></div>
   <div class="container feature-focus-content">
     <div class="feature-focus-copy fade-in">
-      <span class="section-badge">Vitrine do Delivery</span>
-      <h2 class="section-title">
-        Presença digital forte para vender mais fora do salão
-      </h2>
+      <span class="section-badge">Fechamento Inteligente</span>
+      <h2 class="section-title">Checkout Ágil para Acelerar o Giro de Mesas</h2>
       <p class="section-subtitle">
-        Mostre seu cardápio online com identidade profissional e facilite o
-        pedido de quem está em casa.
+        Evite filas no caixa e demoras na hora mais crítica da experiência. O fechamento do OrdrX liquida contas com poucos cliques e atualiza a retaguarda financeira instantaneamente.
       </p>
       <ul class="feature-focus-list">
-        <li>Layout pensado para confiança e conversão</li>
-        <li>Destaque de produtos estratégicos e promoções</li>
-        <li>Fluxo rápido para finalizar o pedido</li>
+        <li><strong>Fluxo Express:</strong> Seleção rápida do cliente, escolha do método de pagamento (PIX, Dinheiro, Cartões) e baixa.</li>
+        <li><strong>Flexibilidade de Processo:</strong> Modal de fechamento detalhado pode ser desabilitado nas configurações para máxima rapidez.</li>
+        <li><strong>Reset Automático:</strong> Mesa volta instantaneamente ao status verde (Disponível) alimentando o faturamento.</li>
       </ul>
       <div class="feature-focus-cta">
-        <a href="#contact" class="btn-large btn-gradient"
-          >Ver Vitrine do Delivery</a
-        >
+        <a href="#contact" class="btn-large btn-gradient">Agilizar Meu Fechamento</a>
         <a href="#features" class="btn-large btn-outline">Saber Mais</a>
+        <a href="#overview-2" class="btn-large btn-outline">Voltar</a>
       </div>
     </div>
-    <div class="feature-focus-mockup fade-in" style="animation-delay: 0.15s">
+    <div class="feature-focus-mockup fade-in fade-delay-15">
       <div class="focus-window">
-        <div class="focus-banner"></div>
-        <div class="focus-list-item"></div>
-        <div class="focus-list-item"></div>
-        <div class="focus-list-item"></div>
+        <div class="focus-video focus-video-dark">
+          <img class="focus-video-image" src="/images/cardapio-liberar-mesa.gif" alt="Visualização: Cliente entrando na fila e host disparando o aviso de mesa liberada no WhatsApp">
+        </div>
       </div>
-      <p class="focus-caption">
-        Mockup: vitrine online para pedidos de delivery
-      </p>
+      <p class="focus-caption">Visualização: Registro de métodos de pagamento e atualização imediata do salão</p>
     </div>
   </div>
 </section>
 
-<section id="kanban-delivery" class="feature-focus-section feature-focus-light">
+<!-- Módulo 6: Configurações Gerais, Taxas e Ecossistema de Impressão -->
+<section id="modulo-configuracoes" class="feature-focus-section feature-focus-light">
   <div class="focus-parallax" data-parallax-speed="0.12"></div>
   <div class="container feature-focus-content reverse">
     <div class="feature-focus-copy fade-in">
-      <span class="section-badge">Kanban de Delivery</span>
-      <h2 class="section-title">
-        Controle visual do pedido do aceite até a entrega
-      </h2>
+      <span class="section-badge">Central de Controle</span>
+      <h2 class="section-title">Sua Regra de Negócio Customizada em Minutos</h2>
       <p class="section-subtitle">
-        Acompanhe cada etapa com clareza e sincronize equipe, cozinha e entrega
-        em um fluxo único.
+        Modifique as diretrizes, taxas, identidade visual e integrações físicas do seu estabelecimento sem precisar de suporte técnico. Um painel sob o seu total comando.
       </p>
       <ul class="feature-focus-list">
-        <li>Status organizados por etapa operacional</li>
-        <li>Menos atraso por falta de acompanhamento</li>
-        <li>Visibilidade completa para tomada de ação imediata</li>
+        <li><strong>Branding Unificado:</strong> Upload prático de logotipos e banners customizados do cardápio digital.</li>
+        <li><strong>Gestão Operacional de Taxas:</strong> Configuração rápida do percentual de taxa de serviço do salão.</li>
+        <li><strong>Automação de Hardware:</strong> Vinculação direta com impressoras térmicas de produção da cozinha e balcão.</li>
       </ul>
       <div class="feature-focus-cta">
-        <a href="#contact" class="btn-large btn-gradient"
-          >Testar Kanban de Delivery</a
-        >
+        <a href="#contact" class="btn-large btn-gradient">Configurar Meu Restaurante</a>
         <a href="#features" class="btn-large btn-outline">Saber Mais</a>
+        <a href="#overview-2" class="btn-large btn-outline">Voltar</a>
       </div>
     </div>
-    <div class="feature-focus-mockup fade-in" style="animation-delay: 0.15s">
-      <div class="focus-window focus-kanban">
-        <div class="focus-kanban-col"><span></span><span></span></div>
-        <div class="focus-kanban-col"><span></span><span></span></div>
-        <div class="focus-kanban-col"><span></span><span></span></div>
+    <div class="feature-focus-mockup fade-in fade-delay-15">
+      <div class="focus-window">
+        <div class="focus-video focus-video-light">
+          <img class="focus-video-image" src="/images/admin-gerenciar-mesas.gif" alt="Visualização: Cliente entrando na fila e host disparando o aviso de mesa liberada no WhatsApp">
+        </div>
       </div>
-      <p class="focus-caption">
-        Mockup: kanban operacional de delivery em tempo real
-      </p>
+      <p class="focus-caption">Visualização: Painel de controle ajustando métodos de pagamento, impressoras e dados da marca</p>
     </div>
   </div>
 </section>
+
+<!-- Módulo 7: Engenharia de Cardápio, SKUs Relacionados e Ficha Técnica -->
+<section id="modulo-engenharia-cardapio" class="feature-focus-section feature-focus-dark">
+  <div class="focus-parallax" data-parallax-speed="0.08"></div>
+  <div class="container feature-focus-content">
+    <div class="feature-focus-copy fade-in">
+      <span class="section-badge">Engenharia de Catálogo</span>
+      <h2 class="section-title">Gestão Avançada de Produtos, Cross-Selling e Estoque</h2>
+      <p class="section-subtitle">
+        Muito mais que uma listagem de fotos: gerencie seu mix de SKUs de forma profissional com importação massiva, gatilhos de venda psicológicos e controle real de insumos.
+      </p>
+      <ul class="feature-focus-list">
+        <li><strong>Importação em Massa:</strong> Ganhe tempo subindo ou baixando todo o seu cardápio via planilhas.</li>
+        <li><strong>Aumento de Ticket:</strong> Sugestão automática de produtos relacionados (cross-selling) no carrinho.</li>
+        <li><strong>Ficha Técnica e Idiomas:</strong> Controle automatizado de insumos para estoque e traduções para Inglês e Espanhol.</li>
+      </ul>
+      <div class="feature-focus-cta">
+        <a href="#contact" class="btn-large btn-gradient">Otimizar Meu Mix de Produtos</a>
+        <a href="#pricing" class="btn-large btn-outline">Ver Planos</a>
+        <a href="#overview-3" class="btn-large btn-outline">Voltar</a>
+      </div>
+    </div>
+    <div class="feature-focus-mockup fade-in fade-delay-15">
+      <div class="focus-window">
+        <div class="focus-video focus-video-dark">
+          <img class="focus-video-image" src="/images/admin-gerenciar-produtos.gif" alt="Visualização: Cliente entrando na fila e host disparando o aviso de mesa liberada no WhatsApp">
+        </div>
+      </div>
+      <p class="focus-caption">Visualização: Painel de edição de SKUs com tags promocionais, preços dinâmicos e controle de estoque</p>
+    </div>
+  </div>
+</section>
+
+<!-- Módulo 8: Controle de Comandas Individuais por QR Code (Opcional) -->
+<section id="modulo-comandas" class="feature-focus-section feature-focus-light">
+  <div class="focus-parallax" data-parallax-speed="0.1"></div>
+  <div class="container feature-focus-content reverse">
+    <div class="feature-focus-copy fade-in">
+      <span class="section-badge">Módulo Opcional</span>
+      <h2 class="section-title">Comandas Individuais Físicas Conectadas ao Digital</h2>
+      <p class="section-subtitle">
+        A solução definitiva e segura para bares, baladas ou eventos de alto giro. Alterne entre o modo de mesas fixas tradicionais ou comanda por pessoa com um clique no painel Admin.
+      </p>
+      <ul class="feature-focus-list">
+        <li><strong>Captura de Leads Segura:</strong> Vincule o cartão impresso com QR Code ao Nome e Telefone do cliente na entrada.</li>
+        <li><strong>Bloqueio de Fraudes:</strong> Cada consumo é registrado pessoalmente de forma intransferível e digitalizada.</li>
+        <li><strong>Flexibilidade de Ativação:</strong> Habilite ou desabilite o recurso a qualquer momento na área de configurações.</li>
+      </ul>
+      <div class="feature-focus-cta">
+        <a href="#contact" class="btn-large btn-gradient">Ativar Módulo de Comandas</a>
+        <a href="#features" class="btn-large btn-outline">Entender o Fluxo</a>
+        <a href="#overview-2" class="btn-large btn-outline">Voltar</a>
+      </div>
+    </div>
+    <div class="feature-focus-mockup fade-in fade-delay-15">
+      <div class="focus-window">
+        <div class="focus-video focus-video-light">
+          <img class="focus-video-image" src="/images/admin-comanda-por-qr-code.gif" alt="Visualização: Cliente entrando na fila e host disparando o aviso de mesa liberada no WhatsApp">
+        </div>
+      </div>
+      <p class="focus-caption">Visualização: Tela de ativação do recurso de comandas e gerenciamento de cartões físicos com QR Code</p>
+    </div>
+  </div>
+</section>
+
+<!-- Módulo 9: Dashboard Gerencial 360° e Business Intelligence (BI) -->
+<section id="modulo-dashboard-360" class="feature-focus-section feature-focus-dark">
+  <div class="focus-parallax" data-parallax-speed="0.12"></div>
+  <div class="container feature-focus-content">
+    <div class="feature-focus-copy fade-in">
+      <span class="section-badge">Inteligência de Dados (BI)</span>
+      <h2 class="section-title">O Cérebro da sua Operação Unificado e em Tempo Real</h2>
+      <p class="section-subtitle">
+        Tome decisões estratégicas de faturamento pautadas em dados analíticos consolidados. Monitore de ponta a ponta a saúde operacional e comercial do seu negócio sem planilhas confusas.
+      </p>
+      <ul class="feature-focus-list">
+        <li><strong>Visão 360° Comercial:</strong> Faturamento do período filtrado, ticket médio real e fluxo de caixa detalhado.</li>
+        <li><strong>Gráficos de Faixa e Picos:</strong> Gráficos em linha de faturamento diário e barras mapeando as vendas por horários e dias.</li>
+        <li><strong>Ranking de Performance:</strong> Lista com o Top 10 Produtos mais vendidos, canais de pagamento e monitor de avaliações.</li>
+      </ul>
+      <div class="feature-focus-cta">
+        <a href="#contact" class="btn-large btn-gradient">Acessar Meu Dashboard 360°</a>
+        <a href="#features" class="btn-large btn-outline">Ver Todas as Métricas</a>
+        <a href="#overview-3" class="btn-large btn-outline">Voltar</a>
+      </div>
+    </div>
+    <div class="feature-focus-mockup fade-in fade-delay-15">
+      <div class="focus-window">
+        <div class="focus-video focus-video-dark">
+          <img class="focus-video-image" src="/images/admin-dashboard-2.gif" alt="Visualização: Cliente entrando na fila e host disparando o aviso de mesa liberada no WhatsApp">
+        </div>
+      </div>
+      <p class="focus-caption">Visualização: Central analítica de BI exibindo gráficos de vendas, taxas de ocupação de mesas e caixa</p>
+    </div>
+  </div>
+</section>
+
 
 <!-- Comparison Section -->
 <section id="comparison" class="comparison">
@@ -1342,7 +1477,7 @@ structured_data: |
     </div>
 
     <div class="founders-grid">
-      <div class="founder-card fade-in" style="animation-delay: 0.1s">
+      <div class="founder-card fade-in fade-delay-10">
         <div class="founder-photo">
           <img
             src="/images/team/pablo-ungaro.jpeg"
@@ -1353,18 +1488,7 @@ structured_data: |
         <p class="founder-role">Tech Lead & Co-founder</p>
       </div>
 
-      <div class="founder-card fade-in" style="animation-delay: 0.2s">
-        <div class="founder-photo">
-          <img
-            src="/images/team/rafael-pacheco.jpg"
-            alt="Rafael Pacheco - Administrador de Empresas & Co-founder"
-          />
-        </div>
-        <h3 class="founder-name">Rafael Pacheco</h3>
-        <p class="founder-role">Administrador de Empresas & Co-founder</p>
-      </div>
-
-      <div class="founder-card fade-in" style="animation-delay: 0.3s">
+      <div class="founder-card fade-in fade-delay-30">
         <div class="founder-photo">
           <img
             src="/images/team/thiago-lontra.jpeg"
@@ -1375,7 +1499,7 @@ structured_data: |
         <p class="founder-role">Fotógrafo & Co-founder</p>
       </div>
 
-      <div class="founder-card fade-in" style="animation-delay: 0.4s">
+      <div class="founder-card fade-in fade-delay-40">
         <div class="founder-photo">
           <img
             src="/images/team/fagner-pinho.jpeg"
@@ -1386,7 +1510,7 @@ structured_data: |
         <p class="founder-role">Tech Lead & Co-founder</p>
       </div>
 
-      <div class="founder-card fade-in" style="animation-delay: 0.5s">
+      <div class="founder-card fade-in fade-delay-50">
         <div class="founder-photo">
           <img
             src="/images/team/erick-fonseca.jpg"
@@ -1397,7 +1521,7 @@ structured_data: |
         <p class="founder-role">Senior Backend Developer & Co-founder</p>
       </div>
 
-      <div class="founder-card fade-in" style="animation-delay: 0.6s">
+      <div class="founder-card fade-in fade-delay-60">
         <div class="founder-photo">
           <img
             src="/images/team/roberto-porlan.jpg"
@@ -1672,7 +1796,7 @@ structured_data: |
 </section>
 
 <!-- SEO Content Section -->
-<section id="seo-content" class="seo-content" style="display: none">
+<section id="seo-content" class="seo-content seo-content-hidden">
   <div class="container">
     <h2>
       ORDRX.AI: Sistema Gratuito de Cardápio Digital com IA para Restaurantes
