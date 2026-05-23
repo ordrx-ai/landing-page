@@ -1877,7 +1877,14 @@ section {
    ======================================== */
 .contact {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgb(1 1 1 / 84%)), url(/images/bg-10.png) center / cover no-repeat;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgb(1 1 1 / 84%)),
+    url(/images/bg-10.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Avoid EXIF-based auto-rotation inconsistencies on some mobile browsers. */
+  image-orientation: none;
   box-sizing: border-box;
   display: flex;
   align-items: center;
