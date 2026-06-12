@@ -1367,6 +1367,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     section.classList.add("calc-done");
+
+    // Leva o usuário direto para os cards de prejuízo (Garçom Extra nos Picos)
+    const alvoScroll = document.getElementById("card-garcom-extra");
+    if (alvoScroll) {
+      alvoScroll.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
   }
 
   input.addEventListener("input", () => {
