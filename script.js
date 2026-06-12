@@ -1308,7 +1308,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("calc-faturamento");
   const btn = document.getElementById("calc-btn");
   const inputWrap = section.querySelector(".calc-input-wrap");
-  const cards = section.querySelectorAll(".pain-result");
+  const costs = section.querySelectorAll(".pain-cost[data-min]");
   const totalEl = section.querySelector(".pain-total-result");
   if (!input || !btn) return;
 
@@ -1350,11 +1350,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (inputWrap) inputWrap.classList.remove("calc-error");
 
-    cards.forEach((card) => {
-      const min = parseFloat(card.dataset.min);
-      const max = parseFloat(card.dataset.max);
-      const valueEl = card.querySelector(".pain-result-value");
-      if (valueEl) valueEl.textContent = faixaReais(faturamento, min, max);
+    // Substitui o texto da % de cada card pelo valor em R$ correspondente
+    costs.forEach((cost) => {
+      const min = parseFloat(cost.dataset.min);
+      const max = parseFloat(cost.dataset.max);
+      cost.innerHTML = `${faixaReais(faturamento, min, max)}<span class="pain-cost-sub">de prejuízo por mês</span>`;
+      cost.classList.add("pain-cost--calc");
     });
 
     if (totalEl) {
