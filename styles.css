@@ -3819,6 +3819,240 @@ p.section-subtitle {
 }
 
 /* ========================================
+   Calculadora de Recuperação de Lucro
+   (mobile first)
+   ======================================== */
+.calc-box {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.25rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(255, 255, 255, 0.99) 100%
+  );
+  border: 1px solid rgba(168, 85, 247, 0.16);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  box-shadow:
+    0 16px 48px rgba(26, 31, 58, 0.1),
+    0 4px 16px rgba(168, 85, 247, 0.08);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.calc-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color),
+    var(--teal-color),
+    var(--accent-color)
+  );
+}
+
+.calc-field {
+  flex: 1;
+  text-align: left;
+}
+
+.calc-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.calc-label svg {
+  width: 20px;
+  height: 20px;
+  color: var(--secondary-color);
+  flex-shrink: 0;
+}
+
+.calc-input-wrap {
+  display: flex;
+  align-items: center;
+  background: var(--bg-secondary);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 0 1rem;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.calc-input-wrap:focus-within {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.12);
+}
+
+.calc-currency {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-right: 0.5rem;
+}
+
+.calc-input {
+  flex: 1;
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 0.9rem 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.calc-input::placeholder {
+  color: var(--gray-400);
+  font-weight: 600;
+}
+
+.calc-input.calc-error {
+  /* highlight handled on wrap */
+}
+
+.calc-input-wrap.calc-error {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.12);
+}
+
+.calc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.calc-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 600px) {
+  .calc-box {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .calc-btn {
+    margin-bottom: 0;
+  }
+}
+
+/* Resultado dentro de cada card de perda */
+.pain-result {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--gray-200);
+  display: none;
+}
+
+.calc-done .pain-result {
+  display: block;
+  animation: calcReveal 0.5s ease both;
+}
+
+.pain-result-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.pain-result-value {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Resultado total no CTA */
+.pain-total-result {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.pain-total-result strong {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--accent-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.calc-done .pain-total-result {
+  animation: calcReveal 0.5s ease both;
+}
+
+@keyframes calcReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .calc-box {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .pain-result-value {
+    font-size: 1.5rem;
+  }
+
+  .pain-total-result strong {
+    font-size: 1.6rem;
+  }
+}
+
+/* ========================================
    Hero Trust Line
    ======================================== */
 .hero-trust {
