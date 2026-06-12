@@ -2330,10 +2330,23 @@ p.section-subtitle {
   margin-bottom: 3rem;
 }
 
+.footer-brand .logo img.footer-logo-img {
+  width: 160px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
 .footer-brand p {
   color: var(--text-secondary);
   margin-top: 1rem;
   line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .footer-brand .logo img.footer-logo-img {
+    width: 140px;
+  }
 }
 
 .footer-links {
