@@ -1299,6 +1299,98 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ========================================
+// Calculadora de Recuperação de Lucro
+// ========================================
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.getElementById("calculator");
+  if (!section) return;
+
+  const input = document.getElementById("calc-faturamento");
+  const btn = document.getElementById("calc-btn");
+  const inputWrap = section.querySelector(".calc-input-wrap");
+  const costs = section.querySelectorAll(".pain-cost[data-min]");
+  const totalEl = section.querySelector(".pain-total-result");
+  if (!input || !btn) return;
+
+  const moeda = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+    maximumFractionDigits: 0,
+  });
+
+  // Mantém apenas dígitos e formata com separador de milhar (pt-BR)
+  function formatarInput() {
+    const digitos = input.value.replace(/\D/g, "");
+    if (!digitos) {
+      input.value = "";
+      return;
+    }
+    input.value = Number(digitos).toLocaleString("pt-BR");
+  }
+
+  function lerFaturamento() {
+    const digitos = input.value.replace(/\D/g, "");
+    return digitos ? Number(digitos) : 0;
+  }
+
+  function faixaReais(faturamento, min, max) {
+    const valorMin = Math.round((faturamento * min) / 100);
+    const valorMax = Math.round((faturamento * max) / 100);
+    if (valorMin === valorMax) return moeda.format(valorMax);
+    return `${moeda.format(valorMin)} a ${moeda.format(valorMax)}`;
+  }
+
+  function calcular() {
+    const faturamento = lerFaturamento();
+
+    if (faturamento <= 0) {
+      if (inputWrap) inputWrap.classList.add("calc-error");
+      input.focus();
+      return;
+    }
+    if (inputWrap) inputWrap.classList.remove("calc-error");
+
+    // Substitui o texto da % de cada card pelo valor em R$ correspondente
+    costs.forEach((cost) => {
+      const min = parseFloat(cost.dataset.min);
+      const max = parseFloat(cost.dataset.max);
+      cost.innerHTML = `${faixaReais(faturamento, min, max)}<span class="pain-cost-sub">de prejuízo por mês</span>`;
+      cost.classList.add("pain-cost--calc");
+    });
+
+    if (totalEl) {
+      const max = parseFloat(totalEl.dataset.max) || 25;
+      const recMax = Math.round((faturamento * max) / 100);
+      totalEl.innerHTML = `Com a ORDRX você pode recuperar até <strong>${moeda.format(
+        recMax
+      )}</strong> por mês.`;
+    }
+
+    section.classList.add("calc-done");
+
+    // Leva o usuário direto para os cards de prejuízo (Garçom Extra nos Picos)
+    const alvoScroll = document.getElementById("card-garcom-extra");
+    if (alvoScroll) {
+      alvoScroll.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
+
+  input.addEventListener("input", () => {
+    formatarInput();
+    if (inputWrap) inputWrap.classList.remove("calc-error");
+  });
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      calcular();
+    }
+  });
+
+  btn.addEventListener("click", calcular);
+});
+
+// ========================================
 // Console Easter Egg
 // ========================================
 console.log(
