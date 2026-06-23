@@ -2308,6 +2308,7 @@ section {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 0.25rem;
   margin-top: 28px;
 }
@@ -5397,4 +5398,10 @@ body.lightbox-open {
 }
 .home-v2-intro .hero-title {
   margin-bottom: 1rem;
+}
+/* Texto da intro com respiro lateral e leitura mais confortável */
+.home-v2-intro .section-subtitle {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 1.3rem;
 }
