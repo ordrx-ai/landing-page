@@ -5377,3 +5377,15 @@ body.lightbox-open {
     height: 24px;
   }
 }
+
+/* Home v2 — intro (título ORDRX + subtítulo acima dos módulos) */
+.home-v2-intro {
+  padding-top: calc(var(--spacing-xl) + 1rem);
+  padding-bottom: 0;
+}
+.home-v2-intro .section-header {
+  margin-bottom: 0;
+}
+.home-v2-intro .hero-title {
+  margin-bottom: 1rem;
+}
