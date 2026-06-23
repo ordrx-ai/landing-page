@@ -2302,6 +2302,15 @@ section {
     0 0 0 3px rgba(59, 130, 246, 0.16),
     0 10px 18px rgba(15, 23, 42, 0.08);
 }
+
+.carousel-module-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-top: 28px;
+}
 p.section-subtitle {
   margin-bottom: 20px;;
   margin-left: auto;
