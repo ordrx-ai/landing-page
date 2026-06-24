@@ -562,6 +562,158 @@ structured_data: |
   </div>
 </section>
 
+<!-- Pain Points Section -->
+<section id="calculator" class="pain-points">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Calculadora de Recuperação de Lucro</span>
+      <h2 class="section-title">
+        Com a <span class="gradient-text">ORDRX</span> você recupera<br />
+        até <span class="gradient-text">25% do seu faturamento</span>
+      </h2>
+      <p class="section-subtitle">
+        Informe quanto seu restaurante fatura por mês e descubra, na hora,
+        quanto dinheiro está escapando do seu caixa — e quanto você pode recuperar.
+      </p>
+    </div>
+
+    <!-- Calculadora Interativa -->
+    <div class="calc-box fade-in">
+      <div class="calc-field">
+        <label for="calc-faturamento" class="calc-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="6" width="20" height="12" rx="2" />
+            <circle cx="12" cy="12" r="2.5" />
+            <path d="M6 12h.01M18 12h.01" />
+          </svg>
+          Faturamento mensal aproximado
+        </label>
+        <div class="calc-input-wrap">
+          <span class="calc-currency">R$</span>
+          <input
+            type="text"
+            id="calc-faturamento"
+            class="calc-input"
+            inputmode="numeric"
+            placeholder="50.000"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+      <button type="button" id="calc-btn" class="btn-large btn-gradient calc-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="4" y="2" width="16" height="20" rx="2" />
+          <line x1="8" y1="6" x2="16" y2="6" />
+          <line x1="8" y1="10.5" x2="8.01" y2="10.5" />
+          <line x1="12" y1="10.5" x2="12.01" y2="10.5" />
+          <line x1="16" y1="10.5" x2="16.01" y2="10.5" />
+          <line x1="8" y1="14.5" x2="8.01" y2="14.5" />
+          <line x1="12" y1="14.5" x2="12.01" y2="14.5" />
+          <line x1="16" y1="14.5" x2="16" y2="18" />
+          <line x1="8" y1="18" x2="12" y2="18" />
+        </svg>
+        Calcular meu prejuízo
+      </button>
+    </div>
+
+    <div class="pain-grid">
+      <div class="pain-card fade-in" id="card-garcom-extra">
+        <div class="pain-icon">
+          <img
+            src="/images/pain-icon-waiter.png"
+            alt="Garçom Extra"
+            loading="lazy"
+          />
+        </div>
+        <div class="pain-cost" data-min="4" data-max="6">4-6% <br> do faturamento</div>
+        <h3>Garçom Extra nos Picos</h3>
+        <p>
+          Nas sextas e sábados lotados, você contrata mais gente. Com
+          autoatendimento, essa despesa some.
+        </p>
+      </div>
+
+      <div class="pain-card fade-in">
+        <div class="pain-icon">
+          <img
+            src="/images/pain-icon-wrong-order.png"
+            alt="Pedido Errado"
+            loading="lazy"
+          />
+        </div>
+        <div class="pain-cost" data-min="2" data-max="5">2-5% <br> do faturamento</div>
+        <h3>Pedido Errado</h3>
+        <p>
+          Cada prato devolvido = refeição não vendida + cliente insatisfeito + avaliação
+          ruim. <strong>Com ORDRX</strong>: zero erros.
+        </p>
+      </div>
+
+      <div class="pain-card fade-in">
+        <div class="pain-icon">
+          <img
+            src="/images/pain-icon-idle-table.png"
+            alt="Mesa Parada"
+            loading="lazy"
+          />
+        </div>
+        <div class="pain-cost" data-min="3" data-max="5">3-5% <br> do faturamento</div>
+        <h3>Perda de giro de mesas</h3>
+        <p>
+          Cliente esperando para ser atendido consome menos e a mesa demora o dobro do tempo para desocupar. <br> <strong>ORDRX acelera o atendimento e aumenta o giro</strong>.
+          <strong>Cada mesa pode virar 3-4 serviços por noite</strong>.
+        </p>
+      </div>
+
+       <div class="pain-card fade-in">
+          <div class="pain-icon">
+            <img
+              src="/images/pain-icon-wrong-order.png"
+              alt="Controle de Caixa"
+              loading="lazy"
+            />
+          </div>
+          <div class="pain-cost" data-min="2" data-max="4">2-4% <br> do faturamento</div>
+          <h3>Controle de Caixa</h3>
+          <p>
+            Erros no fechamento de contas e falta de controle sobre o fluxo de caixa podem levar a perdas significativas.<br>
+            <strong>ORDRX</strong>, cada transação é registrada e monitorada em tempo real, garantindo precisão e segurança financeira.
+          </p>
+        </div>
+
+        <div class="pain-card fade-in">
+          <div class="pain-icon">
+            <img
+              src="/images/pain-icon-invisible-profit.png"
+              alt="Lucro Invisível"
+              loading="lazy"
+            />
+          </div>
+          <div class="pain-cost" data-min="2" data-max="3">2-3% <br> do faturamento</div>
+          <h3>Decisões no Escuro</h3>
+          <p>
+            O dono acredita que o prato mais vendido é o mais lucrativo, mas sem sistema, ignora custos altos e margens baixas. Enquanto isso, pratos realmente lucrativos ficam escondidos no cardápio.
+            <br><strong>ORDRX</strong> revela dados reais para decisões estratégicas, mostrando onde está o lucro de verdade.
+          </p>
+        </div>
+
+      
+    </div>
+
+    <div class="pain-cta">
+      <p class="pain-total">
+        <strong>Soma Total: 15% a 25% de prejuízo evitável</strong>
+      </p>
+      <p class="pain-total-result" aria-live="polite" data-min="15" data-max="25">
+        Informe seu faturamento acima e veja quanto você pode recuperar todo mês.
+      </p>
+      <a href="#contact" class="btn-large btn-gradient"
+        >Parar de Perder Dinheiro Agora</a
+      >
+    </div>
+  </div>
+</section>
+
 
 
 <!-- System Showcase Section 02 -->
@@ -911,158 +1063,6 @@ structured_data: |
           >
         </p>
       </form>
-    </div>
-  </div>
-</section>
-
-<!-- Pain Points Section -->
-<section id="calculator" class="pain-points">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-badge">Calculadora de Recuperação de Lucro</span>
-      <h2 class="section-title">
-        Com a <span class="gradient-text">ORDRX</span> você recupera<br />
-        até <span class="gradient-text">25% do seu faturamento</span>
-      </h2>
-      <p class="section-subtitle">
-        Informe quanto seu restaurante fatura por mês e descubra, na hora,
-        quanto dinheiro está escapando do seu caixa — e quanto você pode recuperar.
-      </p>
-    </div>
-
-    <!-- Calculadora Interativa -->
-    <div class="calc-box fade-in">
-      <div class="calc-field">
-        <label for="calc-faturamento" class="calc-label">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="2" y="6" width="20" height="12" rx="2" />
-            <circle cx="12" cy="12" r="2.5" />
-            <path d="M6 12h.01M18 12h.01" />
-          </svg>
-          Faturamento mensal aproximado
-        </label>
-        <div class="calc-input-wrap">
-          <span class="calc-currency">R$</span>
-          <input
-            type="text"
-            id="calc-faturamento"
-            class="calc-input"
-            inputmode="numeric"
-            placeholder="50.000"
-            autocomplete="off"
-          />
-        </div>
-      </div>
-      <button type="button" id="calc-btn" class="btn-large btn-gradient calc-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="4" y="2" width="16" height="20" rx="2" />
-          <line x1="8" y1="6" x2="16" y2="6" />
-          <line x1="8" y1="10.5" x2="8.01" y2="10.5" />
-          <line x1="12" y1="10.5" x2="12.01" y2="10.5" />
-          <line x1="16" y1="10.5" x2="16.01" y2="10.5" />
-          <line x1="8" y1="14.5" x2="8.01" y2="14.5" />
-          <line x1="12" y1="14.5" x2="12.01" y2="14.5" />
-          <line x1="16" y1="14.5" x2="16" y2="18" />
-          <line x1="8" y1="18" x2="12" y2="18" />
-        </svg>
-        Calcular meu prejuízo
-      </button>
-    </div>
-
-    <div class="pain-grid">
-      <div class="pain-card fade-in" id="card-garcom-extra">
-        <div class="pain-icon">
-          <img
-            src="/images/pain-icon-waiter.png"
-            alt="Garçom Extra"
-            loading="lazy"
-          />
-        </div>
-        <div class="pain-cost" data-min="4" data-max="6">4-6% <br> do faturamento</div>
-        <h3>Garçom Extra nos Picos</h3>
-        <p>
-          Nas sextas e sábados lotados, você contrata mais gente. Com
-          autoatendimento, essa despesa some.
-        </p>
-      </div>
-
-      <div class="pain-card fade-in">
-        <div class="pain-icon">
-          <img
-            src="/images/pain-icon-wrong-order.png"
-            alt="Pedido Errado"
-            loading="lazy"
-          />
-        </div>
-        <div class="pain-cost" data-min="2" data-max="5">2-5% <br> do faturamento</div>
-        <h3>Pedido Errado</h3>
-        <p>
-          Cada prato devolvido = refeição não vendida + cliente insatisfeito + avaliação
-          ruim. <strong>Com ORDRX</strong>: zero erros.
-        </p>
-      </div>
-
-      <div class="pain-card fade-in">
-        <div class="pain-icon">
-          <img
-            src="/images/pain-icon-idle-table.png"
-            alt="Mesa Parada"
-            loading="lazy"
-          />
-        </div>
-        <div class="pain-cost" data-min="3" data-max="5">3-5% <br> do faturamento</div>
-        <h3>Perda de giro de mesas</h3>
-        <p>
-          Cliente esperando para ser atendido consome menos e a mesa demora o dobro do tempo para desocupar. <br> <strong>ORDRX acelera o atendimento e aumenta o giro</strong>.
-          <strong>Cada mesa pode virar 3-4 serviços por noite</strong>.
-        </p>
-      </div>
-
-       <div class="pain-card fade-in">
-          <div class="pain-icon">
-            <img
-              src="/images/pain-icon-wrong-order.png"
-              alt="Controle de Caixa"
-              loading="lazy"
-            />
-          </div>
-          <div class="pain-cost" data-min="2" data-max="4">2-4% <br> do faturamento</div>
-          <h3>Controle de Caixa</h3>
-          <p>
-            Erros no fechamento de contas e falta de controle sobre o fluxo de caixa podem levar a perdas significativas.<br>
-            <strong>ORDRX</strong>, cada transação é registrada e monitorada em tempo real, garantindo precisão e segurança financeira.
-          </p>
-        </div>
-
-        <div class="pain-card fade-in">
-          <div class="pain-icon">
-            <img
-              src="/images/pain-icon-invisible-profit.png"
-              alt="Lucro Invisível"
-              loading="lazy"
-            />
-          </div>
-          <div class="pain-cost" data-min="2" data-max="3">2-3% <br> do faturamento</div>
-          <h3>Decisões no Escuro</h3>
-          <p>
-            O dono acredita que o prato mais vendido é o mais lucrativo, mas sem sistema, ignora custos altos e margens baixas. Enquanto isso, pratos realmente lucrativos ficam escondidos no cardápio.
-            <br><strong>ORDRX</strong> revela dados reais para decisões estratégicas, mostrando onde está o lucro de verdade.
-          </p>
-        </div>
-
-      
-    </div>
-
-    <div class="pain-cta">
-      <p class="pain-total">
-        <strong>Soma Total: 15% a 25% de prejuízo evitável</strong>
-      </p>
-      <p class="pain-total-result" aria-live="polite" data-min="15" data-max="25">
-        Informe seu faturamento acima e veja quanto você pode recuperar todo mês.
-      </p>
-      <a href="#contact" class="btn-large btn-gradient"
-        >Parar de Perder Dinheiro Agora</a
-      >
     </div>
   </div>
 </section>
