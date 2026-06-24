@@ -152,13 +152,97 @@ structured_data: |
   </script>
 ---
 
+<!-- home v3 — combo "hype na medida" da primeira dobra (escopo: .home-v2-intro) -->
+<style>
+  /* Garante o efeito sobre o navy do #overview */
+  .home-v2-intro {
+    position: relative;
+    isolation: isolate;
+    padding-top: 1.5rem;
+  }
+
+  /* 3a — aurora glow radial (laranja + roxo) atrás do wordmark */
+  .home-v2-intro::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 36%;
+    width: min(700px, 92vw);
+    height: min(440px, 64vw);
+    transform: translate(-50%, -50%);
+    background:
+      radial-gradient(closest-side, rgba(255, 107, 53, 0.28) 0%, transparent 70%),
+      radial-gradient(closest-side, rgba(168, 85, 247, 0.22) 28%, transparent 72%);
+    filter: blur(10px);
+    z-index: -2;
+    pointer-events: none;
+  }
+
+  /* 3b — grão sutil (noise) sobre a abertura */
+  .home-v2-intro::after {
+    content: "";
+    position: absolute;
+    inset: -10% 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  /* 1B — wordmark "Ordr" branco + "X" laranja com glow */
+  .home-v2-wordmark {
+    font-size: clamp(3.2rem, 2rem + 6vw, 6rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .home-v2-wordmark .wm-base {
+    color: #ffffff;
+  }
+  .home-v2-wordmark .wm-x {
+    color: var(--accent-color);
+    text-shadow:
+      0 0 18px rgba(255, 107, 53, 0.55),
+      0 0 42px rgba(255, 107, 53, 0.30);
+  }
+
+  /* 2 — subtítulo (tagline) com hierarquia: peso leve, esmaecido, letra aberta */
+  .home-v2-intro .home-v2-tagline {
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.66);
+    letter-spacing: 0.02em;
+    font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.4rem);
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 3e — entrada com fade-up no load */
+  .home-v2-intro > * {
+    animation: hv2-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .home-v2-intro > *:nth-child(2) { animation-delay: 0.08s; }
+  .home-v2-intro > *:nth-child(3) { animation-delay: 0.16s; }
+  .home-v2-intro > *:nth-child(4) { animation-delay: 0.24s; }
+  @keyframes hv2-fade-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .home-v2-intro > * { animation: none; }
+    .home-v2-wordmark .wm-x { text-shadow: 0 0 14px rgba(255, 107, 53, 0.4); }
+  }
+</style>
+
 <!-- System Showcase Section 01 -->
 <section id="overview" class="system-showcase">
   <div class="container">
     <!-- Intro — Título e subtítulo dentro do #overview (home v2) -->
     <div class="section-header home-v2-intro">
-      <h1 class="hero-title gradient-text">OrdrX</h1>
-      <p class="section-subtitle">
+      <h1 class="hero-title home-v2-wordmark"><span class="wm-base">Ordr</span><span class="wm-x">X</span></h1>
+      <p class="section-subtitle home-v2-tagline">
         Transforme seu restaurante com tecnologia e automação inteligente.
       </p>
       <p class="section-subtitle">
