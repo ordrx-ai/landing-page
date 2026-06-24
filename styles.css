@@ -4547,9 +4547,22 @@ p.section-subtitle {
 /* ========================================
    Responsive - New Sections
    ======================================== */
-@media (max-width: 1440px) {
+/* Desktop: 3 cards por linha, centralizados, com largura máxima legível.
+   5 cards => linha 1 com 3 + linha 2 com 2 centralizados (sem aperto/órfão). */
+@media (min-width: 1024px) {
   .pain-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.75rem;
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pain-card {
+    flex: 0 1 calc((100% - 2 * 1.75rem) / 3);
+    max-width: calc((100% - 2 * 1.75rem) / 3);
   }
 }
 @media (max-width: 1023px) {
