@@ -234,6 +234,166 @@ structured_data: |
     .home-v2-intro > * { animation: none; }
     .home-v2-wordmark .wm-x { text-shadow: 0 0 14px rgba(255, 107, 53, 0.4); }
   }
+
+  /* ============================================================
+     home v3 — CTAs modernos "hype" (escopo: SÓ esta página de validação)
+     Aplica a todos os botões de ação dentro das <section>
+     (não toca no botão do menu, que fica no header).
+     ============================================================ */
+
+  /* Base unificada: gradiente vibrante laranja→roxo, pílula, glow colorido */
+  section .btn-gradient,
+  section .btn-submit,
+  section .contact-submit-btn {
+    position: relative;
+    overflow: hidden;
+    border: none !important;
+    border-radius: 999px !important;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff3d77 48%, #a855f7 100%) !important;
+    background-size: 180% 180%;
+    color: #ffffff !important;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    box-shadow:
+      0 10px 28px -8px rgba(255, 107, 53, 0.55),
+      0 6px 22px -10px rgba(168, 85, 247, 0.55),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+    transition:
+      transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.28s ease,
+      background-position 0.6s ease;
+  }
+
+  /* Botões "grandes" ganham mais presença */
+  section .btn-large.btn-gradient {
+    padding: 1.05rem 2.5rem;
+    font-size: 1.15rem;
+  }
+
+  /* Sheen — brilho diagonal que cruza o botão no hover */
+  section .btn-gradient::before,
+  section .btn-submit::before,
+  section .contact-submit-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -130%;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+    transform: skewX(-18deg);
+    transition: left 0.6s ease;
+    pointer-events: none;
+  }
+
+  section .btn-gradient:hover,
+  section .btn-submit:hover,
+  section .contact-submit-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    background-position: 100% 0 !important;
+    box-shadow:
+      0 18px 40px -10px rgba(255, 107, 53, 0.7),
+      0 10px 30px -10px rgba(168, 85, 247, 0.65),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  }
+
+  section .btn-gradient:hover::before,
+  section .btn-submit:hover::before,
+  section .contact-submit-btn:hover::before {
+    left: 135%;
+  }
+
+  /* A setinha avança no hover */
+  section .btn-gradient svg,
+  section .btn-submit svg,
+  section .contact-submit-btn svg {
+    transition: transform 0.28s ease;
+  }
+  section .btn-gradient:hover svg,
+  section .btn-submit:hover svg,
+  section .contact-submit-btn:hover svg {
+    transform: translateX(4px);
+  }
+
+  section .btn-gradient:focus-visible,
+  section .btn-submit:focus-visible,
+  section .contact-submit-btn:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 4px rgba(255, 107, 53, 0.35),
+      0 14px 30px -10px rgba(168, 85, 247, 0.6) !important;
+  }
+
+  /* ---- Abertura: CTA principal com glow pulsante + chips de confiança ---- */
+  .home-v2-intro-cta {
+    margin-top: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+  }
+
+  .home-v2-intro-cta .btn-gradient {
+    animation: hv3-cta-pulse 2.8s ease-in-out infinite;
+  }
+  @keyframes hv3-cta-pulse {
+    0%, 100% {
+      box-shadow:
+        0 10px 28px -8px rgba(255, 107, 53, 0.55),
+        0 6px 22px -10px rgba(168, 85, 247, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+    50% {
+      box-shadow:
+        0 16px 38px -8px rgba(255, 107, 53, 0.85),
+        0 10px 30px -10px rgba(168, 85, 247, 0.8),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  /* Linha de confiança em "chips" (substitui o texto com emojis) */
+  .hv3-trust {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 0.7rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .hv3-trust li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.5rem 0.95rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+  .hv3-trust svg {
+    flex-shrink: 0;
+    color: #34d399;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    section .btn-gradient,
+    section .btn-submit,
+    section .contact-submit-btn,
+    .home-v2-intro-cta .btn-gradient {
+      animation: none !important;
+      transition: none !important;
+    }
+    section .btn-gradient::before,
+    section .btn-submit::before,
+    section .contact-submit-btn::before {
+      display: none;
+    }
+  }
 </style>
 
 <!-- System Showcase Section 01 -->
@@ -250,13 +410,27 @@ structured_data: |
       </p>
 
       <!-- home v3: CTA de ação logo na abertura + reforço da oferta -->
-      <div class="home-v2-intro-cta" style="margin-top: 2rem; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+      <div class="home-v2-intro-cta">
         <a href="#contact" class="btn-large btn-gradient">
           Começar Agora — Teste Grátis
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
         </a>
-        <p class="section-subtitle" style="margin: 0; font-weight: 600;">
-          ✅ Primeiro mês grátis &nbsp;·&nbsp; ✅ Sem cartão de crédito &nbsp;·&nbsp; ✅ Acesso por e-mail em minutos
-        </p>
+        <ul class="hv3-trust">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Primeiro mês grátis
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Sem cartão de crédito
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Acesso por e-mail em minutos
+          </li>
+        </ul>
       </div>
     </div>
 
