@@ -394,6 +394,22 @@ structured_data: |
       display: none;
     }
   }
+
+  /* ============================================================
+     home v3 — respiro lateral: abertura (#overview) e preço (#pricing)
+     O styles.css é compartilhado com o index, então corrigimos só aqui.
+     No mobile o #overview zera o padding do container
+     (.system-showcase > .container { padding: 0 }), deixando o
+     título/CTA/chips colados nas bordas; e o #pricing herda pouco
+     espaçamento. Garantimos um respiro lateral confortável que cresce
+     do mobile ao desktop.
+     ============================================================ */
+  #overview .home-v2-intro,
+  #pricing .container {
+    box-sizing: border-box;
+    padding-left: clamp(1.25rem, 4vw, 2.5rem);
+    padding-right: clamp(1.25rem, 4vw, 2.5rem);
+  }
 </style>
 
 <!-- System Showcase Section 01 -->
